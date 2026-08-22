@@ -1,0 +1,550 @@
+{
+  "Metadata": {
+    "brand": "Teknomont",
+    "title": "Teknomont — connectors and components for industry",
+    "description": "Distribution of connectors and wire-harness components, sourcing and B2B supply."
+  },
+  "Navigation": {
+    "mainNav": "Main navigation",
+    "mobileNav": "Mobile navigation",
+    "products": "Products",
+    "manufacturers": "Manufacturers",
+    "sourcing": "Sourcing",
+    "b2b": "B2B offer",
+    "about": "About us",
+    "contact": "Contact",
+    "shop": "Shop",
+    "goToShop": "Go to shop",
+    "sendInquiry": "Send inquiry",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "switchLanguage": "Switch language to {language}"
+  },
+  "Home": {
+    "eyebrow": "Component distribution",
+    "title": "Connectors and components for industry",
+    "description": "We supply components for wire-harness production and industrial equipment. We also support sourcing, larger series and hard-to-find part numbers.",
+    "primaryCta": "Send inquiry",
+    "shopCta": "Go to shop",
+    "foundationLabel": "Stage 1",
+    "foundationTitle": "Layout and routing are ready for further development",
+    "foundationDescription": "Header, mobile menu, localized PL/EN URLs, base design tokens and the footer now create a common application shell.",
+    "foundationCta": "View sourcing route",
+    "heroBenefits": {
+      "experience": {
+        "title": "25+ years",
+        "description": "of experience"
+      },
+      "b2b": {
+        "title": "B2B supply",
+        "description": "and larger series"
+      },
+      "sourcing": {
+        "title": "Sourcing",
+        "description": "across Asia"
+      },
+      "quote": {
+        "title": "Fast quotes",
+        "description": "and delivery"
+      }
+    },
+    "categories": {
+      "title": "What are you",
+      "accent": "looking for?",
+      "description": "Components for manufacturing, series supply and sourcing of hard-to-find parts.",
+      "connectors": {
+        "title": "Connectors & terminals",
+        "description": "Housings, pins, seals, terminals and connector accessories."
+      },
+      "materials": {
+        "title": "Wire harness materials",
+        "description": "Wires, braids, sleeves, grommets and other harness materials."
+      },
+      "hardToFind": {
+        "title": "Hard-to-find part",
+        "description": "We can source the product, an equivalent or an alternative manufacturer."
+      },
+      "series": {
+        "title": "Series supply",
+        "description": "Individual pricing for larger volumes and recurring deliveries."
+      }
+    },
+    "sourcing": {
+      "eyebrow": "Component sourcing",
+      "title": "Can't find the",
+      "accent": "component?",
+      "description": "Send us a part number, photo or technical documentation. We will check availability, alternative manufacturers and sourcing options for the required quantity.",
+      "benefits": {
+        "sourcing": {
+          "title": "Sourcing in China & Asia",
+          "description": "Direct contact with suppliers"
+        },
+        "quality": {
+          "title": "Quality verification",
+          "description": "Samples and pre-delivery checks"
+        },
+        "pricing": {
+          "title": "Competitive terms",
+          "description": "Pricing based on volume and demand"
+        }
+      },
+      "form": {
+        "partLabel": "Part number / description",
+        "partPlaceholder": "e.g. 1-967616-1 or product description",
+        "quantityLabel": "Quantity",
+        "quantityPlaceholder": "e.g. 5,000 pcs",
+        "emailLabel": "Email",
+        "emailPlaceholder": "you@company.com",
+        "messageLabel": "Additional information",
+        "messagePlaceholder": "Manufacturer, application, expected delivery date...",
+        "fileTitle": "Attach a file or documentation",
+        "fileDescription": "PDF, photo, drawing or spreadsheet with part numbers",
+        "removeFile": "Remove file",
+        "submit": "Send inquiry",
+        "privacy": "Your data will only be used to respond to this inquiry."
+      }
+    },
+    "howItWorks": {
+      "eyebrow": "Our process",
+      "title": "How it",
+      "accent": "works",
+      "description": "From the first inquiry to final delivery, we handle the entire component sourcing process.",
+      "steps": {
+        "inquiry": {
+          "title": "Send us your inquiry",
+          "description": "Provide a part number, manufacturer, quantity or send us a photo and technical documentation."
+        },
+        "verification": {
+          "title": "We check the options",
+          "description": "We verify availability, suppliers and alternatives, then prepare an individual quotation."
+        },
+        "samples": {
+          "title": "We provide samples",
+          "description": "When required, we arrange samples so you can verify quality and compatibility."
+        },
+        "delivery": {
+          "title": "We deliver",
+          "description": "We source the agreed quantity, arrange delivery or maintain dedicated stock for your business."
+        }
+      }
+    },
+    "whyTeknomont": {
+      "eyebrow": "Why us",
+      "title": "Why",
+      "accent": "Teknomont?",
+      "description": "We combine years of distribution experience with a flexible approach to purchasing and component sourcing.",
+      "benefits": {
+        "experience": {
+          "title": "Experience since 1998",
+          "description": "We have been supporting customers across a range of industrial sectors for many years."
+        },
+        "assortment": {
+          "title": "Broad product range",
+          "description": "Components available from stock as well as products sourced to order."
+        },
+        "quality": {
+          "title": "Verified sources",
+          "description": "We work with trusted manufacturers and suppliers."
+        },
+        "sourcing": {
+          "title": "Global sourcing",
+          "description": "Direct relationships with suppliers in China and other Asian markets."
+        },
+        "support": {
+          "title": "Technical support",
+          "description": "We help select components, find alternatives and solve availability problems."
+        }
+      }
+    },
+    "b2bCta": {
+      "eyebrow": "B2B offer",
+      "title": "Buying larger quantities?",
+      "description": "Online store prices do not always reflect conditions available for series orders. For larger quantities, we prepare individual quotations.",
+      "cta": "Request an individual quote",
+      "benefits": {
+        "pricing": {
+          "title": "Individual commercial terms",
+          "description": "Pricing tailored to volume, frequency and the nature of your orders."
+        },
+        "moq": {
+          "title": "Flexible MOQ and deliveries",
+          "description": "Order quantities and delivery schedules can be adapted to your production needs."
+        },
+        "stock": {
+          "title": "Dedicated stock",
+          "description": "For recurring orders, we can agree on buffer stock and scheduled deliveries."
+        },
+        "cooperation": {
+          "title": "Long-term B2B cooperation",
+          "description": ""
+        }
+      }
+    }
+  },
+  "Footer": {
+    "description": "Connectors, terminals and accessories for industry. B2B supply, sourcing and support in finding hard-to-source components.",
+    "menu": "Menu",
+    "information": "Information",
+    "terms": "Store terms",
+    "privacy": "Privacy policy",
+    "shipping": "Shipping and payments",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  },
+  "Pages": {
+    "products": {
+      "eyebrow": "Offer",
+      "title": "Products",
+      "description": "This page will contain the key product categories and a clear route to the existing Teknomont online store."
+    },
+    "manufacturers": {
+      "eyebrow": "Brands",
+      "title": "Manufacturers",
+      "description": "The manufacturers page will organize the brands and product families available through Teknomont."
+    },
+    "sourcing": {
+      "eyebrow": "Sourcing",
+      "title": "We can find hard-to-source components",
+      "description": "Customers will be able to submit a part number, photo or technical documentation and request a sourcing quote."
+    },
+    "b2b": {
+      "eyebrow": "For business",
+      "title": "B2B offer",
+      "description": "Larger volumes, recurring orders, individual commercial terms and the option to hold dedicated stock."
+    },
+    "about": {
+      "eyebrow": "Teknomont",
+      "title": "About us",
+      "description": "A place for the company story, experience, working model and advantages of cooperation with industrial customers."
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Tell us what you need",
+      "description": "This page will contain the contact and sourcing form focused on qualified B2B inquiries."
+    }
+  },
+  "SourcingPage": {
+    "metadata": {
+      "title": "Component sourcing | Teknomont",
+      "description": "Sourcing of hard-to-find components, alternatives and series supply. Supplier verification, samples and import tailored to your requirements."
+    },
+    "hero": {
+      "eyebrow": "Component sourcing",
+      "title": "We find the component you",
+      "accent": "can't source",
+      "description": "Send us a part number, photo or technical documentation. We will check availability, alternative manufacturers and sourcing options directly from suppliers in Asia.",
+      "primaryCta": "Request a sourcing quote",
+      "secondaryCta": "See how it works",
+      "benefits": {
+        "suppliers": {
+          "title": "Direct sourcing",
+          "description": "China & Asia"
+        },
+        "alternatives": {
+          "title": "Alternatives",
+          "description": "additional sources"
+        },
+        "verification": {
+          "title": "Verification",
+          "description": "samples & quality"
+        },
+        "series": {
+          "title": "Series supply",
+          "description": "B2B deliveries"
+        }
+      }
+    },
+    "useCases": {
+      "title": "When does sourcing",
+      "accent": "make sense?",
+      "description": "We most often help when the standard distribution channel does not provide a satisfactory solution.",
+      "items": {
+        "availability": {
+          "title": "No availability",
+          "description": "The required part is unavailable from European stock or has been removed from regular distribution."
+        },
+        "leadTime": {
+          "title": "Long lead times",
+          "description": "The current supplier's delivery time does not match your production schedule."
+        },
+        "price": {
+          "title": "Series pricing",
+          "description": "For larger quantities, we search for sources that allow us to prepare individual commercial terms."
+        },
+        "alternative": {
+          "title": "Alternative required",
+          "description": "We check alternative manufacturers and products with comparable technical parameters."
+        }
+      }
+    },
+    "capabilities": {
+      "eyebrow": "Sourcing scope",
+      "title": "What can we",
+      "accent": "source?",
+      "description": "Our strongest experience is in electrical components and products used in wire harness and industrial equipment manufacturing.",
+      "note": "We do not recommend replacements blindly. For alternative products, we recommend reviewing documentation, testing samples and obtaining customer approval.",
+      "items": {
+        "connectors": {
+          "title": "Connectors & terminals",
+          "description": "Housings, pins, terminals, seals and accessories."
+        },
+        "harness": {
+          "title": "Wire harness materials",
+          "description": "Braided sleeves, conduits, heat shrink, wires and protective materials."
+        },
+        "electromechanical": {
+          "title": "Electromechanical parts",
+          "description": "Selected components used in equipment and industrial automation."
+        },
+        "partNumber": {
+          "title": "Specific part number",
+          "description": "Sourcing based on a manufacturer part number or an existing component."
+        },
+        "custom": {
+          "title": "Parts from documentation",
+          "description": "Feasibility checks based on a drawing or technical specification."
+        },
+        "other": {
+          "title": "Unusual requirements",
+          "description": "If the component is outside our catalogue, we can still investigate available options."
+        }
+      }
+    },
+    "process": {
+      "eyebrow": "Sourcing process",
+      "title": "From inquiry to",
+      "accent": "delivery",
+      "description": "We first collect the technical requirements, then identify possible sources and verify feasibility.",
+      "steps": {
+        "request": {
+          "title": "Send your requirement",
+          "description": "Part number, quantity, manufacturer, photo or technical documentation."
+        },
+        "offer": {
+          "title": "We verify sources",
+          "description": "We check suppliers, availability, purchasing terms and possible alternatives."
+        },
+        "sample": {
+          "title": "We arrange samples",
+          "description": "For new products, samples can be supplied for verification before series orders."
+        },
+        "delivery": {
+          "title": "We deliver",
+          "description": "After approval, we arrange purchasing and delivery of the agreed quantity."
+        }
+      }
+    },
+    "inquiry": {
+      "eyebrow": "Sourcing inquiry",
+      "title": "Have a specific",
+      "accent": "part number?",
+      "description": "Send us the part number, quantity and any available information. You can also attach a photo, drawing or datasheet."
+    }
+  },
+  "B2BPage": {
+    "metadata": {
+      "title": "B2B offer | Teknomont",
+      "description": "Individual terms for larger component orders. Series deliveries, schedules, dedicated stock and B2B sourcing."
+    },
+    "hero": {
+      "eyebrow": "Business offer",
+      "title": "Larger orders.",
+      "accent": "Better terms.",
+      "description": "For larger quantities, we prepare individual commercial terms. Pricing, delivery schedules and supply continuity can be tailored to your requirements.",
+      "primaryCta": "Request a B2B quote",
+      "secondaryCta": "How cooperation works",
+      "benefits": {
+        "pricing": {
+          "title": "Better pricing",
+          "description": "volume based"
+        },
+        "deliveries": {
+          "title": "Schedules",
+          "description": "recurring delivery"
+        },
+        "stock": {
+          "title": "Stock",
+          "description": "dedicated supply"
+        },
+        "quantities": {
+          "title": "Larger series",
+          "description": "individual MOQ"
+        }
+      }
+    },
+    "benefits": {
+      "title": "More than",
+      "accent": "catalogue pricing",
+      "description": "For recurring business, we can tailor not only pricing but also the entire delivery model.",
+      "items": {
+        "pricing": {
+          "title": "Individual pricing",
+          "description": "Terms based on order volume, purchasing frequency and the nature of cooperation."
+        },
+        "schedule": {
+          "title": "Scheduled deliveries",
+          "description": "Larger quantities can be divided into deliveries that match your production plan."
+        },
+        "stock": {
+          "title": "Buffer stock",
+          "description": "For recurring orders, dedicated stock can help protect continuity of supply."
+        },
+        "cooperation": {
+          "title": "Long-term cooperation",
+          "description": "One point of contact, agreed terms and better visibility for future orders."
+        }
+      }
+    },
+    "forWho": {
+      "eyebrow": "For business",
+      "title": "Who is the",
+      "accent": "B2B offer for?",
+      "description": "We primarily work with businesses where component availability has a direct impact on production or project delivery.",
+      "items": {
+        "manufacturing": {
+          "title": "Manufacturers",
+          "description": "Components for ongoing production, new projects and recurring requirements."
+        },
+        "harness": {
+          "title": "Wire harness manufacturers",
+          "description": "Connectors, terminals, wires and materials used in harness production."
+        },
+        "automation": {
+          "title": "Automation & integrators",
+          "description": "Electrical components and parts required for industrial projects."
+        },
+        "service": {
+          "title": "Maintenance & service",
+          "description": "Hard-to-find parts and supply protection for critical components."
+        }
+      }
+    },
+    "cooperation": {
+      "eyebrow": "Cooperation model",
+      "title": "Terms tailored to",
+      "accent": "your production",
+      "description": "Every business has different supply requirements, so we build the cooperation model individually.",
+      "steps": {
+        "requirement": {
+          "title": "We review your requirements",
+          "description": "Part numbers, quantities, purchasing frequency and expected delivery dates."
+        },
+        "terms": {
+          "title": "We agree the terms",
+          "description": "Pricing, MOQ, schedules, delivery dates and potential buffer stock."
+        },
+        "order": {
+          "title": "We fulfil the first order",
+          "description": "The first delivery is launched according to the agreed parameters."
+        },
+        "repeat": {
+          "title": "We plan recurring deliveries",
+          "description": "For ongoing cooperation, future orders can follow the agreed delivery model."
+        }
+      }
+    },
+    "inquiry": {
+      "eyebrow": "Let's talk",
+      "title": "Have a BOM or planned component requirement?",
+      "description": "Send us the products, quantities and expected purchasing frequency. We will prepare a proposal for B2B cooperation.",
+      "contact": "Send inquiry",
+      "phone": "Call us"
+    }
+  },
+  "ProductsPage": {
+    "metadata": {
+      "title": "Products | Teknomont",
+      "description": "Connectors, terminals, wires and materials for wire harness and industrial equipment manufacturing. Retail and B2B supply."
+    },
+    "hero": {
+      "eyebrow": "Product range",
+      "title": "Components for manufacturing and",
+      "accent": "wire harnesses",
+      "description": "We supply connectors, terminals, wires and materials used in wire harness and industrial equipment manufacturing. Available products can be purchased online or quoted individually for larger quantities.",
+      "shopCta": "Go to online store",
+      "inquiryCta": "Ask about a product",
+      "benefits": {
+        "range": {
+          "title": "Broad range",
+          "description": "multiple categories"
+        },
+        "availability": {
+          "title": "Availability",
+          "description": "stock & sourcing"
+        },
+        "series": {
+          "title": "B2B supply",
+          "description": "larger series"
+        }
+      }
+    },
+    "categories": {
+      "title": "Product",
+      "accent": "categories",
+      "description": "Components used in wire harness, equipment, machinery and industrial installation manufacturing.",
+      "shopCta": "Browse the online store",
+      "items": {
+        "connectors": {
+          "title": "Connectors & housings",
+          "description": "Multi-pin connectors, housings, plugs, sockets and connection system components."
+        },
+        "terminals": {
+          "title": "Terminals & pins",
+          "description": "Male and female contacts, crimp terminals and contact elements."
+        },
+        "seals": {
+          "title": "Seals",
+          "description": "Wire seals, cavity plugs and components protecting electrical connectors."
+        },
+        "wires": {
+          "title": "Wires",
+          "description": "Electrical wires for harness, equipment and installation manufacturing."
+        },
+        "sleeves": {
+          "title": "Braided sleeves & conduit",
+          "description": "Mechanical wire protection, textile braids and corrugated conduit."
+        },
+        "heatShrink": {
+          "title": "Heat-shrink tubing",
+          "description": "Materials for insulation, identification and protection of connections."
+        },
+        "grommets": {
+          "title": "Grommets",
+          "description": "Rubber and technical grommets protecting wires through panels and housings."
+        },
+        "accessories": {
+          "title": "Harness accessories",
+          "description": "Cable ties, clips, mounts and other components used in harness production."
+        }
+      }
+    },
+    "support": {
+      "eyebrow": "Beyond the catalogue",
+      "title": "Can't find the",
+      "accent": "product?",
+      "description": "Not every component we can supply is listed in our online store. Send us a part number, photo or technical documentation and we can check availability or identify an alternative source.",
+      "cta": "Explore component sourcing"
+    },
+    "b2b": {
+      "eyebrow": "Larger orders",
+      "title": "Buying components in series?",
+      "description": "For larger quantities, we can prepare individual pricing, plan recurring deliveries and establish a supply model tailored to your production.",
+      "cta": "Explore our B2B offer",
+      "items": {
+        "pricing": {
+          "title": "Individual pricing",
+          "description": "Terms tailored to volume."
+        },
+        "series": {
+          "title": "Series deliveries",
+          "description": "Schedules aligned with production."
+        },
+        "stock": {
+          "title": "Dedicated stock",
+          "description": "Supply protection for recurring part numbers."
+        }
+      }
+    }
+  }
+}

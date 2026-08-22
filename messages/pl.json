@@ -1,0 +1,550 @@
+{
+  "Metadata": {
+    "brand": "Teknomont",
+    "title": "Teknomont — złącza i komponenty dla przemysłu",
+    "description": "Dystrybucja złączy, komponentów do wiązek kablowych, sourcing oraz dostawy B2B."
+  },
+  "Navigation": {
+    "mainNav": "Główna nawigacja",
+    "mobileNav": "Nawigacja mobilna",
+    "products": "Produkty",
+    "manufacturers": "Producenci",
+    "sourcing": "Sourcing",
+    "b2b": "Oferta B2B",
+    "about": "O firmie",
+    "contact": "Kontakt",
+    "shop": "Sklep",
+    "goToShop": "Przejdź do sklepu",
+    "sendInquiry": "Wyślij zapytanie",
+    "openMenu": "Otwórz menu",
+    "closeMenu": "Zamknij menu",
+    "language": "Język",
+    "switchLanguage": "Przełącz język na {language}"
+  },
+  "Home": {
+    "eyebrow": "Dystrybucja komponentów",
+    "title": "Złącza i komponenty dla przemysłu",
+    "description": "Dostarczamy komponenty do produkcji wiązek kablowych i urządzeń przemysłowych. Pomagamy również w sourcingu, większych seriach i trudno dostępnych indeksach.",
+    "primaryCta": "Wyślij zapytanie",
+    "shopCta": "Przejdź do sklepu",
+    "foundationLabel": "Etap 1",
+    "foundationTitle": "Layout i routing są gotowe pod dalszy rozwój",
+    "foundationDescription": "Nagłówek, menu mobilne, lokalizowane adresy PL/EN, podstawowe style i stopka tworzą wspólny shell dla całej strony.",
+    "foundationCta": "Zobacz routing sourcingu",
+    "heroBenefits": {
+      "experience": {
+        "title": "25+ lat",
+        "description": "doświadczenia"
+      },
+      "b2b": {
+        "title": "Dostawy B2B",
+        "description": "i większe serie"
+      },
+      "sourcing": {
+        "title": "Sourcing",
+        "description": "w Azji"
+      },
+      "quote": {
+        "title": "Szybka wycena",
+        "description": "i realizacja"
+      }
+    },
+    "categories": {
+      "title": "Czego",
+      "accent": "szukasz?",
+      "description": "Komponenty do produkcji, dostawy seryjne oraz sourcing trudno dostępnych części.",
+      "connectors": {
+        "title": "Złącza i terminale",
+        "description": "Obudowy, piny, uszczelki, terminale i akcesoria do złączy."
+      },
+      "materials": {
+        "title": "Materiały do wiązek",
+        "description": "Przewody, oploty, koszulki, przepusty i pozostałe materiały."
+      },
+      "hardToFind": {
+        "title": "Trudno dostępna część",
+        "description": "Znajdziemy produkt, zamiennik lub alternatywnego producenta."
+      },
+      "series": {
+        "title": "Dostawa seryjna",
+        "description": "Indywidualna wycena większych ilości i cyklicznych dostaw."
+      }
+    },
+    "sourcing": {
+      "eyebrow": "Sourcing komponentów",
+      "title": "Nie możesz znaleźć",
+      "accent": "komponentu?",
+      "description": "Prześlij nam numer katalogowy, zdjęcie lub dokumentację. Sprawdzimy dostępność, alternatywnego producenta oraz możliwość sprowadzenia potrzebnej partii.",
+      "benefits": {
+        "sourcing": {
+          "title": "Sourcing w Chinach i Azji",
+          "description": "Bezpośredni kontakt z dostawcami"
+        },
+        "quality": {
+          "title": "Weryfikacja jakości",
+          "description": "Próbki i kontrola przed dostawą"
+        },
+        "pricing": {
+          "title": "Korzystne warunki",
+          "description": "Wycena pod ilość i zapotrzebowanie"
+        }
+      },
+      "form": {
+        "partLabel": "Numer katalogowy / opis części",
+        "partPlaceholder": "np. 1-967616-1 lub opis produktu",
+        "quantityLabel": "Ilość",
+        "quantityPlaceholder": "np. 5 000 szt.",
+        "emailLabel": "E-mail",
+        "emailPlaceholder": "twoj@email.pl",
+        "messageLabel": "Dodatkowe informacje",
+        "messagePlaceholder": "Producent, zastosowanie, oczekiwany termin dostawy...",
+        "fileTitle": "Dodaj plik lub dokumentację",
+        "fileDescription": "PDF, zdjęcie, rysunek, arkusz z indeksami",
+        "removeFile": "Usuń plik",
+        "submit": "Wyślij zapytanie",
+        "privacy": "Twoje dane wykorzystamy wyłącznie do przygotowania odpowiedzi na zapytanie."
+      }
+    },
+    "howItWorks": {
+      "eyebrow": "Proces współpracy",
+      "title": "Jak",
+      "accent": "działamy?",
+      "description": "Od pierwszego zapytania do dostawy — zajmujemy się całym procesem pozyskania komponentów.",
+      "steps": {
+        "inquiry": {
+          "title": "Przesyłasz zapytanie",
+          "description": "Podajesz numer części, producenta, ilość lub przesyłasz zdjęcie i dokumentację."
+        },
+        "verification": {
+          "title": "Sprawdzamy możliwości",
+          "description": "Weryfikujemy dostępność, dostawców, zamienniki i przygotowujemy indywidualną wycenę."
+        },
+        "samples": {
+          "title": "Dostarczamy próbki",
+          "description": "Jeżeli jest taka potrzeba, organizujemy próbki do sprawdzenia jakości i dopasowania."
+        },
+        "delivery": {
+          "title": "Realizujemy dostawę",
+          "description": "Sprowadzamy uzgodnioną partię, realizujemy dostawę lub utrzymujemy zapas pod klienta."
+        }
+      }
+    },
+    "whyTeknomont": {
+      "eyebrow": "Dlaczego my",
+      "title": "Dlaczego",
+      "accent": "Teknomont?",
+      "description": "Łączymy wieloletnie doświadczenie w dystrybucji z elastycznym podejściem do zakupów i sourcingu.",
+      "benefits": {
+        "experience": {
+          "title": "Doświadczenie od 1998 roku",
+          "description": "Od lat obsługujemy klientów z różnych branż przemysłowych."
+        },
+        "assortment": {
+          "title": "Szeroki asortyment",
+          "description": "Komponenty dostępne od ręki oraz produkty sprowadzane na zamówienie."
+        },
+        "quality": {
+          "title": "Sprawdzone źródła",
+          "description": "Współpracujemy ze sprawdzonymi producentami i dostawcami."
+        },
+        "sourcing": {
+          "title": "Sourcing globalny",
+          "description": "Bezpośrednie kontakty z dostawcami w Chinach i pozostałych krajach Azji."
+        },
+        "support": {
+          "title": "Wsparcie techniczne",
+          "description": "Pomagamy dobrać komponent, znaleźć zamiennik i rozwiązać problem z dostępnością."
+        }
+      }
+    },
+    "b2bCta": {
+      "eyebrow": "Oferta B2B",
+      "title": "Kupujesz większe ilości?",
+      "description": "Ceny w sklepie internetowym nie zawsze odzwierciedlają warunki dla zamówień seryjnych. Przy większych ilościach przygotujemy indywidualną ofertę.",
+      "cta": "Zapytaj o indywidualną wycenę",
+      "benefits": {
+        "pricing": {
+          "title": "Indywidualne warunki handlowe",
+          "description": "Cena dopasowana do ilości, częstotliwości i charakteru zamówień."
+        },
+        "moq": {
+          "title": "Elastyczne MOQ i dostawy",
+          "description": "Możemy dopasować wielkość partii i harmonogram do potrzeb produkcji."
+        },
+        "stock": {
+          "title": "Możliwość utrzymywania zapasu",
+          "description": "Dla stałych zamówień możemy ustalić bufor magazynowy i cykliczne dostawy."
+        },
+        "cooperation": {
+          "title": "Długoterminowa współpraca B2B",
+          "description": ""
+        }
+      }
+    }
+  },
+  "Footer": {
+    "description": "Złącza, terminale i akcesoria dla przemysłu. Dostawy B2B, sourcing oraz pomoc w znalezieniu trudno dostępnych komponentów.",
+    "menu": "Menu",
+    "information": "Informacje",
+    "terms": "Regulamin sklepu",
+    "privacy": "Polityka prywatności",
+    "shipping": "Dostawa i płatności",
+    "contact": "Kontakt",
+    "rights": "Wszelkie prawa zastrzeżone."
+  },
+  "Pages": {
+    "products": {
+      "eyebrow": "Oferta",
+      "title": "Produkty",
+      "description": "Tutaj powstanie katalog głównych grup produktowych i przejście do istniejącego sklepu Teknomont."
+    },
+    "manufacturers": {
+      "eyebrow": "Marki",
+      "title": "Producenci",
+      "description": "Strona producentów będzie porządkowała marki i rodziny produktów dostępne w ofercie Teknomont."
+    },
+    "sourcing": {
+      "eyebrow": "Sourcing",
+      "title": "Znajdziemy trudno dostępny komponent",
+      "description": "Docelowo klient będzie mógł przesłać numer katalogowy, zdjęcie lub dokumentację i otrzymać wycenę sourcingu."
+    },
+    "b2b": {
+      "eyebrow": "Dla firm",
+      "title": "Oferta B2B",
+      "description": "Większe ilości, zamówienia seryjne, indywidualne warunki handlowe i możliwość utrzymywania zapasu pod klienta."
+    },
+    "about": {
+      "eyebrow": "Teknomont",
+      "title": "O firmie",
+      "description": "Miejsce na historię firmy, doświadczenie, sposób pracy i przewagi we współpracy z klientami przemysłowymi."
+    },
+    "contact": {
+      "eyebrow": "Kontakt",
+      "title": "Porozmawiajmy o Twoim zapotrzebowaniu",
+      "description": "Tutaj powstanie formularz kontaktowy i sourcingowy przygotowany przede wszystkim pod zapytania B2B."
+    }
+  },
+  "SourcingPage": {
+    "metadata": {
+      "title": "Sourcing komponentów | Teknomont",
+      "description": "Sourcing trudno dostępnych komponentów, zamienników i dostaw seryjnych. Weryfikacja dostawców, próbki i import pod konkretne zapotrzebowanie."
+    },
+    "hero": {
+      "eyebrow": "Sourcing komponentów",
+      "title": "Znajdziemy komponent, którego",
+      "accent": "nie możesz dostać",
+      "description": "Prześlij numer katalogowy, zdjęcie lub dokumentację. Sprawdzimy dostępność, alternatywnych producentów oraz możliwość sprowadzenia potrzebnej ilości bezpośrednio od dostawców w Azji.",
+      "primaryCta": "Wyślij komponent do wyceny",
+      "secondaryCta": "Zobacz jak działamy",
+      "benefits": {
+        "suppliers": {
+          "title": "Bezpośredni sourcing",
+          "description": "Chiny i Azja"
+        },
+        "alternatives": {
+          "title": "Zamienniki",
+          "description": "alternatywne źródła"
+        },
+        "verification": {
+          "title": "Weryfikacja",
+          "description": "próbki i jakość"
+        },
+        "series": {
+          "title": "Większe serie",
+          "description": "dostawy B2B"
+        }
+      }
+    },
+    "useCases": {
+      "title": "Kiedy sourcing",
+      "accent": "ma sens?",
+      "description": "Najczęściej pomagamy wtedy, gdy standardowy kanał dystrybucji nie daje satysfakcjonującego rozwiązania.",
+      "items": {
+        "availability": {
+          "title": "Brak dostępności",
+          "description": "Potrzebnego indeksu nie ma w magazynach europejskich lub został wycofany z regularnej dystrybucji."
+        },
+        "leadTime": {
+          "title": "Długi termin dostawy",
+          "description": "Obecny dostawca oferuje termin, który nie odpowiada harmonogramowi produkcji."
+        },
+        "price": {
+          "title": "Cena przy większej ilości",
+          "description": "Przy seryjnych zamówieniach szukamy źródeł pozwalających przygotować indywidualne warunki."
+        },
+        "alternative": {
+          "title": "Potrzebny zamiennik",
+          "description": "Sprawdzamy alternatywnych producentów oraz produkty o zbliżonych parametrach."
+        }
+      }
+    },
+    "capabilities": {
+      "eyebrow": "Zakres sourcingu",
+      "title": "Czego możemy",
+      "accent": "szukać?",
+      "description": "Największe doświadczenie mamy w komponentach elektrotechnicznych i elementach wykorzystywanych w produkcji wiązek oraz urządzeń przemysłowych.",
+      "note": "Nie proponujemy zamiennika w ciemno. W przypadku alternatywnego produktu zalecamy weryfikację dokumentacji, próbki oraz akceptację po stronie klienta.",
+      "items": {
+        "connectors": {
+          "title": "Złącza i terminale",
+          "description": "Obudowy, piny, terminale, uszczelki i akcesoria."
+        },
+        "harness": {
+          "title": "Materiały do wiązek",
+          "description": "Oploty, peszle, koszulki, przewody i materiały ochronne."
+        },
+        "electromechanical": {
+          "title": "Elementy elektromechaniczne",
+          "description": "Wybrane komponenty stosowane w urządzeniach i automatyce."
+        },
+        "partNumber": {
+          "title": "Konkretny numer części",
+          "description": "Sourcing na podstawie indeksu producenta lub istniejącego produktu."
+        },
+        "custom": {
+          "title": "Element według dokumentacji",
+          "description": "Weryfikacja możliwości wykonania części na podstawie rysunku lub specyfikacji."
+        },
+        "other": {
+          "title": "Nietypowe zapotrzebowanie",
+          "description": "Jeżeli komponent nie mieści się w katalogu, możemy sprawdzić dostępne możliwości."
+        }
+      }
+    },
+    "process": {
+      "eyebrow": "Proces sourcingu",
+      "title": "Od zapytania do",
+      "accent": "dostawy",
+      "description": "Najpierw zbieramy dane techniczne, później szukamy źródła i weryfikujemy możliwość realizacji.",
+      "steps": {
+        "request": {
+          "title": "Przekazujesz zapotrzebowanie",
+          "description": "Numer katalogowy, ilość, producent, zdjęcie lub dokumentacja techniczna."
+        },
+        "offer": {
+          "title": "Weryfikujemy źródła",
+          "description": "Sprawdzamy dostawców, dostępność, warunki zakupu i możliwe alternatywy."
+        },
+        "sample": {
+          "title": "Organizujemy próbki",
+          "description": "Przy nowym produkcie możemy dostarczyć próbki do weryfikacji przed zamówieniem seryjnym."
+        },
+        "delivery": {
+          "title": "Realizujemy dostawę",
+          "description": "Po akceptacji organizujemy zakup i dostawę uzgodnionej partii."
+        }
+      }
+    },
+    "inquiry": {
+      "eyebrow": "Zapytanie sourcingowe",
+      "title": "Masz konkretny",
+      "accent": "indeks?",
+      "description": "Wyślij numer części, ilość oraz dostępne informacje. Jeżeli masz zdjęcie, rysunek lub kartę katalogową, możesz dołączyć je do zapytania."
+    }
+  },
+  "B2BPage": {
+    "metadata": {
+      "title": "Oferta B2B | Teknomont",
+      "description": "Indywidualne warunki dla większych zamówień komponentów. Dostawy seryjne, harmonogramy, zapas magazynowy i sourcing B2B."
+    },
+    "hero": {
+      "eyebrow": "Oferta dla firm",
+      "title": "Większe zamówienia.",
+      "accent": "Lepsze warunki.",
+      "description": "Przy większych ilościach przygotowujemy indywidualne warunki handlowe. Możemy ustalić ceny pod wolumen, harmonogram dostaw oraz sposób zabezpieczenia ciągłości produkcji.",
+      "primaryCta": "Zapytaj o ofertę B2B",
+      "secondaryCta": "Jak wygląda współpraca",
+      "benefits": {
+        "pricing": {
+          "title": "Lepsza cena",
+          "description": "pod wolumen"
+        },
+        "deliveries": {
+          "title": "Harmonogram",
+          "description": "cykliczne dostawy"
+        },
+        "stock": {
+          "title": "Zapas",
+          "description": "pod klienta"
+        },
+        "quantities": {
+          "title": "Większe serie",
+          "description": "indywidualne MOQ"
+        }
+      }
+    },
+    "benefits": {
+      "title": "Więcej niż",
+      "accent": "cena katalogowa",
+      "description": "Przy stałej współpracy możemy dopasować nie tylko cenę, ale również sposób realizacji zamówień.",
+      "items": {
+        "pricing": {
+          "title": "Indywidualne ceny",
+          "description": "Warunki przygotowane pod wielkość zamówienia, częstotliwość zakupów oraz charakter współpracy."
+        },
+        "schedule": {
+          "title": "Dostawy według harmonogramu",
+          "description": "Możemy podzielić większą partię na dostawy odpowiadające planowi produkcji."
+        },
+        "stock": {
+          "title": "Bufor magazynowy",
+          "description": "Dla stałych zamówień możemy ustalić zapas zabezpieczający ciągłość dostaw."
+        },
+        "cooperation": {
+          "title": "Stała współpraca",
+          "description": "Jeden kontakt, uzgodnione warunki i możliwość planowania kolejnych zamówień z wyprzedzeniem."
+        }
+      }
+    },
+    "forWho": {
+      "eyebrow": "Dla biznesu",
+      "title": "Dla kogo jest",
+      "accent": "oferta B2B?",
+      "description": "Współpracujemy przede wszystkim z firmami, dla których dostępność komponentów ma bezpośredni wpływ na produkcję lub realizację projektów.",
+      "items": {
+        "manufacturing": {
+          "title": "Firmy produkcyjne",
+          "description": "Komponenty do bieżącej produkcji, nowych projektów i powtarzalnych zamówień."
+        },
+        "harness": {
+          "title": "Producenci wiązek",
+          "description": "Złącza, terminale, przewody i materiały wykorzystywane w produkcji wiązek."
+        },
+        "automation": {
+          "title": "Automatyka i integratorzy",
+          "description": "Komponenty elektrotechniczne i elementy potrzebne do realizacji projektów."
+        },
+        "service": {
+          "title": "Serwis i utrzymanie ruchu",
+          "description": "Sourcing trudno dostępnych części oraz zabezpieczenie kluczowych indeksów."
+        }
+      }
+    },
+    "cooperation": {
+      "eyebrow": "Model współpracy",
+      "title": "Ustalamy warunki pod",
+      "accent": "Twoją produkcję",
+      "description": "Nie każda firma potrzebuje tego samego modelu dostaw, dlatego warunki ustalamy indywidualnie.",
+      "steps": {
+        "requirement": {
+          "title": "Poznajemy zapotrzebowanie",
+          "description": "Indeksy, ilości, częstotliwość zakupów oraz oczekiwane terminy."
+        },
+        "terms": {
+          "title": "Ustalamy warunki",
+          "description": "Cena, MOQ, harmonogram, terminy dostaw oraz ewentualny zapas."
+        },
+        "order": {
+          "title": "Realizujemy pierwszą partię",
+          "description": "Uruchamiamy dostawę zgodnie z uzgodnionymi parametrami."
+        },
+        "repeat": {
+          "title": "Planujemy kolejne dostawy",
+          "description": "Przy stałej współpracy kolejne zamówienia mogą być realizowane według ustalonego modelu."
+        }
+      }
+    },
+    "inquiry": {
+      "eyebrow": "Porozmawiajmy",
+      "title": "Masz listę indeksów lub planowane zapotrzebowanie?",
+      "description": "Wyślij nam produkty, ilości oraz przewidywaną częstotliwość zamówień. Przygotujemy propozycję warunków dla współpracy B2B.",
+      "contact": "Wyślij zapytanie",
+      "phone": "Zadzwoń"
+    }
+  },
+  "ProductsPage": {
+    "metadata": {
+      "title": "Produkty | Teknomont",
+      "description": "Złącza, terminale, przewody oraz materiały do produkcji wiązek i urządzeń przemysłowych. Sprzedaż detaliczna i dostawy B2B."
+    },
+    "hero": {
+      "eyebrow": "Oferta produktowa",
+      "title": "Komponenty do produkcji i",
+      "accent": "wiązek kablowych",
+      "description": "Dostarczamy złącza, terminale, przewody oraz materiały wykorzystywane w produkcji wiązek i urządzeń przemysłowych. Dostępne produkty możesz kupić w sklepie lub wysłać nam zapytanie o większą partię.",
+      "shopCta": "Przejdź do sklepu",
+      "inquiryCta": "Zapytaj o produkt",
+      "benefits": {
+        "range": {
+          "title": "Szeroka oferta",
+          "description": "wiele kategorii"
+        },
+        "availability": {
+          "title": "Dostępność",
+          "description": "towar i sourcing"
+        },
+        "series": {
+          "title": "Dostawy B2B",
+          "description": "większe serie"
+        }
+      }
+    },
+    "categories": {
+      "title": "Kategorie",
+      "accent": "produktów",
+      "description": "Komponenty wykorzystywane w produkcji wiązek kablowych, urządzeń, maszyn oraz instalacji przemysłowych.",
+      "shopCta": "Zobacz ofertę w sklepie",
+      "items": {
+        "connectors": {
+          "title": "Złącza i obudowy",
+          "description": "Złącza wielopinowe, obudowy, wtyki, gniazda i elementy systemów połączeniowych."
+        },
+        "terminals": {
+          "title": "Terminale i piny",
+          "description": "Styki męskie i żeńskie, terminale zaciskane oraz elementy kontaktowe."
+        },
+        "seals": {
+          "title": "Uszczelki",
+          "description": "Uszczelki przewodów, zaślepki oraz elementy zabezpieczające złącza."
+        },
+        "wires": {
+          "title": "Przewody",
+          "description": "Przewody elektryczne do produkcji wiązek, urządzeń oraz instalacji."
+        },
+        "sleeves": {
+          "title": "Oploty i peszle",
+          "description": "Ochrona mechaniczna przewodów, oploty tekstylne i rury karbowane."
+        },
+        "heatShrink": {
+          "title": "Koszulki termokurczliwe",
+          "description": "Materiały do izolacji, oznaczania i zabezpieczania połączeń."
+        },
+        "grommets": {
+          "title": "Przepusty",
+          "description": "Gumowe i techniczne przepusty chroniące przewody w obudowach i konstrukcjach."
+        },
+        "accessories": {
+          "title": "Akcesoria do wiązek",
+          "description": "Opaski, klipsy, mocowania i pozostałe elementy potrzebne przy produkcji wiązek."
+        }
+      }
+    },
+    "support": {
+      "eyebrow": "Poza katalogiem",
+      "title": "Nie widzisz potrzebnego",
+      "accent": "produktu?",
+      "description": "Nie wszystkie komponenty, które możemy dostarczyć, znajdują się w sklepie internetowym. Jeżeli masz konkretny indeks, zdjęcie lub dokumentację, sprawdzimy dostępność albo znajdziemy alternatywne źródło.",
+      "cta": "Sprawdź sourcing komponentów"
+    },
+    "b2b": {
+      "eyebrow": "Większe zamówienia",
+      "title": "Kupujesz komponenty seryjnie?",
+      "description": "Przy większych ilościach możemy przygotować indywidualną ofertę, zaplanować dostawy oraz ustalić model współpracy dopasowany do produkcji.",
+      "cta": "Zobacz ofertę B2B",
+      "items": {
+        "pricing": {
+          "title": "Indywidualna cena",
+          "description": "Warunki dopasowane do wolumenu."
+        },
+        "series": {
+          "title": "Dostawy seryjne",
+          "description": "Harmonogram pod produkcję."
+        },
+        "stock": {
+          "title": "Zapas magazynowy",
+          "description": "Możliwość zabezpieczenia stałych indeksów."
+        }
+      }
+    }
+  }
+}
