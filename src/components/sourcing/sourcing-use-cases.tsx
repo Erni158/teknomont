@@ -1,9 +1,8 @@
-import { BadgeDollarSign, Clock3, PackageX, Replace } from "lucide-react";
+import { Boxes, PackageX, RefreshCw } from "lucide-react";
 
 import { getTranslations } from "next-intl/server";
 
 import { Container } from "@/components/layout/container";
-import { SectionHeading } from "@/components/ui/section-heading";
 
 const items = [
   {
@@ -11,16 +10,12 @@ const items = [
     icon: PackageX,
   },
   {
-    key: "leadTime",
-    icon: Clock3,
-  },
-  {
-    key: "price",
-    icon: BadgeDollarSign,
-  },
-  {
     key: "alternative",
-    icon: Replace,
+    icon: RefreshCw,
+  },
+  {
+    key: "series",
+    icon: Boxes,
   },
 ] as const;
 
@@ -28,45 +23,92 @@ export async function SourcingUseCases() {
   const t = await getTranslations("SourcingPage.useCases");
 
   return (
-    <section className="bg-white py-16 sm:py-20 lg:py-24">
-      <Container>
-        <SectionHeading
-          title={t("title")}
-          accent={t("accent")}
-          description={t("description")}
-        />
+    <section className="bg-white py-14 sm:py-16 lg:py-20">
+      <Container maxWidth={1180}>
+        {/* HEADING */}
+        <div className="mx-auto max-w-[680px] text-center">
+          <p
+            className="
+              text-xs
+              font-extrabold
+              uppercase
+              tracking-[0.16em]
+              text-[var(--primary)]
+            "
+          >
+            {t("eyebrow")}
+          </p>
 
+          <h2
+            className="
+              mt-3
+              text-3xl
+              font-extrabold
+              tracking-[-0.04em]
+              text-[var(--foreground)]
+
+              sm:text-4xl
+            "
+          >
+            {t("title")}{" "}
+            <span className="text-[var(--primary)]">{t("accent")}</span>
+          </h2>
+
+          <p
+            className="
+              mx-auto
+              mt-4
+              max-w-[600px]
+              text-[14px]
+              leading-6
+              text-[var(--muted-foreground)]
+
+              sm:text-[15px]
+            "
+          >
+            {t("description")}
+          </p>
+        </div>
+
+        {/* ITEMS */}
         <div
           className="
             mt-10
-            grid gap-4
+            grid
 
-            sm:grid-cols-2
+            md:grid-cols-3
 
             lg:mt-12
-            lg:grid-cols-4
           "
         >
-          {items.map(({ key, icon: Icon }) => (
+          {items.map(({ key, icon: Icon }, index) => (
             <div
               key={key}
-              className="
-                rounded-2xl
-                border border-[#dfe8ee]
-                bg-white
-                p-5
-                shadow-[0_8px_30px_rgba(7,29,51,0.04)]
+              className={`
+                py-6
 
-                sm:p-6
-              "
+                md:px-7
+                md:py-3
+
+                ${
+                  index !== items.length - 1
+                    ? `
+                      border-b border-[#dfe8ee]
+
+                      md:border-b-0
+                      md:border-r
+                    `
+                    : ""
+                }
+              `}
             >
               <div
                 className="
                   flex size-11
                   items-center justify-center
                   rounded-full
-                  border border-[#cfdee8]
-                  bg-[#f5f9fb]
+                  border border-[#d0e0e9]
+                  bg-[#f4f8fa]
                   text-[var(--primary)]
                 "
               >
@@ -75,10 +117,9 @@ export async function SourcingUseCases() {
 
               <h3
                 className="
-                  mt-5
+                  mt-4
                   text-[17px]
                   font-extrabold
-                  leading-[1.25]
                   tracking-[-0.025em]
                   text-[var(--foreground)]
                 "
@@ -89,6 +130,7 @@ export async function SourcingUseCases() {
               <p
                 className="
                   mt-2
+                  max-w-[300px]
                   text-[13px]
                   leading-6
                   text-[var(--muted-foreground)]

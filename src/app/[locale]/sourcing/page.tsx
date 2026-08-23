@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { SourcingHero } from "@/components/sourcing/sourcing-hero";
 import { SourcingUseCases } from "@/components/sourcing/sourcing-use-cases";
-import { SourcingCapabilities } from "@/components/sourcing/sourcing-capabilities";
+// import { SourcingCapabilities } from "@/components/sourcing/sourcing-capabilities";
 import { SourcingProcess } from "@/components/sourcing/sourcing-process";
 import { SourcingInquirySection } from "@/components/sourcing/sourcing-inquiry-section";
 
@@ -36,7 +36,6 @@ export default async function SourcingPage({ params }: Props) {
     <main>
       <SourcingHero />
       <SourcingUseCases />
-      <SourcingCapabilities />
       <SourcingProcess />
       <SourcingInquirySection />
     </main>

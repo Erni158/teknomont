@@ -279,25 +279,22 @@
       }
     },
     "useCases": {
-      "title": "When does sourcing",
-      "accent": "make sense?",
-      "description": "We most often help when the standard distribution channel does not provide a satisfactory solution.",
+      "eyebrow": "Component sourcing",
+      "title": "When can we",
+      "accent": "help?",
+      "description": "We usually help when standard distribution channels cannot provide a suitable solution.",
       "items": {
         "availability": {
           "title": "No availability",
-          "description": "The required part is unavailable from European stock or has been removed from regular distribution."
-        },
-        "leadTime": {
-          "title": "Long lead times",
-          "description": "The current supplier's delivery time does not match your production schedule."
-        },
-        "price": {
-          "title": "Series pricing",
-          "description": "For larger quantities, we search for sources that allow us to prepare individual commercial terms."
+          "description": "A specific part number is unavailable or the delivery time is too long."
         },
         "alternative": {
           "title": "Alternative required",
-          "description": "We check alternative manufacturers and products with comparable technical parameters."
+          "description": "You need another manufacturer or an alternative source of supply."
+        },
+        "series": {
+          "title": "Larger quantity",
+          "description": "You need individual pricing and supply terms for series quantities."
         }
       }
     },
@@ -335,26 +332,22 @@
       }
     },
     "process": {
-      "eyebrow": "Sourcing process",
-      "title": "From inquiry to",
-      "accent": "delivery",
-      "description": "We first collect the technical requirements, then identify possible sources and verify feasibility.",
+      "eyebrow": "How it works",
+      "title": "A simple sourcing",
+      "accent": "process",
+      "description": "Send us the basic information and we will take care of checking the available options.",
       "steps": {
         "request": {
-          "title": "Send your requirement",
-          "description": "Part number, quantity, manufacturer, photo or technical documentation."
+          "title": "Send the part number",
+          "description": "Part number, photo, quantity or technical documentation."
         },
-        "offer": {
-          "title": "We verify sources",
-          "description": "We check suppliers, availability, purchasing terms and possible alternatives."
-        },
-        "sample": {
-          "title": "We arrange samples",
-          "description": "For new products, samples can be supplied for verification before series orders."
+        "search": {
+          "title": "We check the sources",
+          "description": "We verify availability, manufacturers and possible alternatives."
         },
         "delivery": {
-          "title": "We deliver",
-          "description": "After approval, we arrange purchasing and delivery of the agreed quantity."
+          "title": "Sample or delivery",
+          "description": "Once approved, we arrange a sample or fulfil the order."
         }
       }
     },
