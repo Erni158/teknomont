@@ -1,53 +1,59 @@
-import type {Metadata} from 'next';
-import {hasLocale, NextIntlClientProvider} from 'next-intl';
-import {getMessages, getTranslations, setRequestLocale} from 'next-intl/server';
-import {notFound} from 'next/navigation';
-import {Footer} from '@/components/layout/footer';
-import {Header} from '@/components/layout/header';
-import {routing} from '@/i18n/routing';
-import '../globals.css';
+import type { Metadata } from "next";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
+import { notFound } from "next/navigation";
+import { Footer } from "@/components/layout/footer";
+import { Header } from "@/components/layout/header";
+import { routing } from "@/i18n/routing";
+import "../globals.css";
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({locale}));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({
-  params
+  params,
 }: {
-  params: Promise<{locale: string}>;
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const {locale} = await params;
+  const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
 
-  const t = await getTranslations({locale, namespace: 'Metadata'});
+  const t = await getTranslations({ locale, namespace: "Metadata" });
 
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tmidc.pl'),
+    metadataBase: new URL(
+      process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://tmidc.pl",
+    ),
     title: {
-      default: t('title'),
-      template: `%s | ${t('brand')}`
+      default: t("title"),
+      template: `%s | ${t("brand")}`,
     },
-    description: t('description'),
+    description: t("description"),
     alternates: {
       languages: {
-        pl: '/pl',
-        en: '/en'
-      }
-    }
+        pl: "/pl",
+        en: "/en",
+      },
+    },
   };
 }
 
 export default async function LocaleLayout({
   children,
-  params
+  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{locale: string}>;
+  params: Promise<{ locale: string }>;
 }>) {
-  const {locale} = await params;
+  const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();
