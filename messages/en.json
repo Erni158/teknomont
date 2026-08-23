@@ -90,19 +90,42 @@
         }
       },
       "form": {
-        "partLabel": "Part number / description",
-        "partPlaceholder": "e.g. 1-967616-1 or product description",
-        "quantityLabel": "Quantity",
-        "quantityPlaceholder": "e.g. 5,000 pcs",
-        "emailLabel": "Email",
-        "emailPlaceholder": "you@company.com",
-        "messageLabel": "Additional information",
-        "messagePlaceholder": "Manufacturer, application, expected delivery date...",
-        "fileTitle": "Attach a file or documentation",
-        "fileDescription": "PDF, photo, drawing or spreadsheet with part numbers",
-        "removeFile": "Remove file",
+        "partNumber": {
+          "label": "Part number / component description",
+          "placeholder": "E.g. 1-967616-1 or a short description"
+        },
+        "quantity": {
+          "label": "Quantity",
+          "placeholder": "E.g. 5,000 pcs."
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "your@email.com"
+        },
+        "message": {
+          "label": "Additional information",
+          "placeholder": "Manufacturer, required delivery date, target price or other details..."
+        },
+        "file": {
+          "label": "Attachment",
+          "action": "Add photo or documentation",
+          "description": "PDF, JPG, PNG, DOC, XLS — max. 10 MB",
+          "remove": "Remove file"
+        },
         "submit": "Send inquiry",
-        "privacy": "Your data will only be used to respond to this inquiry."
+        "submitting": "Sending...",
+        "privacy": "By submitting the form, you agree to be contacted regarding your inquiry.",
+        "success": {
+          "title": "Inquiry sent",
+          "description": "Thank you. We will review the request and get back to you."
+        },
+        "error": "We couldn't send your inquiry. Please try again.",
+        "validation": {
+          "partNumber": "Enter a part number or component description.",
+          "quantity": "Enter the approximate quantity.",
+          "emailRequired": "Enter your email address.",
+          "emailInvalid": "Enter a valid email address."
+        }
       }
     },
     "howItWorks": {

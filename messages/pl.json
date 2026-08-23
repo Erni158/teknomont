@@ -90,19 +90,42 @@
         }
       },
       "form": {
-        "partLabel": "Numer katalogowy / opis części",
-        "partPlaceholder": "np. 1-967616-1 lub opis produktu",
-        "quantityLabel": "Ilość",
-        "quantityPlaceholder": "np. 5 000 szt.",
-        "emailLabel": "E-mail",
-        "emailPlaceholder": "twoj@email.pl",
-        "messageLabel": "Dodatkowe informacje",
-        "messagePlaceholder": "Producent, zastosowanie, oczekiwany termin dostawy...",
-        "fileTitle": "Dodaj plik lub dokumentację",
-        "fileDescription": "PDF, zdjęcie, rysunek, arkusz z indeksami",
-        "removeFile": "Usuń plik",
+        "partNumber": {
+          "label": "Numer części / opis komponentu",
+          "placeholder": "Np. 1-967616-1 lub krótki opis"
+        },
+        "quantity": {
+          "label": "Ilość",
+          "placeholder": "Np. 5000 szt."
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "twoj@email.pl"
+        },
+        "message": {
+          "label": "Dodatkowe informacje",
+          "placeholder": "Producent, wymagany termin, oczekiwana cena lub inne informacje..."
+        },
+        "file": {
+          "label": "Załącznik",
+          "action": "Dodaj zdjęcie lub dokumentację",
+          "description": "PDF, JPG, PNG, DOC, XLS — maks. 10 MB",
+          "remove": "Usuń plik"
+        },
         "submit": "Wyślij zapytanie",
-        "privacy": "Twoje dane wykorzystamy wyłącznie do przygotowania odpowiedzi na zapytanie."
+        "submitting": "Wysyłanie...",
+        "privacy": "Wysyłając formularz, zgadzasz się na kontakt w sprawie przesłanego zapytania.",
+        "success": {
+          "title": "Zapytanie zostało wysłane",
+          "description": "Dziękujemy. Sprawdzimy możliwości i skontaktujemy się z Tobą."
+        },
+        "error": "Nie udało się wysłać formularza. Spróbuj ponownie.",
+        "validation": {
+          "partNumber": "Podaj numer części lub opis komponentu.",
+          "quantity": "Podaj orientacyjną ilość.",
+          "emailRequired": "Podaj adres e-mail.",
+          "emailInvalid": "Podaj poprawny adres e-mail."
+        }
       }
     },
     "howItWorks": {

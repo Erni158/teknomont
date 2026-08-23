@@ -1,358 +1,531 @@
 "use client";
 
-import { FormEvent, useRef, useState } from "react";
+import { useRef } from "react";
 
-import { FileText, LockKeyhole, Paperclip, Send, X } from "lucide-react";
+import {
+  CheckCircle2,
+  FileText,
+  Loader2,
+  Paperclip,
+  Send,
+  X,
+} from "lucide-react";
 
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+
+import { useInquirySubmit } from "@/hooks/use-inquiry-submit";
+
+type FormValues = {
+  partNumber: string;
+  quantity: string;
+  email: string;
+  message?: string;
+  file?: File;
+};
 
 export function SourcingForm() {
   const t = useTranslations("Home.sourcing.form");
 
-  const inputRef = useRef<HTMLInputElement>(null);
-  const [file, setFile] = useState<File | null>(null);
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  const { submit, isSubmitting, isSuccess, error, resetStatus } =
+    useInquirySubmit();
 
-    // TODO:
-    // Server Action / API / wysyłka maila
+  const formSchema = z.object({
+    partNumber: z.string().min(1, t("validation.partNumber")),
+
+    quantity: z.string().min(1, t("validation.quantity")),
+
+    email: z
+      .string()
+      .min(1, t("validation.emailRequired"))
+      .email(t("validation.emailInvalid")),
+
+    message: z.string().optional(),
+
+    file: z.any().optional(),
+  });
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    setValue,
+    watch,
+    formState: { errors },
+  } = useForm<FormValues>({
+    resolver: zodResolver(formSchema),
+
+    defaultValues: {
+      partNumber: "",
+      quantity: "",
+      email: "",
+      message: "",
+      file: undefined,
+    },
+  });
+
+  const selectedFile = watch("file") as File | undefined;
+
+  async function onSubmit(data: FormValues) {
+    resetStatus();
+
+    try {
+      await submit({
+        type: "sourcing",
+
+        fields: {
+          partNumber: data.partNumber,
+          quantity: data.quantity,
+          email: data.email,
+          message: data.message,
+        },
+
+        file: selectedFile ?? null,
+
+        fallbackError: t("error"),
+      });
+
+      reset();
+
+      if (fileInputRef.current) {
+        fileInputRef.current.value = "";
+      }
+    } catch {
+      // Komunikat błędu jest już
+      // obsługiwany przez useInquirySubmit.
+    }
+  }
+
+  function handleFileChange(event: React.ChangeEvent<HTMLInputElement>) {
+    resetStatus();
+
+    const file = event.target.files?.[0];
+
+    if (!file) {
+      setValue("file", undefined);
+      return;
+    }
+
+    setValue("file", file, {
+      shouldValidate: true,
+    });
+  }
+
+  function removeFile() {
+    setValue("file", undefined, {
+      shouldValidate: true,
+    });
+
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
+
+    resetStatus();
   }
 
   return (
     <form
-      onSubmit={handleSubmit}
+      onSubmit={handleSubmit(onSubmit)}
       className="
-        w-full
-        rounded-[14px]
-        border border-[#d6e3ec]
-        bg-white/90
+        rounded-[18px]
+        border border-[#d8e4eb]
+        bg-white
         p-4
-        shadow-[0_14px_40px_rgba(15,50,76,0.06)]
-        backdrop-blur-sm
+        shadow-[0_16px_45px_rgba(7,29,51,0.06)]
 
-        sm:rounded-[18px]
         sm:p-6
 
         lg:p-7
-        xl:p-8
       "
     >
-      {/* PART */}
-      <div>
-        <label
-          htmlFor="part"
-          className="
-            block
-            text-[12px] font-bold
-            text-[var(--foreground)]
-            sm:text-[13px]
-          "
-        >
-          {t("partLabel")}
-        </label>
-
-        <input
-          id="part"
-          name="part"
-          type="text"
-          required
-          placeholder={t("partPlaceholder")}
-          className="
-            mt-1.5
-            h-11 w-full
-            rounded-lg
-            border border-[#d7e2ea]
-            bg-white
-            px-3.5
-            text-[13px]
-            text-[var(--foreground)]
-            outline-none
-            transition
-            placeholder:text-[#95a3af]
-
-            focus:border-[var(--primary)]
-            focus:ring-4
-            focus:ring-[rgba(0,78,138,0.07)]
-
-            sm:mt-2
-            sm:h-[52px]
-            sm:px-4
-            sm:text-sm
-          "
-        />
-      </div>
-
-      {/* QUANTITY + EMAIL */}
+      {/* TOP ROW */}
       <div
         className="
-          mt-3
-          grid gap-3
+          grid gap-4
 
-          sm:mt-5
-          sm:grid-cols-2
-          sm:gap-4
+          md:grid-cols-[1.35fr_0.65fr]
+
+          lg:gap-5
         "
       >
+        {/* PART NUMBER */}
+        <div>
+          <label
+            htmlFor="partNumber"
+            className="
+              mb-2
+              block
+              text-[12px]
+              font-extrabold
+              text-[var(--foreground)]
+            "
+          >
+            {t("partNumber.label")}
+          </label>
+
+          <input
+            id="partNumber"
+            type="text"
+            placeholder={t("partNumber.placeholder")}
+            disabled={isSubmitting}
+            {...register("partNumber", {
+              onChange: resetStatus,
+            })}
+            className="
+              h-11
+              w-full
+              rounded-lg
+              border border-[#d8e3e9]
+              bg-white
+              px-4
+              text-[14px]
+              text-[var(--foreground)]
+              outline-none
+              transition
+
+              placeholder:text-[#9aaab5]
+
+              focus:border-[var(--primary)]
+              focus:ring-2
+              focus:ring-[var(--primary)]/10
+
+              disabled:cursor-not-allowed
+              disabled:bg-[#f6f8f9]
+            "
+          />
+
+          {errors.partNumber && (
+            <p className="mt-1.5 text-[12px] text-red-600">
+              {errors.partNumber.message}
+            </p>
+          )}
+        </div>
+
+        {/* QUANTITY */}
         <div>
           <label
             htmlFor="quantity"
             className="
+              mb-2
               block
-              text-[12px] font-bold
+              text-[12px]
+              font-extrabold
               text-[var(--foreground)]
-              sm:text-[13px]
             "
           >
-            {t("quantityLabel")}
+            {t("quantity.label")}
           </label>
 
           <input
             id="quantity"
-            name="quantity"
             type="text"
-            placeholder={t("quantityPlaceholder")}
+            inputMode="numeric"
+            placeholder={t("quantity.placeholder")}
+            disabled={isSubmitting}
+            {...register("quantity", {
+              onChange: resetStatus,
+            })}
             className="
-              mt-1.5
-              h-11 w-full
+              h-11
+              w-full
               rounded-lg
-              border border-[#d7e2ea]
+              border border-[#d8e3e9]
               bg-white
-              px-3.5
-              text-[13px]
+              px-4
+              text-[14px]
               text-[var(--foreground)]
               outline-none
               transition
-              placeholder:text-[#95a3af]
+
+              placeholder:text-[#9aaab5]
 
               focus:border-[var(--primary)]
-              focus:ring-4
-              focus:ring-[rgba(0,78,138,0.07)]
+              focus:ring-2
+              focus:ring-[var(--primary)]/10
 
-              sm:mt-2
-              sm:h-[52px]
-              sm:px-4
-              sm:text-sm
+              disabled:cursor-not-allowed
+              disabled:bg-[#f6f8f9]
             "
           />
-        </div>
 
-        <div>
-          <label
-            htmlFor="email"
-            className="
-              block
-              text-[12px] font-bold
-              text-[var(--foreground)]
-              sm:text-[13px]
-            "
-          >
-            {t("emailLabel")}
-          </label>
-
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            placeholder={t("emailPlaceholder")}
-            className="
-              mt-1.5
-              h-11 w-full
-              rounded-lg
-              border border-[#d7e2ea]
-              bg-white
-              px-3.5
-              text-[13px]
-              text-[var(--foreground)]
-              outline-none
-              transition
-              placeholder:text-[#95a3af]
-
-              focus:border-[var(--primary)]
-              focus:ring-4
-              focus:ring-[rgba(0,78,138,0.07)]
-
-              sm:mt-2
-              sm:h-[52px]
-              sm:px-4
-              sm:text-sm
-            "
-          />
+          {errors.quantity && (
+            <p className="mt-1.5 text-[12px] text-red-600">
+              {errors.quantity.message}
+            </p>
+          )}
         </div>
       </div>
 
+      {/* EMAIL */}
+      <div className="mt-4 lg:mt-5">
+        <label
+          htmlFor="email"
+          className="
+            mb-2
+            block
+            text-[12px]
+            font-extrabold
+            text-[var(--foreground)]
+          "
+        >
+          {t("email.label")}
+        </label>
+
+        <input
+          id="email"
+          type="email"
+          autoComplete="email"
+          placeholder={t("email.placeholder")}
+          disabled={isSubmitting}
+          {...register("email", {
+            onChange: resetStatus,
+          })}
+          className="
+            h-11
+            w-full
+            rounded-lg
+            border border-[#d8e3e9]
+            bg-white
+            px-4
+            text-[14px]
+            text-[var(--foreground)]
+            outline-none
+            transition
+
+            placeholder:text-[#9aaab5]
+
+            focus:border-[var(--primary)]
+            focus:ring-2
+            focus:ring-[var(--primary)]/10
+
+            disabled:cursor-not-allowed
+            disabled:bg-[#f6f8f9]
+          "
+        />
+
+        {errors.email && (
+          <p className="mt-1.5 text-[12px] text-red-600">
+            {errors.email.message}
+          </p>
+        )}
+      </div>
+
       {/* MESSAGE */}
-      <div className="mt-3 sm:mt-5">
+      <div className="mt-4 lg:mt-5">
         <label
           htmlFor="message"
           className="
+            mb-2
             block
-            text-[12px] font-bold
+            text-[12px]
+            font-extrabold
             text-[var(--foreground)]
-            sm:text-[13px]
           "
         >
-          {t("messageLabel")}
+          {t("message.label")}
         </label>
 
         <textarea
           id="message"
-          name="message"
           rows={4}
-          placeholder={t("messagePlaceholder")}
+          placeholder={t("message.placeholder")}
+          disabled={isSubmitting}
+          {...register("message", {
+            onChange: resetStatus,
+          })}
           className="
-            mt-1.5
-            w-full resize-none
+            min-h-[110px]
+            w-full
+            resize-y
             rounded-lg
-            border border-[#d7e2ea]
+            border border-[#d8e3e9]
             bg-white
-            px-3.5 py-2.5
-            text-[13px]
-            leading-5
+            px-4 py-3
+            text-[14px]
+            leading-6
             text-[var(--foreground)]
             outline-none
             transition
-            placeholder:text-[#95a3af]
+
+            placeholder:text-[#9aaab5]
 
             focus:border-[var(--primary)]
-            focus:ring-4
-            focus:ring-[rgba(0,78,138,0.07)]
+            focus:ring-2
+            focus:ring-[var(--primary)]/10
 
-            sm:mt-2
-            sm:px-4
-            sm:py-3
-            sm:text-sm
-            sm:leading-6
+            disabled:cursor-not-allowed
+            disabled:bg-[#f6f8f9]
           "
         />
       </div>
 
       {/* FILE */}
-      <div className="mt-3 sm:mt-5">
-        <input
-          ref={inputRef}
-          type="file"
-          name="file"
-          className="hidden"
-          accept=".pdf,.jpg,.jpeg,.png,.webp,.xls,.xlsx,.csv"
-          onChange={(event) => {
-            setFile(event.target.files?.[0] ?? null);
-          }}
-        />
+      <div className="mt-4 lg:mt-5">
+        <p
+          className="
+            mb-2
+            text-[12px]
+            font-extrabold
+            text-[var(--foreground)]
+          "
+        >
+          {t("file.label")}
+        </p>
 
-        {!file ? (
-          <button
-            type="button"
-            onClick={() => inputRef.current?.click()}
+        {!selectedFile ? (
+          <label
             className="
-              flex w-full
-              items-center gap-2.5
+              flex
+              min-h-[72px]
+              cursor-pointer
+              items-center
+              justify-center
+              gap-3
               rounded-lg
-              border border-dashed border-[#c7d8e4]
-              bg-[#f7fafc]
-              px-3 py-3
-              text-left
+              border
+              border-dashed
+              border-[#cbdbe4]
+              bg-[#f8fafb]
+              px-4
+              text-center
               transition
 
               hover:border-[var(--primary)]
-              hover:bg-[#f2f7fa]
+              hover:bg-[#f3f8fb]
+            "
+          >
+            <input
+              ref={fileInputRef}
+              type="file"
+              className="hidden"
+              disabled={isSubmitting}
+              accept="
+                .pdf,
+                .jpg,
+                .jpeg,
+                .png,
+                .webp,
+                .doc,
+                .docx,
+                .xls,
+                .xlsx
+              "
+              onChange={handleFileChange}
+            />
 
-              sm:gap-3
-              sm:px-4
-              sm:py-4
+            <Paperclip
+              className="
+                size-4
+                shrink-0
+                text-[var(--primary)]
+              "
+              strokeWidth={1.8}
+            />
+
+            <div>
+              <p
+                className="
+                  text-[13px]
+                  font-bold
+                  text-[var(--foreground)]
+                "
+              >
+                {t("file.action")}
+              </p>
+
+              <p
+                className="
+                  mt-1
+                  text-[11px]
+                  text-[var(--muted-foreground)]
+                "
+              >
+                {t("file.description")}
+              </p>
+            </div>
+          </label>
+        ) : (
+          <div
+            className="
+              flex
+              min-h-[72px]
+              items-center
+              justify-between
+              gap-4
+              rounded-lg
+              border border-[#d8e4eb]
+              bg-[#f8fafb]
+              px-4 py-3
             "
           >
             <div
               className="
-                flex size-8 shrink-0
-                items-center justify-center
-                rounded-full
-                bg-white
-                text-[var(--primary)]
-
-                sm:size-10
+                flex min-w-0
+                items-center
+                gap-3
               "
             >
-              <Paperclip className="size-4 sm:size-[18px]" />
-            </div>
-
-            <div className="min-w-0">
-              <p
+              <div
                 className="
-                  text-[12px] font-bold
-                  leading-4
-                  text-[var(--foreground)]
-
-                  sm:text-[13px]
-                "
-              >
-                {t("fileTitle")}
-              </p>
-
-              <p
-                className="
-                  mt-0.5
-                  text-[10px] leading-4
-                  text-[var(--muted-foreground)]
-
-                  sm:text-[11px]
-                "
-              >
-                {t("fileDescription")}
-              </p>
-            </div>
-          </button>
-        ) : (
-          <div
-            className="
-              flex items-center
-              justify-between gap-3
-              rounded-lg
-              border border-[#c7d8e4]
-              bg-[#f7fafc]
-              px-3 py-2.5
-
-              sm:px-4
-              sm:py-3
-            "
-          >
-            <div className="flex min-w-0 items-center gap-2.5">
-              <FileText
-                className="
-                  size-4 shrink-0
+                  flex size-9
+                  shrink-0
+                  items-center
+                  justify-center
+                  rounded-lg
+                  bg-[#edf5f9]
                   text-[var(--primary)]
-                  sm:size-5
-                "
-              />
-
-              <span
-                className="
-                  truncate
-                  text-[12px] font-semibold
-                  sm:text-[13px]
                 "
               >
-                {file.name}
-              </span>
+                <FileText className="size-4" strokeWidth={1.8} />
+              </div>
+
+              <div className="min-w-0">
+                <p
+                  className="
+                    truncate
+                    text-[13px]
+                    font-bold
+                    text-[var(--foreground)]
+                  "
+                >
+                  {selectedFile.name}
+                </p>
+
+                <p
+                  className="
+                    mt-0.5
+                    text-[11px]
+                    text-[var(--muted-foreground)]
+                  "
+                >
+                  {formatFileSize(selectedFile.size)}
+                </p>
+              </div>
             </div>
 
             <button
               type="button"
-              aria-label={t("removeFile")}
-              onClick={() => {
-                setFile(null);
-
-                if (inputRef.current) {
-                  inputRef.current.value = "";
-                }
-              }}
+              onClick={removeFile}
+              disabled={isSubmitting}
+              aria-label={t("file.remove")}
               className="
-                flex size-8 shrink-0
-                items-center justify-center
+                flex size-9
+                shrink-0
+                items-center
+                justify-center
                 rounded-full
+                text-[#728692]
                 transition
+
                 hover:bg-white
+                hover:text-red-600
+
+                disabled:cursor-not-allowed
+                disabled:opacity-50
               "
             >
               <X className="size-4" />
@@ -361,49 +534,141 @@ export function SourcingForm() {
         )}
       </div>
 
-      {/* SUBMIT */}
-      <button
-        type="submit"
-        className="
-          mt-4
-          flex h-11 w-full
-          items-center justify-center gap-2
-          rounded-lg
-          bg-[var(--primary)]
-          px-4
-          text-[12px] font-extrabold
-          uppercase
-          tracking-[0.02em]
-          text-white
-          transition
-          hover:brightness-90
+      {/* STATUS */}
+      {isSuccess && (
+        <div
+          className="
+            mt-4
+            flex items-start
+            gap-3
+            rounded-lg
+            border border-emerald-200
+            bg-emerald-50
+            px-4 py-3
+          "
+        >
+          <CheckCircle2
+            className="
+              mt-0.5
+              size-5
+              shrink-0
+              text-emerald-600
+            "
+          />
 
-          sm:mt-5
-          sm:h-[52px]
-          sm:px-6
-          sm:text-[13px]
-        "
-      >
-        <Send className="size-4" />
-        {t("submit")}
-      </button>
+          <div>
+            <p className="text-[13px] font-extrabold text-emerald-900">
+              {t("success.title")}
+            </p>
 
-      {/* PRIVACY */}
+            <p className="mt-1 text-[12px] leading-5 text-emerald-800">
+              {t("success.description")}
+            </p>
+          </div>
+        </div>
+      )}
+
+      {error && (
+        <div
+          className="
+            mt-4
+            rounded-lg
+            border border-red-200
+            bg-red-50
+            px-4 py-3
+            text-[12px]
+            font-medium
+            leading-5
+            text-red-700
+          "
+        >
+          {error}
+        </div>
+      )}
+
+      {/* BOTTOM */}
       <div
         className="
-          mt-3
-          flex items-start gap-2
-          text-[10px] leading-4
-          text-[var(--muted-foreground)]
+          mt-5
+          grid gap-3
 
-          sm:mt-4
-          sm:text-[11px]
+          sm:grid-cols-[1fr_auto]
+          sm:items-center
         "
       >
-        <LockKeyhole className="mt-0.5 size-3 shrink-0 sm:size-3.5" />
+        <p
+          className="
+            text-[10px]
+            leading-4
+            text-[var(--muted-foreground)]
 
-        <span>{t("privacy")}</span>
+            sm:max-w-[520px]
+          "
+        >
+          {t("privacy")}
+        </p>
+
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="
+            inline-flex
+            h-11
+            w-full
+            items-center
+            justify-center
+            gap-2
+            rounded-lg
+            bg-[var(--primary)]
+            px-6
+            text-[12px]
+            font-extrabold
+            uppercase
+            tracking-[0.02em]
+            text-white
+            transition
+
+            hover:brightness-95
+
+            disabled:cursor-not-allowed
+            disabled:opacity-65
+
+            sm:w-auto
+            sm:min-w-[185px]
+          "
+        >
+          {isSubmitting ? (
+            <>
+              <Loader2
+                className="
+                  size-4
+                  animate-spin
+                "
+              />
+
+              {t("submitting")}
+            </>
+          ) : (
+            <>
+              <Send className="size-4" strokeWidth={1.8} />
+
+              {t("submit")}
+            </>
+          )}
+        </button>
       </div>
     </form>
   );
+}
+
+function formatFileSize(bytes: number) {
+  if (bytes < 1024) {
+    return `${bytes} B`;
+  }
+
+  if (bytes < 1024 * 1024) {
+    return `${(bytes / 1024).toFixed(1)} KB`;
+  }
+
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
 }
