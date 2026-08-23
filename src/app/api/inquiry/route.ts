@@ -142,27 +142,27 @@ export async function POST(request: Request) {
       </div>
     `;
 
-    const { error } = await resend.emails.send({
-      from: process.env.MAIL_FROM ?? "Teknomont <noreply@tmidc.pl>",
+    // const { error } = await resend.emails.send({
+    //   from: process.env.MAIL_FROM ?? "Teknomont <noreply@tmidc.pl>",
 
-      to: [process.env.MAIL_TO ?? "biuro@tmidc.pl"],
+    //   to: [process.env.MAIL_TO ?? "biuro@tmidc.pl"],
 
-      replyTo: email,
+    //   replyTo: email,
 
-      subject,
-      html,
+    //   subject,
+    //   html,
 
-      attachments: attachments.length > 0 ? attachments : undefined,
-    });
+    //   attachments: attachments.length > 0 ? attachments : undefined,
+    // });
 
-    if (error) {
-      console.error(error);
+    // if (error) {
+    //   console.error(error);
 
-      return NextResponse.json(
-        { error: "Nie udało się wysłać wiadomości." },
-        { status: 500 },
-      );
-    }
+    //   return NextResponse.json(
+    //     { error: "Nie udało się wysłać wiadomości." },
+    //     { status: 500 },
+    //   );
+    // }
 
     return NextResponse.json({
       success: true,
