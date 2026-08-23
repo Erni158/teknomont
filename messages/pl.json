@@ -569,5 +569,102 @@
         }
       }
     }
+  },
+  "ContactPage": {
+    "metadata": {
+      "title": "Kontakt | Teknomont",
+      "description": "Skontaktuj się z Teknomont. Zapytania produktowe, sourcing komponentów, większe zamówienia i współpraca B2B."
+    },
+    "hero": {
+      "eyebrow": "Kontakt",
+      "title": "Porozmawiajmy o",
+      "accent": "Twoim zapotrzebowaniu",
+      "description": "Masz konkretny indeks, pytanie o dostępność albo planujesz większe zamówienie? Napisz lub zadzwoń. Postaramy się szybko wskazać najlepszą drogę realizacji.",
+      "items": {
+        "email": {
+          "title": "E-mail",
+          "description": "zapytania i wyceny"
+        },
+        "phone": {
+          "title": "Telefon",
+          "description": "bezpośredni kontakt"
+        },
+        "inquiry": {
+          "title": "Formularz",
+          "description": "szybkie zapytanie"
+        }
+      }
+    },
+    "contact": {
+      "eyebrow": "Dane kontaktowe",
+      "title": "Skontaktuj się",
+      "accent": "z nami",
+      "description": "W sprawach produktowych, sourcingowych i handlowych możesz skorzystać z formularza lub skontaktować się z nami bezpośrednio.",
+      "details": {
+        "email": "E-mail",
+        "phone": "Telefon",
+        "address": "Adres",
+        "company": "Firma"
+      }
+    },
+    "form": {
+      "title": "Wyślij wiadomość",
+      "description": "Opisz krótko czego potrzebujesz. Jeżeli dotyczy to konkretnego produktu, możesz podać numer katalogowy w treści wiadomości.",
+      "name": {
+        "label": "Imię i nazwisko",
+        "placeholder": "Jan Kowalski"
+      },
+      "company": {
+        "label": "Firma",
+        "placeholder": "Nazwa firmy"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "jan@firma.pl"
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "+48..."
+      },
+      "message": {
+        "label": "Wiadomość",
+        "placeholder": "Opisz swoje zapytanie..."
+      },
+      "submit": "Wyślij wiadomość",
+      "submitting": "Wysyłanie...",
+      "privacy": "Wysyłając formularz, zgadzasz się na kontakt w sprawie przesłanego zapytania.",
+      "success": {
+        "title": "Wiadomość została wysłana",
+        "description": "Dziękujemy. Skontaktujemy się z Tobą po zapoznaniu się z zapytaniem."
+      },
+      "error": "Nie udało się wysłać wiadomości. Spróbuj ponownie.",
+      "validation": {
+        "name": "Podaj imię i nazwisko.",
+        "emailRequired": "Podaj adres e-mail.",
+        "emailInvalid": "Podaj poprawny adres e-mail.",
+        "message": "Napisz krótką wiadomość."
+      }
+    },
+    "links": {
+      "title": "Szukasz czegoś konkretnego?",
+      "description": "Możesz również przejść bezpośrednio do odpowiedniej części naszej oferty.",
+      "items": {
+        "shop": {
+          "title": "Sklep internetowy",
+          "description": "Sprawdź dostępne produkty i bieżącą ofertę.",
+          "cta": "Przejdź do sklepu"
+        },
+        "sourcing": {
+          "title": "Sourcing komponentów",
+          "description": "Masz trudno dostępny indeks lub potrzebujesz alternatywnego źródła?",
+          "cta": "Zobacz sourcing"
+        },
+        "b2b": {
+          "title": "Oferta B2B",
+          "description": "Kupujesz większe ilości lub planujesz cykliczne dostawy?",
+          "cta": "Zobacz ofertę B2B"
+        }
+      }
+    }
   }
 }

@@ -569,5 +569,102 @@
         }
       }
     }
+  },
+  "ContactPage": {
+    "metadata": {
+      "title": "Contact | Teknomont",
+      "description": "Contact Teknomont regarding products, component sourcing, larger orders and B2B cooperation."
+    },
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Let's discuss",
+      "accent": "your requirements",
+      "description": "Have a specific part number, an availability question or a larger planned order? Send us a message or call us and we will help identify the best way forward.",
+      "items": {
+        "email": {
+          "title": "Email",
+          "description": "inquiries & quotes"
+        },
+        "phone": {
+          "title": "Phone",
+          "description": "direct contact"
+        },
+        "inquiry": {
+          "title": "Form",
+          "description": "quick inquiry"
+        }
+      }
+    },
+    "contact": {
+      "eyebrow": "Contact details",
+      "title": "Get in",
+      "accent": "touch",
+      "description": "For product, sourcing and commercial inquiries, use the form or contact us directly.",
+      "details": {
+        "email": "Email",
+        "phone": "Phone",
+        "address": "Address",
+        "company": "Company"
+      }
+    },
+    "form": {
+      "title": "Send us a message",
+      "description": "Tell us briefly what you need. If your inquiry concerns a specific product, include the part number in the message.",
+      "name": {
+        "label": "Name",
+        "placeholder": "John Smith"
+      },
+      "company": {
+        "label": "Company",
+        "placeholder": "Company name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "john@company.com"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "+48..."
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Describe your inquiry..."
+      },
+      "submit": "Send message",
+      "submitting": "Sending...",
+      "privacy": "By submitting the form, you agree to be contacted regarding your inquiry.",
+      "success": {
+        "title": "Message sent",
+        "description": "Thank you. We will review your inquiry and get back to you."
+      },
+      "error": "We couldn't send your message. Please try again.",
+      "validation": {
+        "name": "Enter your name.",
+        "emailRequired": "Enter your email address.",
+        "emailInvalid": "Enter a valid email address.",
+        "message": "Enter a short message."
+      }
+    },
+    "links": {
+      "title": "Looking for something specific?",
+      "description": "You can also go directly to the relevant part of our offer.",
+      "items": {
+        "shop": {
+          "title": "Online store",
+          "description": "Browse available products and our current online range.",
+          "cta": "Go to the store"
+        },
+        "sourcing": {
+          "title": "Component sourcing",
+          "description": "Have a hard-to-find part number or need an alternative source?",
+          "cta": "Explore sourcing"
+        },
+        "b2b": {
+          "title": "B2B offer",
+          "description": "Buying larger quantities or planning recurring deliveries?",
+          "cta": "Explore B2B"
+        }
+      }
+    }
   }
 }

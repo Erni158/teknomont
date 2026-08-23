@@ -1,9 +1,41 @@
-import {getTranslations, setRequestLocale} from 'next-intl/server';
-import {PageIntro} from '@/components/layout/page-intro';
+import type { Metadata } from "next";
 
-export default async function ContactPage({params}: {params: Promise<{locale: string}>}) {
-  const {locale} = await params;
+import { getTranslations, setRequestLocale } from "next-intl/server";
+
+import { ContactHero } from "@/components/contact/contact-hero";
+import { ContactSection } from "@/components/contact/contact-section";
+import { ContactLinksSection } from "@/components/contact/contact-links-section";
+
+type Props = {
+  params: Promise<{
+    locale: string;
+  }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+
+  const t = await getTranslations({
+    locale,
+    namespace: "ContactPage.metadata",
+  });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
+
+export default async function ContactPage({ params }: Props) {
+  const { locale } = await params;
+
   setRequestLocale(locale);
-  const t = await getTranslations('Pages.contact');
-  return <PageIntro eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />;
+
+  return (
+    <main>
+      <ContactHero />
+      <ContactSection />
+      <ContactLinksSection />
+    </main>
+  );
 }
