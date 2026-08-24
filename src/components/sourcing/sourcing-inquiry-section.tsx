@@ -7,7 +7,15 @@ export async function SourcingInquirySection() {
   const t = await getTranslations("SourcingPage.inquiry");
 
   return (
-    <section id="zapytanie" className="bg-white pb-14 sm:pb-16 lg:pb-20">
+    <section
+      id="zapytanie"
+      className="
+        bg-white
+        pt-10 pb-14
+        sm:pt-12 sm:pb-16
+        lg:pt-14 lg:pb-20
+      "
+    >
       <Container maxWidth={1440}>
         <div
           className="
