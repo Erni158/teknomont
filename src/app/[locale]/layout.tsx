@@ -9,6 +9,7 @@ import { notFound } from "next/navigation";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { routing } from "@/i18n/routing";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -73,6 +74,9 @@ export default async function LocaleLayout({
           </div>
         </NextIntlClientProvider>
       </body>
+      {process.env.NEXT_PUBLIC_GA_ID && (
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+      )}
     </html>
   );
 }
