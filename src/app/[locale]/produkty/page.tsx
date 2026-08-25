@@ -6,6 +6,7 @@ import { ProductsHero } from "@/components/products/products-hero";
 import { ProductCategoriesSection } from "@/components/products/product-categories-section";
 import { ProductSupportSection } from "@/components/products/product-support-section";
 import { ProductsB2BSection } from "@/components/products/products-b2b-section";
+import { getLocalizedAlternates } from "@/lib/seo";
 
 type Props = {
   params: Promise<{
@@ -24,6 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: t("title"),
     description: t("description"),
+    alternates: getLocalizedAlternates(locale, "/produkty"),
   };
 }
 

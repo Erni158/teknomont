@@ -6,6 +6,7 @@ import { SourcingUseCases } from "@/components/sourcing/sourcing-use-cases";
 // import { SourcingCapabilities } from "@/components/sourcing/sourcing-capabilities";
 import { SourcingProcess } from "@/components/sourcing/sourcing-process";
 import { SourcingInquirySection } from "@/components/sourcing/sourcing-inquiry-section";
+import { getLocalizedAlternates } from "@/lib/seo";
 
 type Props = {
   params: Promise<{
@@ -24,6 +25,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: t("title"),
     description: t("description"),
+
+    alternates: getLocalizedAlternates(locale, "/sourcing"),
   };
 }
 

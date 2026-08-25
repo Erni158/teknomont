@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { AboutHero } from "@/components/about/about-hero";
 import { AboutScopeSection } from "@/components/about/about-scope-section";
 import { AboutContactSection } from "@/components/about/about-contact-section";
+import { getLocalizedAlternates } from "@/lib/seo";
 
 type Props = {
   params: Promise<{
@@ -23,6 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: t("title"),
     description: t("description"),
+    alternates: getLocalizedAlternates(locale, "/o-firmie"),
   };
 }
 

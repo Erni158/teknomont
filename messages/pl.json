@@ -249,7 +249,7 @@
   },
   "SourcingPage": {
     "metadata": {
-      "title": "Sourcing komponentów | Teknomont",
+      "title": "Sourcing komponentów",
       "description": "Sourcing trudno dostępnych komponentów, zamienników i dostaw seryjnych. Weryfikacja dostawców, próbki i import pod konkretne zapotrzebowanie."
     },
     "hero": {
@@ -360,7 +360,7 @@
   },
   "B2BPage": {
     "metadata": {
-      "title": "Oferta B2B | Teknomont",
+      "title": "Oferta B2B",
       "description": "Indywidualne warunki dla większych zamówień komponentów. Dostawy seryjne, harmonogramy, zapas magazynowy i sourcing B2B."
     },
     "hero": {
@@ -470,7 +470,7 @@
   },
   "ProductsPage": {
     "metadata": {
-      "title": "Produkty | Teknomont",
+      "title": "Produkty",
       "description": "Złącza, terminale, przewody oraz materiały do produkcji wiązek i urządzeń przemysłowych. Sprzedaż detaliczna i dostawy B2B."
     },
     "hero": {
@@ -565,7 +565,7 @@
   },
   "ContactPage": {
     "metadata": {
-      "title": "Kontakt | Teknomont",
+      "title": "Kontakt",
       "description": "Skontaktuj się z Teknomont. Zapytania produktowe, sourcing komponentów, większe zamówienia i współpraca B2B."
     },
     "hero": {
@@ -689,7 +689,7 @@
   },
   "AboutPage": {
     "metadata": {
-      "title": "O firmie | Teknomont",
+      "title": "O firmie",
       "description": "Teknomont — dystrybucja złączy i komponentów dla przemysłu, dostawy B2B oraz globalny sourcing komponentów."
     },
     "hero": {

@@ -1,10 +1,6 @@
-import Image from "next/image";
-import { Send, ShoppingCart } from "lucide-react";
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Container } from "@/components/layout/container";
-import { buttonClassName } from "@/components/ui/button";
-import { Link } from "@/i18n/navigation";
-import { HeroBenefits } from "@/components/home/hero-benefits";
+
 import { CategoriesSection } from "@/components/home/categories-section";
 import { SourcingSection } from "@/components/home/sourcing-section";
 import { HowItWorksSection } from "@/components/home/how-it-works-section";
@@ -12,14 +8,39 @@ import { WhyTeknomontSection } from "@/components/home/why-teknomont-section";
 import { B2BCtaSection } from "@/components/home/b2b-cta-section";
 import { HeroSection } from "@/components/home/hero-section";
 
-export default async function HomePage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+import { getLocalizedAlternates } from "@/lib/seo";
+
+type Props = {
+  params: Promise<{
+    locale: string;
+  }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
+
+  const t = await getTranslations({
+    locale,
+    namespace: "Metadata",
+  });
+
+  return {
+    // "absolute" omija template "%s | Teknomont"
+    // z głównego layoutu.
+    title: {
+      absolute: t("title"),
+    },
+
+    description: t("description"),
+
+    alternates: getLocalizedAlternates(locale),
+  };
+}
+
+export default async function HomePage({ params }: Props) {
+  const { locale } = await params;
+
   setRequestLocale(locale);
-  const t = await getTranslations("Home");
 
   return (
     <main>

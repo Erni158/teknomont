@@ -32,19 +32,13 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL(
-      process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://tmidc.pl",
+      process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://www.tmidc.pl",
     ),
     title: {
       default: t("title"),
       template: `%s | ${t("brand")}`,
     },
     description: t("description"),
-    alternates: {
-      languages: {
-        pl: "/pl",
-        en: "/en",
-      },
-    },
   };
 }
 
