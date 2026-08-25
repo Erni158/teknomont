@@ -14,6 +14,25 @@ type Props = {
   }>;
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Strona główna",
+      item: "https://www.tmidc.pl/pl",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Sourcing",
+      item: "https://www.tmidc.pl/pl/sourcing",
+    },
+  ],
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
 
@@ -41,6 +60,12 @@ export default async function SourcingPage({ params }: Props) {
       <SourcingUseCases />
       <SourcingProcess />
       <SourcingInquirySection />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+      />
     </main>
   );
 }

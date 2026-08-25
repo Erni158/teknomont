@@ -16,6 +16,23 @@ type Props = {
   }>;
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.tmidc.pl/#organization",
+
+  name: "Teknomont",
+  url: "https://www.tmidc.pl",
+
+  logo: {
+    "@type": "ImageObject",
+    url: "https://www.tmidc.pl/images/logo.png",
+  },
+
+  description:
+    "Dystrybucja złączy i komponentów dla przemysłu, dostawy B2B oraz globalny sourcing komponentów.",
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
 
@@ -50,6 +67,12 @@ export default async function HomePage({ params }: Props) {
       <HowItWorksSection />
       <WhyTeknomontSection />
       <B2BCtaSection />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationJsonLd),
+        }}
+      />
     </main>
   );
 }
