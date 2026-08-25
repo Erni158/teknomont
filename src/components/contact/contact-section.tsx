@@ -6,10 +6,9 @@ import { Container } from "@/components/layout/container";
 import { ContactForm } from "@/components/contact/contact-form";
 
 const contactDetails = {
-  email: "TU_WPISZ_EMAIL",
-  phone: "TU_WPISZ_TELEFON",
-  phoneHref: "TU_WPISZ_TELEFON_DO_TEL",
-  address: "TU_WPISZ_ADRES",
+  email: "kontakt@tmidc.pl",
+  phone: "+48 781 702 472",
+  phoneHref: "+48733003882",
 };
 
 export async function ContactSection() {
@@ -161,16 +160,6 @@ export async function ContactSection() {
                   "
                 >
                   <MapPin className="size-4" />
-                </div>
-
-                <div>
-                  <p className="text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#7c8e9a]">
-                    {t("details.address")}
-                  </p>
-
-                  <p className="mt-1 text-[14px] font-extrabold leading-6 text-[var(--foreground)]">
-                    {contactDetails.address}
-                  </p>
                 </div>
               </div>
 

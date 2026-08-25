@@ -90,11 +90,11 @@ export async function Footer() {
             </li>
             <li>
               <a
-                href="mailto:sklep@tmidc.pl"
+                href="mailto:kontakt@tmidc.pl"
                 className="flex items-start gap-3 transition-colors hover:text-white"
               >
                 <Mail className="mt-0.5 size-4 shrink-0" />
-                sklep@tmidc.pl
+                kontakt@tmidc.pl
               </a>
             </li>
             <li className="flex items-start gap-3">
