@@ -1,9 +1,41 @@
-import {getTranslations, setRequestLocale} from 'next-intl/server';
-import {PageIntro} from '@/components/layout/page-intro';
+import type { Metadata } from "next";
 
-export default async function AboutPage({params}: {params: Promise<{locale: string}>}) {
-  const {locale} = await params;
+import { getTranslations, setRequestLocale } from "next-intl/server";
+
+import { AboutHero } from "@/components/about/about-hero";
+import { AboutScopeSection } from "@/components/about/about-scope-section";
+import { AboutContactSection } from "@/components/about/about-contact-section";
+
+type Props = {
+  params: Promise<{
+    locale: string;
+  }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+
+  const t = await getTranslations({
+    locale,
+    namespace: "AboutPage.metadata",
+  });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
+
+export default async function AboutPage({ params }: Props) {
+  const { locale } = await params;
+
   setRequestLocale(locale);
-  const t = await getTranslations('Pages.about');
-  return <PageIntro eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />;
+
+  return (
+    <main>
+      <AboutHero />
+      <AboutScopeSection />
+      <AboutContactSection />
+    </main>
+  );
 }

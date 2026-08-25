@@ -686,5 +686,62 @@
         "description": "Pozwalają na pomiar skuteczności reklam i mogą być wykorzystywane przez usługi reklamowe Google."
       }
     }
+  },
+  "AboutPage": {
+    "metadata": {
+      "title": "O firmie | Teknomont",
+      "description": "Teknomont — dystrybucja złączy i komponentów dla przemysłu, dostawy B2B oraz globalny sourcing komponentów."
+    },
+    "hero": {
+      "eyebrow": "O firmie",
+      "title": "Dystrybucja komponentów",
+      "accent": "dla przemysłu",
+      "description": "Teknomont działa od 1998 roku. Dostarczamy złącza, terminale i materiały wykorzystywane w produkcji wiązek oraz urządzeń przemysłowych. Obsługujemy zarówno bieżące zamówienia, jak i większe dostawy B2B oraz sourcing trudno dostępnych komponentów.",
+      "facts": {
+        "experience": {
+          "title": "Od 1998 roku",
+          "description": "doświadczenie w dystrybucji"
+        },
+        "b2b": {
+          "title": "Klienci B2B",
+          "description": "firmy produkcyjne i przemysł"
+        },
+        "distribution": {
+          "title": "Dystrybucja",
+          "description": "komponenty i materiały"
+        },
+        "sourcing": {
+          "title": "Globalny sourcing",
+          "description": "źródła dostaw na całym świecie"
+        }
+      }
+    },
+    "scope": {
+      "eyebrow": "Zakres działalności",
+      "title": "Czym się",
+      "accent": "zajmujemy?",
+      "description": "Koncentrujemy się na dostawach komponentów dla firm produkcyjnych oraz klientów wykorzystujących je w bieżącej działalności.",
+      "items": {
+        "distribution": {
+          "title": "Dystrybucja komponentów",
+          "description": "Złącza, terminale, przewody i materiały do produkcji wiązek oraz urządzeń przemysłowych."
+        },
+        "b2b": {
+          "title": "Dostawy B2B",
+          "description": "Większe partie, cykliczne zamówienia, indywidualne warunki oraz możliwość ustalenia zapasu."
+        },
+        "sourcing": {
+          "title": "Sourcing",
+          "description": "Wyszukiwanie trudno dostępnych indeksów, zamienników i alternatywnych źródeł dostaw na rynku globalnym."
+        }
+      }
+    },
+    "contact": {
+      "eyebrow": "Kontakt",
+      "title": "Masz konkretne zapotrzebowanie?",
+      "description": "Wyślij nam numer części, listę indeksów albo opisz czego szukasz. Sprawdzimy dostępne możliwości.",
+      "contactCta": "Skontaktuj się",
+      "sourcingCta": "Sourcing"
+    }
   }
 }

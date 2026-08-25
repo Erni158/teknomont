@@ -686,5 +686,62 @@
         "description": "Allows advertising effectiveness measurement and may be used by Google advertising services."
       }
     }
+  },
+  "AboutPage": {
+    "metadata": {
+      "title": "About us | Teknomont",
+      "description": "Teknomont — distribution of connectors and industrial components, B2B supply and global component sourcing."
+    },
+    "hero": {
+      "eyebrow": "About us",
+      "title": "Component distribution",
+      "accent": "for industry",
+      "description": "Teknomont has been operating since 1998. We supply connectors, terminals and materials used in wire harness and industrial equipment manufacturing. We support both day-to-day purchasing, larger B2B orders and sourcing of hard-to-find components.",
+      "facts": {
+        "experience": {
+          "title": "Since 1998",
+          "description": "distribution experience"
+        },
+        "b2b": {
+          "title": "B2B customers",
+          "description": "manufacturing and industry"
+        },
+        "distribution": {
+          "title": "Distribution",
+          "description": "components and materials"
+        },
+        "sourcing": {
+          "title": "Global sourcing",
+          "description": "supply sources worldwide"
+        }
+      }
+    },
+    "scope": {
+      "eyebrow": "What we do",
+      "title": "Our main",
+      "accent": "activities",
+      "description": "We focus on component supply for manufacturing companies and businesses using these products in their day-to-day operations.",
+      "items": {
+        "distribution": {
+          "title": "Component distribution",
+          "description": "Connectors, terminals, wires and materials for wire harness and industrial equipment manufacturing."
+        },
+        "b2b": {
+          "title": "B2B supply",
+          "description": "Larger quantities, recurring orders, individual terms and the option to agree dedicated stock."
+        },
+        "sourcing": {
+          "title": "Sourcing",
+          "description": "Hard-to-find part numbers, alternatives and additional supply sources on the global market."
+        }
+      }
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Have a specific requirement?",
+      "description": "Send us a part number, list of components or a short description of what you need. We will check the available options.",
+      "contactCta": "Contact us",
+      "sourcingCta": "Sourcing"
+    }
   }
 }
