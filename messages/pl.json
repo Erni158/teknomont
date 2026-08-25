@@ -42,7 +42,7 @@
       },
       "sourcing": {
         "title": "Sourcing",
-        "description": "w Azji"
+        "description": "globalne źródła"
       },
       "quote": {
         "title": "Szybka wycena",
@@ -77,7 +77,7 @@
       "description": "Prześlij nam numer katalogowy, zdjęcie lub dokumentację. Sprawdzimy dostępność, alternatywnego producenta oraz możliwość sprowadzenia potrzebnej partii.",
       "benefits": {
         "sourcing": {
-          "title": "Sourcing w Chinach i Azji",
+          "title": "Sourcing",
           "description": "Bezpośredni kontakt z dostawcami"
         },
         "quality": {
@@ -172,7 +172,7 @@
         },
         "sourcing": {
           "title": "Sourcing globalny",
-          "description": "Bezpośrednie kontakty z dostawcami w Chinach i pozostałych krajach Azji."
+          "description": "Bezpośrednie kontakty z dostawcami i źródłami na całym świecie."
         },
         "support": {
           "title": "Wsparcie techniczne",
@@ -256,13 +256,13 @@
       "eyebrow": "Sourcing komponentów",
       "title": "Znajdziemy komponent, którego",
       "accent": "nie możesz dostać",
-      "description": "Prześlij numer katalogowy, zdjęcie lub dokumentację. Sprawdzimy dostępność, alternatywnych producentów oraz możliwość sprowadzenia potrzebnej ilości bezpośrednio od dostawców w Azji.",
+      "description": "Prześlij numer katalogowy, zdjęcie lub dokumentację. Sprawdzimy dostępność, alternatywnych producentów oraz możliwości dostawy z globalnych źródeł.",
       "primaryCta": "Wyślij komponent do wyceny",
       "secondaryCta": "Zobacz jak działamy",
       "benefits": {
         "suppliers": {
-          "title": "Bezpośredni sourcing",
-          "description": "Chiny i Azja"
+          "title": "Sourcing",
+          "description": "globalne źródła"
         },
         "alternatives": {
           "title": "Zamienniki",

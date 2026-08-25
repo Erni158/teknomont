@@ -1,31 +1,27 @@
-import {defineRouting} from 'next-intl/routing';
+import { defineRouting } from "next-intl/routing";
 
 export const routing = defineRouting({
-  locales: ['pl', 'en'],
-  defaultLocale: 'pl',
-  localePrefix: 'always',
+  locales: ["pl", "en"],
+  defaultLocale: "pl",
+  localePrefix: "always",
   pathnames: {
-    '/': '/',
-    '/produkty': {
-      pl: '/produkty',
-      en: '/products'
+    "/": "/",
+    "/produkty": {
+      pl: "/produkty",
+      en: "/products",
     },
-    '/producenci': {
-      pl: '/producenci',
-      en: '/manufacturers'
+    "/sourcing": "/sourcing",
+    "/oferta-b2b": {
+      pl: "/oferta-b2b",
+      en: "/b2b",
     },
-    '/sourcing': '/sourcing',
-    '/oferta-b2b': {
-      pl: '/oferta-b2b',
-      en: '/b2b'
+    "/o-firmie": {
+      pl: "/o-firmie",
+      en: "/about",
     },
-    '/o-firmie': {
-      pl: '/o-firmie',
-      en: '/about'
+    "/kontakt": {
+      pl: "/kontakt",
+      en: "/contact",
     },
-    '/kontakt': {
-      pl: '/kontakt',
-      en: '/contact'
-    }
-  }
+  },
 });

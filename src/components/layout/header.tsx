@@ -21,7 +21,6 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { href: "/produkty", key: "products" },
-  { href: "/producenci", key: "manufacturers" },
   { href: "/sourcing", key: "sourcing" },
   { href: "/oferta-b2b", key: "b2b" },
   { href: "/o-firmie", key: "about" },

@@ -42,7 +42,7 @@
       },
       "sourcing": {
         "title": "Sourcing",
-        "description": "across Asia"
+        "description": "global sources"
       },
       "quote": {
         "title": "Fast quotes",
@@ -77,8 +77,8 @@
       "description": "Send us a part number, photo or technical documentation. We will check availability, alternative manufacturers and sourcing options for the required quantity.",
       "benefits": {
         "sourcing": {
-          "title": "Sourcing in China & Asia",
-          "description": "Direct contact with suppliers"
+          "title": "Global sourcing",
+          "description": "Direct contact with suppliers worldwide"
         },
         "quality": {
           "title": "Quality verification",
@@ -109,7 +109,7 @@
         "file": {
           "label": "Attachment",
           "action": "Add photo or documentation",
-          "description": "PDF, JPG, PNG, DOC, XLS — max. 3,5 MB",
+          "description": "PDF, JPG, PNG, DOC, XLS — max. 3.5 MB",
           "remove": "Remove file"
         },
         "submit": "Send inquiry",
@@ -172,7 +172,7 @@
         },
         "sourcing": {
           "title": "Global sourcing",
-          "description": "Direct relationships with suppliers in China and other Asian markets."
+          "description": "Direct relationships with suppliers and sourcing partners worldwide."
         },
         "support": {
           "title": "Technical support",
@@ -256,13 +256,13 @@
       "eyebrow": "Component sourcing",
       "title": "We find the component you",
       "accent": "can't source",
-      "description": "Send us a part number, photo or technical documentation. We will check availability, alternative manufacturers and sourcing options directly from suppliers in Asia.",
+      "description": "Send us a part number, photo or technical documentation. We will check availability, alternative manufacturers and supply options through global sourcing channels.",
       "primaryCta": "Request a sourcing quote",
       "secondaryCta": "See how it works",
       "benefits": {
         "suppliers": {
-          "title": "Direct sourcing",
-          "description": "China & Asia"
+          "title": "Sourcing",
+          "description": "global suppliers"
         },
         "alternatives": {
           "title": "Alternatives",

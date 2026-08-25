@@ -8,7 +8,6 @@ const locales = ["pl", "en"] as const;
 const routes = [
   "",
   "/produkty",
-  "/producenci",
   "/sourcing",
   "/oferta-b2b",
   "/o-firmie",
