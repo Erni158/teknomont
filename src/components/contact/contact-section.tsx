@@ -159,28 +159,6 @@ export async function ContactSection() {
                     text-[var(--primary)]
                   "
                 >
-                  <MapPin className="size-4" />
-                </div>
-              </div>
-
-              <div
-                className="
-                  flex items-start gap-4
-                  rounded-xl
-                  border border-[#dce6ec]
-                  bg-[#f8fafb]
-                  p-4
-                "
-              >
-                <div
-                  className="
-                    flex size-10 shrink-0
-                    items-center justify-center
-                    rounded-full
-                    bg-white
-                    text-[var(--primary)]
-                  "
-                >
                   <Building2 className="size-4" />
                 </div>
 
