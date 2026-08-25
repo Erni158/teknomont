@@ -109,7 +109,7 @@
         "file": {
           "label": "Załącznik",
           "action": "Dodaj zdjęcie lub dokumentację",
-          "description": "PDF, JPG, PNG, DOC, XLS — maks. 10 MB",
+          "description": "PDF, JPG, PNG, DOC, XLS — maks. 3,5 MB",
           "remove": "Usuń plik"
         },
         "submit": "Wyślij zapytanie",
@@ -657,6 +657,33 @@
           "description": "Kupujesz większe ilości lub planujesz cykliczne dostawy?",
           "cta": "Zobacz ofertę B2B"
         }
+      }
+    }
+  },
+  "CookieConsent": {
+    "title": "Dbamy o Twoją prywatność",
+    "description": "Używamy niezbędnych plików cookie do prawidłowego działania strony. Za Twoją zgodą możemy również korzystać z Google Analytics do pomiaru ruchu oraz narzędzi marketingowych.",
+    "acceptAll": "Akceptuj wszystkie",
+    "necessaryOnly": "Tylko niezbędne",
+    "settings": "Ustawienia",
+    "settingsTitle": "Ustawienia plików cookie",
+    "settingsDescription": "Możesz zdecydować, na jakie rodzaje plików cookie i przetwarzania danych wyrażasz zgodę.",
+    "back": "Wróć",
+    "close": "Zamknij ustawienia",
+    "save": "Zapisz ustawienia",
+    "settingsLink": "Ustawienia cookies",
+    "categories": {
+      "necessary": {
+        "title": "Niezbędne",
+        "description": "Są wymagane do prawidłowego działania strony i zapisania Twoich preferencji dotyczących zgody."
+      },
+      "analytics": {
+        "title": "Analityczne",
+        "description": "Pozwalają nam korzystać z Google Analytics i sprawdzać, w jaki sposób użytkownicy korzystają ze strony."
+      },
+      "marketing": {
+        "title": "Marketingowe",
+        "description": "Pozwalają na pomiar skuteczności reklam i mogą być wykorzystywane przez usługi reklamowe Google."
       }
     }
   }

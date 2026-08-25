@@ -109,7 +109,7 @@
         "file": {
           "label": "Attachment",
           "action": "Add photo or documentation",
-          "description": "PDF, JPG, PNG, DOC, XLS — max. 10 MB",
+          "description": "PDF, JPG, PNG, DOC, XLS — max. 3,5 MB",
           "remove": "Remove file"
         },
         "submit": "Send inquiry",
@@ -657,6 +657,33 @@
           "description": "Buying larger quantities or planning recurring deliveries?",
           "cta": "Explore B2B"
         }
+      }
+    }
+  },
+  "CookieConsent": {
+    "title": "We respect your privacy",
+    "description": "We use necessary cookies to ensure the website works correctly. With your consent, we may also use Google Analytics to measure traffic and marketing tools.",
+    "acceptAll": "Accept all",
+    "necessaryOnly": "Necessary only",
+    "settings": "Settings",
+    "settingsTitle": "Cookie settings",
+    "settingsDescription": "You can decide which types of cookies and data processing you consent to.",
+    "back": "Back",
+    "close": "Close settings",
+    "save": "Save settings",
+    "settingsLink": "Cookie settings",
+    "categories": {
+      "necessary": {
+        "title": "Necessary",
+        "description": "Required for the website to function correctly and to remember your consent preferences."
+      },
+      "analytics": {
+        "title": "Analytics",
+        "description": "Allows us to use Google Analytics to understand how visitors use the website."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "description": "Allows advertising effectiveness measurement and may be used by Google advertising services."
       }
     }
   }
