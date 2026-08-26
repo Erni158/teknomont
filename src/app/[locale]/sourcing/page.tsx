@@ -44,8 +44,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: t("title"),
     description: t("description"),
-
     alternates: getLocalizedAlternates(locale, "/sourcing"),
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: `https://www.tmidc.pl/${locale}/sourcing`,
+      siteName: "Teknomont",
+      type: "website",
+
+      images: [
+        {
+          url: "/images/sourcing.png",
+          width: 1200,
+          height: 630,
+          alt: "Sourcing komponentów — Teknomont",
+        },
+      ],
+    },
   };
 }
 

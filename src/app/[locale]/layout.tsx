@@ -39,6 +39,18 @@ export async function generateMetadata({
       template: `%s | ${t("brand")}`,
     },
     description: t("description"),
+    openGraph: {
+      siteName: "Teknomont",
+      type: "website",
+      images: [
+        {
+          url: "/images/hero.png",
+          width: 1200,
+          height: 630,
+          alt: "Teknomont",
+        },
+      ],
+    },
   };
 }
 
