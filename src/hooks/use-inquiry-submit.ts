@@ -1,5 +1,6 @@
 "use client";
 
+import { trackLead } from "@/lib/analytics";
 import { useCallback, useState } from "react";
 
 type InquiryType = "sourcing" | "contact" | "b2b";
@@ -58,6 +59,8 @@ export function useInquirySubmit() {
         if (!response.ok) {
           throw new Error(result.error ?? fallbackError);
         }
+
+        trackLead(type);
 
         setStatus("success");
 
