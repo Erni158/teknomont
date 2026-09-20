@@ -7,12 +7,7 @@ import { B2BForWhoSection } from "@/components/b2b/b2b-for-who-section";
 import { B2BCooperationSection } from "@/components/b2b/b2b-cooperation-section";
 import { B2BInquirySection } from "@/components/b2b/b2b-inquiry-section";
 import { getLocalizedAlternates } from "@/lib/seo";
-
-type Props = {
-  params: Promise<{
-    locale: string;
-  }>;
-};
+import { Props } from "@/lib/types";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;

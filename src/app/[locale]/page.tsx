@@ -9,12 +9,7 @@ import { B2BCtaSection } from "@/components/home/b2b-cta-section";
 import { HeroSection } from "@/components/home/hero-section";
 
 import { getLocalizedAlternates } from "@/lib/seo";
-
-type Props = {
-  params: Promise<{
-    locale: string;
-  }>;
-};
+import { Props } from "@/lib/types";
 
 const organizationJsonLd = {
   "@context": "https://schema.org",

@@ -7,12 +7,7 @@ import { SourcingUseCases } from "@/components/sourcing/sourcing-use-cases";
 import { SourcingProcess } from "@/components/sourcing/sourcing-process";
 import { SourcingInquirySection } from "@/components/sourcing/sourcing-inquiry-section";
 import { getLocalizedAlternates } from "@/lib/seo";
-
-type Props = {
-  params: Promise<{
-    locale: string;
-  }>;
-};
+import { Props } from "@/lib/types";
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",

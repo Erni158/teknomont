@@ -7,12 +7,7 @@ import { ProductCategoriesSection } from "@/components/products/product-categori
 import { ProductSupportSection } from "@/components/products/product-support-section";
 import { ProductsB2BSection } from "@/components/products/products-b2b-section";
 import { getLocalizedAlternates } from "@/lib/seo";
-
-type Props = {
-  params: Promise<{
-    locale: string;
-  }>;
-};
+import { Props } from "@/lib/types";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;

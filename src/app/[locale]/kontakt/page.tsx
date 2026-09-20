@@ -6,12 +6,7 @@ import { ContactHero } from "@/components/contact/contact-hero";
 import { ContactSection } from "@/components/contact/contact-section";
 import { ContactLinksSection } from "@/components/contact/contact-links-section";
 import { getLocalizedAlternates } from "@/lib/seo";
-
-type Props = {
-  params: Promise<{
-    locale: string;
-  }>;
-};
+import { Props } from "@/lib/types";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;

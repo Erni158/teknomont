@@ -1,51 +1,65 @@
 import type { MetadataRoute } from "next";
 
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://www.tmidc.pl";
+import { getLocalizedUrl } from "@/lib/seo";
 
 const routes = [
-  "",
-  "/produkty",
-  "/sourcing",
-  "/oferta-b2b",
-  "/o-firmie",
-  "/kontakt",
+  {
+    pathname: "/",
+    changeFrequency: "weekly",
+    priority: 1,
+  },
+  {
+    pathname: "/produkty",
+    changeFrequency: "monthly",
+    priority: 0.9,
+  },
+  {
+    pathname: "/sourcing",
+    changeFrequency: "monthly",
+    priority: 0.9,
+  },
+  {
+    pathname: "/oferta-b2b",
+    changeFrequency: "monthly",
+    priority: 0.8,
+  },
+  {
+    pathname: "/o-firmie",
+    changeFrequency: "monthly",
+    priority: 0.8,
+  },
+  {
+    pathname: "/kontakt",
+    changeFrequency: "monthly",
+    priority: 0.8,
+  },
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return routes.flatMap((route) => {
-    const plUrl = `${SITE_URL}/pl${route}`;
-    const enUrl = `${SITE_URL}/en${route}`;
+  return routes.flatMap(({ pathname, changeFrequency, priority }) => {
+    const plUrl = getLocalizedUrl("pl", pathname);
 
-    const priority =
-      route === ""
-        ? 1
-        : route === "/produkty" || route === "/sourcing"
-          ? 0.9
-          : 0.8;
+    const enUrl = getLocalizedUrl("en", pathname);
+
+    const alternates = {
+      languages: {
+        pl: plUrl,
+        en: enUrl,
+      },
+    };
 
     return [
       {
         url: plUrl,
-        changeFrequency: route === "" ? "weekly" : "monthly",
+        changeFrequency,
         priority,
-        alternates: {
-          languages: {
-            pl: plUrl,
-            en: enUrl,
-          },
-        },
+        alternates,
       },
       {
         url: enUrl,
-        changeFrequency: route === "" ? "weekly" : "monthly",
+        changeFrequency,
         priority,
-        alternates: {
-          languages: {
-            pl: plUrl,
-            en: enUrl,
-          },
-        },
+        alternates,
       },
     ];
   });
