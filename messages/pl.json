@@ -775,8 +775,8 @@
     "title": "Twoje połączenie.",
     "accent": "Z każdej strony.",
     "description": "Dobierz parametry taśmy i zakończenia. Obejrzyj połączenie w 3D, a gotową specyfikację prześlij nam do wyceny.",
-    "download": "Pobierz specyfikację",
-    "downloaded": "Specyfikacja pobrana",
+    "download": "Pobierz specyfikację PDF",
+    "downloaded": "PDF pobrany",
     "settings": "Konfiguracja",
     "reset": "Przywróć domyślne parametry",
     "summary": "Twoja specyfikacja",
@@ -867,6 +867,8 @@
       "title": "Skonfiguruj przewód taśmowy IDC w 3D",
       "description": "Wybierz liczbę żył, długość i zakończenia. Obejrzyj model z każdej strony, pobierz specyfikację lub prześlij ją do wyceny.",
       "cta": "Otwórz IDC Studio"
-    }
+    },
+    "downloading": "Przygotowuję PDF…",
+    "downloadError": "Nie udało się przygotować PDF. Spróbuj ponownie."
   }
 }

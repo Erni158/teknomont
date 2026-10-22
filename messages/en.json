@@ -775,8 +775,8 @@
     "title": "Your connection.",
     "accent": "From every angle.",
     "description": "Choose cable parameters and terminations. Explore the connection in 3D, then send us the specification for a quotation.",
-    "download": "Download specification",
-    "downloaded": "Specification downloaded",
+    "download": "Download PDF specification",
+    "downloaded": "PDF downloaded",
     "settings": "Configuration",
     "reset": "Restore default parameters",
     "summary": "Your specification",
@@ -867,6 +867,8 @@
       "title": "Configure an IDC ribbon cable in 3D",
       "description": "Choose conductor count, length and terminations. Explore the model from every angle, download the specification or request a quotation.",
       "cta": "Open IDC Studio"
-    }
+    },
+    "downloading": "Preparing PDF…",
+    "downloadError": "The PDF could not be created. Please try again."
   }
 }
