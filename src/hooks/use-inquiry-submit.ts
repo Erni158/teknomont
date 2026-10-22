@@ -3,7 +3,7 @@
 import { trackLead } from "@/lib/analytics";
 import { useCallback, useState } from "react";
 
-type InquiryType = "sourcing" | "contact" | "b2b";
+type InquiryType = "sourcing" | "contact" | "b2b" | "idc";
 
 type SubmitInquiryOptions = {
   type: InquiryType;

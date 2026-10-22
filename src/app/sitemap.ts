@@ -14,6 +14,11 @@ const routes = [
     priority: 0.9,
   },
   {
+    pathname: "/konfigurator-idc",
+    changeFrequency: "monthly",
+    priority: 0.8,
+  },
+  {
     pathname: "/sourcing",
     changeFrequency: "monthly",
     priority: 0.9,

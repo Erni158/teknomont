@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+import { IdcConfiguratorSection } from "@/components/products/idc-configurator-section";
 import { ProductsHero } from "@/components/products/products-hero";
 import { ProductCategoriesSection } from "@/components/products/product-categories-section";
 import { ProductExamplesSection } from "@/components/products/product-examples-section";
@@ -61,6 +62,7 @@ export default async function ProductsPage({ params }: Props) {
   return (
     <main>
       <ProductsHero />
+      <IdcConfiguratorSection />
       <ProductCategoriesSection />
       <ProductExamplesSection />
       <ProductSupportSection />

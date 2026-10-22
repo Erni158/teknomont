@@ -1,4 +1,4 @@
-export type LeadType = "sourcing" | "contact" | "b2b";
+export type LeadType = "sourcing" | "contact" | "b2b" | "idc";
 
 type WindowWithGtag = Window & {
   gtag?: (

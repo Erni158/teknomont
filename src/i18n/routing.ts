@@ -10,6 +10,7 @@ export const routing = defineRouting({
       pl: "/produkty",
       en: "/products",
     },
+    "/konfigurator-idc": { pl: "/konfigurator-idc", en: "/idc-configurator" },
     "/sourcing": "/sourcing",
     "/oferta-b2b": {
       pl: "/oferta-b2b",

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { formatIdcSpecification, idcConfigurationSchema } from "@/lib/idc";
 
 export const runtime = "nodejs";
 
@@ -42,11 +43,11 @@ export async function POST(request: Request) {
 
     const company = String(formData.get("company") ?? "").trim();
 
-    const partNumber = String(formData.get("partNumber") ?? "").trim();
+    let partNumber = String(formData.get("partNumber") ?? "").trim();
 
-    const quantity = String(formData.get("quantity") ?? "").trim();
+    let quantity = String(formData.get("quantity") ?? "").trim();
 
-    const message = String(formData.get("message") ?? "").trim();
+    let message = String(formData.get("message") ?? "").trim();
 
     const file = formData.get("file");
 
@@ -71,6 +72,40 @@ export async function POST(request: Request) {
           status: 400,
         },
       );
+    }
+
+    if (type === "idc") {
+      let rawConfiguration: unknown;
+      try {
+        rawConfiguration = JSON.parse(
+          String(formData.get("configuration") ?? ""),
+        );
+      } catch {
+        return NextResponse.json(
+          { error: "Niepoprawna konfiguracja IDC." },
+          { status: 400 },
+        );
+      }
+      const config = idcConfigurationSchema.safeParse(rawConfiguration);
+      if (
+        !config.success ||
+        !name ||
+        name.length > 160 ||
+        message.length > 6000
+      ) {
+        return NextResponse.json(
+          { error: "Sprawdź dane zapytania i konfigurację IDC." },
+          { status: 400 },
+        );
+      }
+      const locale = formData.get("locale") === "en" ? "en" : "pl";
+      partNumber = `IDC / ${config.data.pins} żył / ${config.data.length} mm`;
+      quantity = String(config.data.quantity);
+      message =
+        formatIdcSpecification(config.data, locale) +
+        (message
+          ? `\n\n${locale === "pl" ? "Uwagi klienta" : "Customer notes"}:\n${message}`
+          : "");
     }
 
     // ATTACHMENT
@@ -101,9 +136,13 @@ export async function POST(request: Request) {
 
     const isSourcing = type === "sourcing";
 
-    const subject = isSourcing
-      ? `Zapytanie sourcingowe: ${partNumber || "nowe zapytanie"}`
-      : `Zapytanie ze strony: ${name || email}`;
+    const isIdc = type === "idc";
+
+    const subject = isIdc
+      ? `Zapytanie IDC Studio: ${partNumber}`
+      : isSourcing
+        ? `Zapytanie sourcingowe: ${partNumber || "nowe zapytanie"}`
+        : `Zapytanie ze strony: ${name || email}`;
 
     const html = `
       <!doctype html>
@@ -164,9 +203,11 @@ export async function POST(request: Request) {
                   "
                 >
                   ${
-                    isSourcing
-                      ? "Nowe zapytanie sourcingowe"
-                      : "Nowe zapytanie ze strony"
+                    isIdc
+                      ? "Nowe zapytanie IDC Studio"
+                      : isSourcing
+                        ? "Nowe zapytanie sourcingowe"
+                        : "Nowe zapytanie ze strony"
                   }
                 </h1>
               </div>
