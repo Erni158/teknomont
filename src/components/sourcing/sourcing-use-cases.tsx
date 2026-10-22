@@ -1,144 +1,49 @@
 import { Boxes, PackageX, RefreshCw } from "lucide-react";
-
 import { getTranslations } from "next-intl/server";
 
 import { Container } from "@/components/layout/container";
+import { SectionHeading } from "@/components/ui/section-heading";
 
 const items = [
-  {
-    key: "availability",
-    icon: PackageX,
-  },
-  {
-    key: "alternative",
-    icon: RefreshCw,
-  },
-  {
-    key: "series",
-    icon: Boxes,
-  },
+  { key: "availability", icon: PackageX },
+  { key: "alternative", icon: RefreshCw },
+  { key: "series", icon: Boxes },
 ] as const;
 
 export async function SourcingUseCases() {
   const t = await getTranslations("SourcingPage.useCases");
 
   return (
-    <section className="bg-white py-14 sm:py-16 lg:py-20">
-      <Container maxWidth={1180}>
-        {/* HEADING */}
-        <div className="mx-auto max-w-[680px] text-center">
-          <p
-            className="
-              text-xs
-              font-extrabold
-              uppercase
-              tracking-[0.16em]
-              text-[var(--primary)]
-            "
-          >
-            {t("eyebrow")}
-          </p>
-
-          <h2
-            className="
-              mt-3
-              text-3xl
-              font-extrabold
-              tracking-[-0.04em]
-              text-[var(--foreground)]
-
-              sm:text-4xl
-            "
-          >
-            {t("title")}{" "}
-            <span className="text-[var(--primary)]">{t("accent")}</span>
-          </h2>
-
-          <p
-            className="
-              mx-auto
-              mt-4
-              max-w-[600px]
-              text-[14px]
-              leading-6
-              text-[var(--muted-foreground)]
-
-              sm:text-[15px]
-            "
-          >
-            {t("description")}
-          </p>
-        </div>
-
-        {/* ITEMS */}
-        <div
-          className="
-            mt-10
-            grid
-
-            md:grid-cols-3
-
-            lg:mt-12
-          "
-        >
-          {items.map(({ key, icon: Icon }, index) => (
-            <div
+    <section className="bg-white py-14 sm:py-20">
+      <Container>
+        <SectionHeading
+          align="left"
+          title={t("title")}
+          accent={t("accent")}
+          description={t("description")}
+        />
+        <div className="mt-9 grid gap-5 md:grid-cols-3">
+          {items.map(({ key, icon: Icon }) => (
+            <article
               key={key}
-              className={`
-                py-6
-
-                md:px-7
-                md:py-3
-
-                ${
-                  index !== items.length - 1
-                    ? `
-                      border-b border-[#dfe8ee]
-
-                      md:border-b-0
-                      md:border-r
-                    `
-                    : ""
-                }
-              `}
+              className="rounded-2xl border border-[var(--border)] p-6"
             >
-              <div
-                className="
-                  flex size-11
-                  items-center justify-center
-                  rounded-full
-                  border border-[#d0e0e9]
-                  bg-[#f4f8fa]
-                  text-[var(--primary)]
-                "
-              >
-                <Icon className="size-5" strokeWidth={1.7} />
-              </div>
-
-              <h3
-                className="
-                  mt-4
-                  text-[17px]
-                  font-extrabold
-                  tracking-[-0.025em]
-                  text-[var(--foreground)]
-                "
-              >
+              <Icon
+                className="size-7 text-[var(--primary)]"
+                strokeWidth={1.6}
+                aria-hidden="true"
+              />
+              <h3 className="mt-5 text-xl font-extrabold">
                 {t(`items.${key}.title`)}
               </h3>
-
-              <p
-                className="
-                  mt-2
-                  max-w-[300px]
-                  text-[13px]
-                  leading-6
-                  text-[var(--muted-foreground)]
-                "
-              >
+              <p className="mt-3 text-sm leading-7 text-[var(--muted-foreground)]">
                 {t(`items.${key}.description`)}
               </p>
-            </div>
+              <p className="mt-5 border-t border-[var(--border)] pt-4 text-sm leading-6">
+                <span className="font-bold">{t("includeLabel")} </span>
+                {t(`items.${key}.include`)}
+              </p>
+            </article>
           ))}
         </div>
       </Container>

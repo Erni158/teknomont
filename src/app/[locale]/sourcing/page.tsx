@@ -3,30 +3,12 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { SourcingHero } from "@/components/sourcing/sourcing-hero";
 import { SourcingUseCases } from "@/components/sourcing/sourcing-use-cases";
-// import { SourcingCapabilities } from "@/components/sourcing/sourcing-capabilities";
 import { SourcingProcess } from "@/components/sourcing/sourcing-process";
+import { SourcingPreparation } from "@/components/sourcing/sourcing-preparation";
+import { SourcingFaq } from "@/components/sourcing/sourcing-faq";
 import { SourcingInquirySection } from "@/components/sourcing/sourcing-inquiry-section";
-import { getLocalizedAlternates } from "@/lib/seo";
+import { getLocalizedAlternates, getLocalizedUrl } from "@/lib/seo";
 import { Props } from "@/lib/types";
-
-const breadcrumbJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Strona główna",
-      item: "https://www.tmidc.pl/pl",
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "Sourcing",
-      item: "https://www.tmidc.pl/pl/sourcing",
-    },
-  ],
-};
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -41,18 +23,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t("description"),
     alternates: getLocalizedAlternates(locale, "/sourcing"),
     openGraph: {
-      title: t("title"),
+      title: `${t("title")} | Teknomont`,
       description: t("description"),
-      url: `https://www.tmidc.pl/${locale}/sourcing`,
+      url: getLocalizedUrl(locale, "/sourcing"),
       siteName: "Teknomont",
       type: "website",
 
       images: [
         {
-          url: "/images/sourcing.png",
+          url: "/images/sourcing-hero.png",
           width: 1200,
           height: 630,
-          alt: "Sourcing komponentów — Teknomont",
+          alt:
+            locale === "pl"
+              ? "Sourcing komponentów — Teknomont"
+              : "Component sourcing — Teknomont",
         },
       ],
     },
@@ -64,11 +49,32 @@ export default async function SourcingPage({ params }: Props) {
 
   setRequestLocale(locale);
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: locale === "pl" ? "Strona główna" : "Home",
+        item: getLocalizedUrl(locale, "/"),
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Sourcing",
+        item: getLocalizedUrl(locale, "/sourcing"),
+      },
+    ],
+  };
+
   return (
     <main>
       <SourcingHero />
       <SourcingUseCases />
       <SourcingProcess />
+      <SourcingPreparation />
+      <SourcingFaq />
       <SourcingInquirySection />
       <script
         type="application/ld+json"

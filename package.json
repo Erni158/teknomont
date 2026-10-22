@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && npm run check:translations",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "check:translations": "node scripts/check-rendered-translations.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.0",

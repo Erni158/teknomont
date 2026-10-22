@@ -1,3 +1,4 @@
+import { Check } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
 import { Container } from "@/components/layout/container";
@@ -7,84 +8,39 @@ export async function SourcingInquirySection() {
   const t = await getTranslations("SourcingPage.inquiry");
 
   return (
-    <section
-      id="zapytanie"
-      className="
-        bg-white
-        pt-10 pb-14
-        sm:pt-12 sm:pb-16
-        lg:pt-14 lg:pb-20
-      "
-    >
-      <Container maxWidth={1440}>
-        <div
-          className="
-            rounded-[24px]
-            border border-[#dce8f0]
-            bg-[#f2f7fa]
-
-            px-4 py-7
-
-            sm:px-7
-            sm:py-9
-
-            lg:px-10
-            lg:py-10
-
-            xl:px-12
-          "
-        >
-          <div className="mx-auto max-w-[1120px]">
-            {/* INTRO */}
-            <div className="max-w-[720px]">
-              <p
-                className="
-                  text-xs
-                  font-extrabold
-                  uppercase
-                  tracking-[0.16em]
-                  text-[var(--primary)]
-                "
+    <section id="zapytanie" className="scroll-mt-28 bg-white py-14 sm:py-20">
+      <Container className="grid items-start gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-14">
+        <div>
+          <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-[var(--primary)]">
+            {t("eyebrow")}
+          </p>
+          <h2 className="mt-4 text-3xl font-extrabold tracking-[-0.035em] sm:text-4xl">
+            {t("title")}{" "}
+            <span className="text-[var(--primary)]">{t("accent")}</span>
+          </h2>
+          <p className="mt-5 text-sm leading-7 text-[var(--muted-foreground)]">
+            {t("description")}
+          </p>
+          <ul className="mt-6 space-y-4">
+            {(["part", "quantity", "requirements"] as const).map((key) => (
+              <li
+                key={key}
+                className="flex items-start gap-3 text-sm leading-6"
               >
-                {t("eyebrow")}
-              </p>
-
-              <h2
-                className="
-                  mt-3
-                  text-3xl
-                  font-extrabold
-                  tracking-[-0.04em]
-                  text-[var(--foreground)]
-
-                  sm:text-4xl
-                "
-              >
-                {t("title")}{" "}
-                <span className="text-[var(--primary)]">{t("accent")}</span>
-              </h2>
-
-              <p
-                className="
-                  mt-3
-                  max-w-[680px]
-                  text-[14px]
-                  leading-6
-                  text-[var(--muted-foreground)]
-
-                  sm:text-[15px]
-                  sm:leading-7
-                "
-              >
-                {t("description")}
-              </p>
-            </div>
-
-            {/* FORM */}
-            <div className="mt-7 sm:mt-8">
-              <SourcingForm />
-            </div>
-          </div>
+                <Check
+                  className="mt-1 size-4 shrink-0 text-[var(--primary)]"
+                  aria-hidden="true"
+                />
+                <span>{t(`items.${key}`)}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 border-t border-[var(--border)] pt-5 text-sm leading-6 text-[var(--muted-foreground)]">
+            {t("attachmentNote")}
+          </p>
+        </div>
+        <div className="min-w-0">
+          <SourcingForm />
         </div>
       </Container>
     </section>

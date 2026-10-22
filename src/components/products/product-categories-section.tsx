@@ -1,160 +1,94 @@
 import {
-  Boxes,
+  ArrowUpRight,
   Cable,
-  Circle,
-  Component,
   Layers,
-  Package,
   PlugZap,
-  ShieldCheck,
+  ToggleRight,
 } from "lucide-react";
-
 import { getTranslations } from "next-intl/server";
 
 import { Container } from "@/components/layout/container";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { catalogCategories } from "@/lib/catalog";
 
-const categories = [
-  {
-    key: "connectors",
-    icon: PlugZap,
-  },
-  {
-    key: "terminals",
-    icon: Component,
-  },
-  {
-    key: "seals",
-    icon: ShieldCheck,
-  },
-  {
-    key: "wires",
-    icon: Cable,
-  },
-  {
-    key: "sleeves",
-    icon: Layers,
-  },
-  {
-    key: "heatShrink",
-    icon: Package,
-  },
-  {
-    key: "grommets",
-    icon: Circle,
-  },
-  {
-    key: "accessories",
-    icon: Boxes,
-  },
-] as const;
+const icons = {
+  connectors: PlugZap,
+  wires: Cable,
+  protection: Layers,
+  controls: ToggleRight,
+};
 
 export async function ProductCategoriesSection() {
   const t = await getTranslations("ProductsPage.categories");
 
   return (
-    <section className="bg-white py-16 sm:py-20 lg:py-24">
+    <section id="oferta" className="scroll-mt-28 bg-white py-14 sm:py-20">
       <Container>
         <SectionHeading
+          align="left"
           title={t("title")}
           accent={t("accent")}
           description={t("description")}
         />
-
-        <div
-          className="
-            mt-10
-            grid gap-3
-
-            sm:grid-cols-2
-            sm:gap-4
-
-            lg:mt-12
-            lg:grid-cols-4
-          "
-        >
-          {categories.map(({ key, icon: Icon }) => (
-            <div
-              key={key}
-              className="
-                group
-                flex min-h-[210px]
-                flex-col
-                rounded-2xl
-                border border-[#dfe8ee]
-                bg-white
-                p-5
-                transition duration-300
-
-                hover:-translate-y-1
-                hover:border-[#c9dce8]
-                hover:shadow-[0_14px_40px_rgba(7,29,51,0.07)]
-
-                sm:p-6
-              "
-            >
-              <div
-                className="
-                  flex size-12
-                  items-center justify-center
-                  rounded-xl
-                  border border-[#d7e4ec]
-                  bg-[#f3f8fb]
-                  text-[var(--primary)]
-                  transition-colors
-
-                  group-hover:bg-[#eaf4f9]
-                "
+        <div className="mt-9 grid gap-5 lg:grid-cols-2">
+          {catalogCategories.map(({ key, links }, index) => {
+            const Icon = icons[key];
+            return (
+              <article
+                key={key}
+                className="flex flex-col rounded-2xl border border-[var(--border)] p-6 sm:p-8"
               >
-                <Icon className="size-6" strokeWidth={1.6} />
-              </div>
-
-              <h3
-                className="
-                  mt-5
-                  text-[17px]
-                  font-extrabold
-                  tracking-[-0.025em]
-                  text-[var(--foreground)]
-                "
-              >
-                {t(`items.${key}.title`)}
-              </h3>
-
-              <p
-                className="
-                  mt-2
-                  text-[13px]
-                  leading-6
-                  text-[var(--muted-foreground)]
-                "
-              >
-                {t(`items.${key}.description`)}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-8 flex justify-center">
-          <a
-            href="https://sklep.tmidc.pl"
-            className="
-              inline-flex h-12
-              items-center justify-center
-              rounded-lg
-              border border-[var(--primary)]
-              px-6
-              text-[13px]
-              font-extrabold
-              uppercase
-              text-[var(--primary)]
-              transition
-
-              hover:bg-[#f2f7fa]
-            "
-          >
-            {t("shopCta")}
-          </a>
+                <div className="flex items-center justify-between gap-4">
+                  <Icon
+                    className="size-7 text-[var(--primary)]"
+                    strokeWidth={1.6}
+                    aria-hidden="true"
+                  />
+                  <span
+                    className="text-xs font-bold tracking-widest text-[var(--muted-foreground)]"
+                    aria-hidden="true"
+                  >
+                    0{index + 1}
+                  </span>
+                </div>
+                <h3 className="mt-5 text-2xl font-extrabold tracking-[-0.025em]">
+                  {t(`items.${key}.title`)}
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-[var(--muted-foreground)]">
+                  {t(`items.${key}.description`)}
+                </p>
+                <dl className="mt-5 space-y-4 border-t border-[var(--border)] pt-5 text-sm leading-6">
+                  <div>
+                    <dt className="font-bold">{t("examplesLabel")}</dt>
+                    <dd className="mt-1 text-[var(--muted-foreground)]">
+                      {t(`items.${key}.examples`)}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="font-bold">{t("selectionLabel")}</dt>
+                    <dd className="mt-1 text-[var(--muted-foreground)]">
+                      {t(`items.${key}.selection`)}
+                    </dd>
+                  </div>
+                </dl>
+                <div className="mt-auto flex flex-wrap gap-x-6 gap-y-1 pt-5">
+                  {links.map((link) => (
+                    <a
+                      key={link.key}
+                      href={link.href}
+                      className="inline-flex min-h-11 items-center gap-2 text-sm font-bold text-[var(--primary)] underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4"
+                    >
+                      {t(`links.${link.key}`)}
+                      <ArrowUpRight
+                        className="size-4 shrink-0"
+                        aria-hidden="true"
+                      />
+                    </a>
+                  ))}
+                </div>
+              </article>
+            );
+          })}
         </div>
       </Container>
     </section>

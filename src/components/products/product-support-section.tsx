@@ -1,146 +1,81 @@
-import Image from "next/image";
-
-import { ArrowRight, Search } from "lucide-react";
-
+import { ArrowRight, FileText, ShoppingCart } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
 import { Container } from "@/components/layout/container";
+import { buttonClassName } from "@/components/ui/button";
+import { SectionHeading } from "@/components/ui/section-heading";
 import { Link } from "@/i18n/navigation";
 
 export async function ProductSupportSection() {
-  const t = await getTranslations("ProductsPage.support");
+  const t = await getTranslations("ProductsPage.ordering");
 
   return (
-    <section className="bg-[#f6f9fb] py-14 sm:py-18 lg:py-20">
-      <Container maxWidth={1440}>
-        <div
-          className="
-            grid overflow-hidden
-            rounded-[24px]
-            border border-[#dce7ed]
-            bg-white
-
-            lg:grid-cols-[0.95fr_1.05fr]
-          "
-        >
-          {/* IMAGE */}
-          <div
-            className="
-              relative
-              min-h-[260px]
-              overflow-hidden
-
-              sm:min-h-[340px]
-
-              lg:min-h-[430px]
-            "
-          >
-            <Image
-              src="/images/magnifier.png"
-              alt=""
-              fill
-              className="object-cover object-center"
-              sizes="(min-width: 1024px) 50vw, 100vw"
+    <section className="bg-white py-14 sm:py-20">
+      <Container>
+        <SectionHeading
+          align="left"
+          title={t("title")}
+          accent={t("accent")}
+          description={t("description")}
+        />
+        <div className="mt-9 grid gap-5 lg:grid-cols-2">
+          <article className="flex flex-col rounded-2xl border border-[var(--border)] bg-[#f5f8fa] p-6 sm:p-8">
+            <ShoppingCart
+              className="size-7 text-[var(--primary)]"
+              aria-hidden="true"
             />
-
-            <div
-              className="
-                pointer-events-none
-                absolute inset-0
-                bg-gradient-to-r
-                from-transparent
-                to-white/10
-              "
-            />
-          </div>
-
-          {/* CONTENT */}
-          <div
-            className="
-              flex flex-col
-              justify-center
-              px-5 py-8
-
-              sm:px-8
-              sm:py-10
-
-              lg:px-12
-
-              xl:px-16
-            "
-          >
-            <div
-              className="
-                flex size-11
-                items-center justify-center
-                rounded-full
-                border border-[#cfdee8]
-                bg-[#f4f8fb]
-                text-[var(--primary)]
-              "
-            >
-              <Search className="size-5" strokeWidth={1.7} />
-            </div>
-
-            <p
-              className="
-                mt-5
-                text-xs
-                font-extrabold
-                uppercase
-                tracking-[0.16em]
-                text-[var(--primary)]
-              "
-            >
-              {t("eyebrow")}
+            <h3 className="mt-5 text-2xl font-extrabold">{t("shop.title")}</h3>
+            <p className="mt-4 text-sm leading-7 text-[var(--muted-foreground)]">
+              {t("shop.description")}
             </p>
-
-            <h2
-              className="
-                mt-3
-                text-3xl
-                font-extrabold
-                leading-[1.05]
-                tracking-[-0.04em]
-                text-[var(--foreground)]
-
-                sm:text-4xl
-              "
+            <a
+              href="https://sklep.tmidc.pl/"
+              className={buttonClassName("outline", "mt-7 self-start py-3")}
             >
-              {t("title")}{" "}
-              <span className="text-[var(--primary)]">{t("accent")}</span>
-            </h2>
-
-            <p
-              className="
-                mt-5
-                max-w-[570px]
-                text-[15px]
-                leading-7
-                text-[var(--muted-foreground)]
-
-                sm:text-base
-              "
-            >
-              {t("description")}
+              {t("shop.cta")}
+              <ArrowRight className="size-4" aria-hidden="true" />
+            </a>
+          </article>
+          <article className="flex flex-col rounded-2xl bg-[#07345d] p-6 text-white sm:p-8">
+            <FileText className="size-7 text-[#a5d6f5]" aria-hidden="true" />
+            <h3 className="mt-5 text-2xl font-extrabold">
+              {t("inquiry.title")}
+            </h3>
+            <p className="mt-4 text-sm leading-7 text-white/80">
+              {t("inquiry.description")}
             </p>
-
+            <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-white/90">
+              {(["part", "quantity", "requirements"] as const).map((key) => (
+                <li key={key}>{t(`inquiry.items.${key}`)}</li>
+              ))}
+            </ul>
+            <Link
+              href="/kontakt"
+              className={buttonClassName("outline", "mt-7 self-start py-3")}
+            >
+              {t("inquiry.cta")}
+              <ArrowRight className="size-4" aria-hidden="true" />
+            </Link>
+          </article>
+        </div>
+        <div className="mt-7 flex flex-col gap-4 border-t border-[var(--border)] pt-6 text-sm leading-7 sm:flex-row sm:items-start sm:justify-between">
+          <p className="max-w-2xl text-[var(--muted-foreground)]">
+            {t("support")}
+          </p>
+          <div className="flex shrink-0 flex-wrap gap-x-6 gap-y-2">
             <Link
               href="/sourcing"
-              className="
-                mt-7
-                inline-flex
-                items-center gap-2
-                self-start
-                text-[14px]
-                font-extrabold
-                text-[var(--primary)]
-
-                hover:underline
-              "
+              className="inline-flex min-h-11 items-center gap-2 font-bold text-[var(--primary)] hover:underline"
             >
-              {t("cta")}
-              <ArrowRight className="size-4" />
+              {t("sourcingCta")}
+              <ArrowRight className="size-4" aria-hidden="true" />
+            </Link>
+            <Link
+              href="/oferta-b2b"
+              className="inline-flex min-h-11 items-center gap-2 font-bold text-[var(--primary)] hover:underline"
+            >
+              {t("b2bCta")}
+              <ArrowRight className="size-4" aria-hidden="true" />
             </Link>
           </div>
         </div>
