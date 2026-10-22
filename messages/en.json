@@ -869,6 +869,29 @@
       "cta": "Open IDC Studio"
     },
     "downloading": "Preparing PDF…",
-    "downloadError": "The PDF could not be created. Please try again."
+    "downloadError": "The PDF could not be created. Please try again.",
+    "heading": "IDC ribbon cable configurator",
+    "guide": {
+      "title": "Specifying an IDC ribbon cable",
+      "introduction": "A ribbon cable has parallel conductors arranged in a flat strip. IDC connectors make electrical contact by displacing the conductor insulation. The configurator helps specify the cable and its terminations and prepare a specification for a quotation.",
+      "items": {
+        "pitch": {
+          "title": "Cable and connector pitch",
+          "description": "The configurator uses a 1.27 mm spacing between adjacent conductor centres. The illustrative connector has two contact rows on a 2.54 × 2.54 mm pitch. These dimensions describe different parts of the connection. Compatibility depends on the actual part number and documentation."
+        },
+        "length": {
+          "title": "Measuring length L",
+          "description": "Length L is specified between the connector axes. Where no connector is selected, the reference is the cable end. Include the required tolerance or attach a dimensioned drawing. We will confirm the measurement reference and tolerances before production."
+        },
+        "ends": {
+          "title": "Ends A/B and pinout",
+          "description": "A and B identify the two cable ends. Same-side or opposite-side orientation describes the housings; the pinout defines the electrical connections. Include the required contact arrangement in your notes or drawing. For custom connectors, enter the manufacturer and full part numbers."
+        },
+        "inquiry": {
+          "title": "Information for a quotation",
+          "description": "Provide the conductor count, length, terminations and quantity. The configurator shows a 28 AWG cable with PVC insulation. Use the form to describe other parameters, delivery needs and recurring quantities. Parts and feasibility will be confirmed after reviewing the specification."
+        }
+      }
+    }
   }
 }

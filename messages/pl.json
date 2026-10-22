@@ -869,6 +869,29 @@
       "cta": "Otwórz IDC Studio"
     },
     "downloading": "Przygotowuję PDF…",
-    "downloadError": "Nie udało się przygotować PDF. Spróbuj ponownie."
+    "downloadError": "Nie udało się przygotować PDF. Spróbuj ponownie.",
+    "heading": "Konfigurator przewodów taśmowych IDC",
+    "guide": {
+      "title": "Dobór przewodu taśmowego IDC",
+      "introduction": "Przewód taśmowy (ribbon cable) ma żyły ułożone równolegle w płaskiej taśmie. W złączach IDC styki nacinają izolację i łączą się z przewodnikami. Konfigurator pomaga określić parametry przewodu i jego zakończeń oraz przygotować specyfikację do wyceny.",
+      "items": {
+        "pitch": {
+          "title": "Raster taśmy i złącza",
+          "description": "W konfiguratorze odstęp między osiami sąsiednich żył wynosi 1,27 mm. Poglądowe złącze ma dwa rzędy styków o rastrze 2,54 × 2,54 mm. To wymiary różnych elementów połączenia. Zgodność konkretnego złącza z taśmą wymaga sprawdzenia numeru części i dokumentacji."
+        },
+        "length": {
+          "title": "Pomiar długości L",
+          "description": "Długość L określamy między osiami złączy. Przy zakończeniu bez złącza punktem odniesienia jest koniec taśmy. W zapytaniu podaj wymaganą tolerancję lub dołącz rysunek z wymiarami. Sposób pomiaru i tolerancje potwierdzimy przed realizacją."
+        },
+        "ends": {
+          "title": "Zakończenia A/B i pinout",
+          "description": "A i B oznaczają dwa końce przewodu. Ułożenie zgodne lub przeciwne pokazuje położenie obudów; schemat połączeń elektrycznych określa pinout. Wymagany układ styków podaj w uwagach lub na rysunku. Dla własnych złączy wpisz producenta i pełne numery części."
+        },
+        "inquiry": {
+          "title": "Dane potrzebne do wyceny",
+          "description": "Podaj liczbę żył, długość, zakończenia i ilość. W konfiguratorze przedstawiamy taśmę 28 AWG z izolacją PVC. Inne parametry, wymagany termin i zapotrzebowanie na kolejne partie opisz w formularzu. Dobór części i możliwość wykonania potwierdzimy po sprawdzeniu specyfikacji."
+        }
+      }
+    }
   }
 }

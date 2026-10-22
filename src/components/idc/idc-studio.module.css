@@ -68,8 +68,12 @@
   line-height: 1.12;
   margin: 13px 0 12px;
 }
-.intro h1 > span {
+.tagline {
+  margin-bottom: 12px;
   color: var(--studio-blue);
+  font-size: 20px;
+  font-weight: 650;
+  line-height: 1.5;
 }
 .description {
   font-size: 14px;
@@ -1106,5 +1110,72 @@
   }
   .downloadError {
     text-align: left;
+  }
+}
+
+.guide {
+  margin-top: 24px;
+  padding: 32px;
+  border: 1px solid var(--studio-line);
+  border-radius: 13px;
+  background: white;
+}
+.guide h2 {
+  font-size: 26px;
+  font-weight: 750;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+}
+.guideIntro {
+  max-width: 1040px;
+  margin-top: 14px;
+  color: #5c6e84;
+  font-size: 14px;
+  line-height: 1.9;
+}
+.guideGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 36px;
+  margin-top: 26px;
+}
+.guideArticle {
+  border-top: 1px solid var(--studio-line);
+  padding-top: 18px;
+}
+.guideArticle h3 {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.guideArticle p {
+  margin-top: 8px;
+  color: #5c6e84;
+  font-size: 13px;
+  line-height: 1.9;
+}
+@media (max-width: 850px) {
+  .guide {
+    padding: 28px;
+  }
+  .guide h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 620px) {
+  .tagline {
+    font-size: 18px;
+  }
+  .guide {
+    margin-top: 18px;
+    padding: 22px 18px;
+  }
+  .guide h2 {
+    font-size: 23px;
+  }
+  .guideGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
   }
 }

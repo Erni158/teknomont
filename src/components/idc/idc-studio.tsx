@@ -186,11 +186,10 @@ export function IdcStudio() {
               <span />
               {t("eyebrow")}
             </p>
-            <h1>
-              {t("title")}
-              <br />
-              <span>{t("accent")}</span>
-            </h1>
+            <h1>{t("heading")}</h1>
+            <p className={s.tagline}>
+              {t("title")} {t("accent")}
+            </p>
             <p className={s.description}>{t("description")}</p>
           </div>
           <div className={s.downloadActions}>
@@ -474,6 +473,19 @@ export function IdcStudio() {
             </div>
           </aside>
         </div>
+
+        <section className={s.guide} aria-labelledby="idc-guide-title">
+          <h2 id="idc-guide-title">{t("guide.title")}</h2>
+          <p className={s.guideIntro}>{t("guide.introduction")}</p>
+          <div className={s.guideGrid}>
+            {(["pitch", "length", "ends", "inquiry"] as const).map((topic) => (
+              <article key={topic} className={s.guideArticle}>
+                <h3>{t(`guide.items.${topic}.title`)}</h3>
+                <p>{t(`guide.items.${topic}.description`)}</p>
+              </article>
+            ))}
+          </div>
+        </section>
 
         <section className={s.inquiry} aria-labelledby="idc-inquiry-title">
           <div className={s.inquiryIntro}>
