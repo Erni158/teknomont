@@ -249,113 +249,123 @@
   },
   "SourcingPage": {
     "metadata": {
-      "title": "Component sourcing | Teknomont",
-      "description": "Sourcing of hard-to-find components, alternatives and series supply. Supplier verification, samples and import tailored to your requirements."
+      "title": "Connector and industrial component sourcing",
+      "description": "Ask about a hard-to-find part, an alternative component or a larger quantity. See which details to send to Teknomont and attach your documentation."
     },
     "hero": {
       "eyebrow": "Component sourcing",
-      "title": "We find the component you",
-      "accent": "can't source",
-      "description": "Send us a part number, photo or technical documentation. We will check availability, alternative manufacturers and supply options through global sourcing channels.",
-      "primaryCta": "Request a sourcing quote",
-      "secondaryCta": "See how it works",
-      "benefits": {
-        "suppliers": {
-          "title": "Sourcing",
-          "description": "global suppliers"
-        },
-        "alternatives": {
-          "title": "Alternatives",
-          "description": "additional sources"
-        },
-        "verification": {
-          "title": "Verification",
-          "description": "samples & quality"
-        },
-        "series": {
-          "title": "Series supply",
-          "description": "B2B deliveries"
-        }
-      }
+      "title": "Looking for a specific",
+      "accent": "production component?",
+      "description": "Send the manufacturer part number, required quantity and delivery date. We will check sourcing options for your harness or equipment component and, if alternatives are acceptable, consider other options as well.",
+      "primaryCta": "Send an inquiry",
+      "secondaryCta": "See the process",
+      "note": "You can attach a photo, datasheet or parts list. If the part number is unknown, describe the markings and application."
     },
     "useCases": {
-      "eyebrow": "Component sourcing",
-      "title": "When can we",
-      "accent": "help?",
-      "description": "We usually help when standard distribution channels cannot provide a suitable solution.",
+      "title": "What can your inquiry",
+      "accent": "cover?",
+      "description": "A clear description of the component and order requirements helps us check the available options.",
+      "includeLabel": "Include:",
       "items": {
         "availability": {
-          "title": "No availability",
-          "description": "A specific part number is unavailable or the delivery time is too long."
+          "title": "A specific part is unavailable",
+          "description": "The part is not in the store, or you are looking for another supply option. Start with the complete manufacturer designation, including its suffix.",
+          "include": "manufacturer, part number, quantity and required delivery date."
         },
         "alternative": {
-          "title": "Alternative required",
-          "description": "You need another manufacturer or an alternative source of supply."
+          "title": "An alternative is acceptable",
+          "description": "You can consider another manufacturer or series. Specify which parameters and construction details must remain the same.",
+          "include": "original part number, documentation and compatibility requirements."
         },
         "series": {
-          "title": "Larger quantity",
-          "description": "You need individual pricing and supply terms for series quantities."
-        }
-      }
-    },
-    "capabilities": {
-      "eyebrow": "Sourcing scope",
-      "title": "What can we",
-      "accent": "source?",
-      "description": "Our strongest experience is in electrical components and products used in wire harness and industrial equipment manufacturing.",
-      "note": "We do not recommend replacements blindly. For alternative products, we recommend reviewing documentation, testing samples and obtaining customer approval.",
-      "items": {
-        "connectors": {
-          "title": "Connectors & terminals",
-          "description": "Housings, pins, terminals, seals and accessories."
-        },
-        "harness": {
-          "title": "Wire harness materials",
-          "description": "Braided sleeves, conduits, heat shrink, wires and protective materials."
-        },
-        "electromechanical": {
-          "title": "Electromechanical parts",
-          "description": "Selected components used in equipment and industrial automation."
-        },
-        "partNumber": {
-          "title": "Specific part number",
-          "description": "Sourcing based on a manufacturer part number or an existing component."
-        },
-        "custom": {
-          "title": "Parts from documentation",
-          "description": "Feasibility checks based on a drawing or technical specification."
-        },
-        "other": {
-          "title": "Unusual requirements",
-          "description": "If the component is outside our catalogue, we can still investigate available options."
+          "title": "You need a larger quantity",
+          "description": "You want a quotation for a larger order or expect to reorder the same component. Describe the anticipated demand.",
+          "include": "quantity per delivery and whether this is a one-off or recurring purchase."
         }
       }
     },
     "process": {
-      "eyebrow": "How it works",
-      "title": "A simple sourcing",
-      "accent": "process",
-      "description": "Send us the basic information and we will take care of checking the available options.",
+      "title": "From your inquiry",
+      "accent": "to an agreed delivery",
+      "description": "Availability differs by part number. Price, quantity and delivery time are established for each inquiry.",
       "steps": {
         "request": {
-          "title": "Send the part number",
-          "description": "Part number, photo, quantity or technical documentation."
+          "title": "Describe your requirements",
+          "description": "Send the part designation, quantity and requirements. A photo, drawing or datasheet helps establish what you need."
         },
         "search": {
-          "title": "We check the sources",
-          "description": "We verify availability, manufacturers and possible alternatives."
+          "title": "We check the options",
+          "description": "We check availability and possible sources for the specified component. If alternatives are acceptable, we include this in the search."
+        },
+        "agreement": {
+          "title": "Agree on the details",
+          "description": "Before ordering, we agree on the specific item, quantity, price and delivery time. Mention any need for a sample or additional documentation in your inquiry."
         },
         "delivery": {
-          "title": "Sample or delivery",
-          "description": "Once approved, we arrange a sample or fulfil the order."
+          "title": "Fulfil the agreed order",
+          "description": "After the terms are accepted, we fulfil the order as agreed. For recurring demand, we can discuss arrangements for subsequent deliveries."
+        }
+      }
+    },
+    "preparation": {
+      "eyebrow": "Considering an alternative",
+      "title": "An exact part number or an acceptable replacement?",
+      "description": "Let us know whether you need a particular manufacturer's part or can consider an alternative. For connectors, the mating part designation, photographs of both sides and dimensions are also useful.",
+      "approval": "Before accepting an alternative, compare its documentation with your application requirements. If you need a sample to check fit, include that in your inquiry.",
+      "productsCta": "Explore the product range",
+      "checklistTitle": "What matters for a replacement?",
+      "items": {
+        "connection": {
+          "title": "Connection and mounting",
+          "description": "Contact count and arrangement, pitch, dimensions, mounting and wire termination method."
+        },
+        "electrical": {
+          "title": "Electrical parameters",
+          "description": "Required voltage, current and connected wire cross-section."
+        },
+        "environment": {
+          "title": "Operating conditions",
+          "description": "Temperature, sealing and material requirements."
+        },
+        "documents": {
+          "title": "Documentation and project requirements",
+          "description": "Datasheet, drawing and any standards or requirements the component must meet."
+        }
+      }
+    },
+    "faq": {
+      "title": "Before sending an inquiry",
+      "description": "A few practical points to help you prepare a quotation request.",
+      "items": {
+        "identification": {
+          "question": "What should I send if I do not know the part number?",
+          "answer": "Attach clear photos of the markings and the complete component. Include dimensions, connection method and application. For a connector, show the contact side and its mating part. These details help with identification; explain any missing information in your message."
+        },
+        "list": {
+          "question": "Can I send a list of several part numbers?",
+          "answer": "Yes. Attach the list in a single XLS, XLSX or PDF file and describe your requirements in the form. Include manufacturer, part number and quantity for each line. The maximum attachment size is 3.5 MB."
+        },
+        "terms": {
+          "question": "How are price, lead time and minimum quantity established?",
+          "answer": "Terms depend on the specific part number, quantity and supply options. State your required date and quantity, and include the frequency if you expect regular purchases. These details form the basis of an individual quotation."
+        },
+        "sample": {
+          "question": "How do I request a sample or documentation?",
+          "answer": "Mention it in the additional information field along with the parameters you need to check. Sample availability and documentation need to be established for the specific component."
         }
       }
     },
     "inquiry": {
       "eyebrow": "Sourcing inquiry",
-      "title": "Have a specific",
-      "accent": "part number?",
-      "description": "Send us the part number, quantity and any available information. You can also attach a photo, drawing or datasheet."
+      "title": "Send a part number",
+      "accent": "and your requirements",
+      "description": "Describe what you need. If you do not know the part number, enter a short description in the first field and add details and a photo to your message.",
+      "items": {
+        "part": "Full part number and manufacturer, or a description with the component markings.",
+        "quantity": "Quantity, required delivery date and any recurring delivery needs.",
+        "requirements": "Whether you accept an alternative or need a sample or specific documentation."
+      },
+      "attachmentNote": "Attach one file up to 3.5 MB: a photo, technical document or parts list. You do not need every specification to start — send the information you have."
     }
   },
   "B2BPage": {
@@ -470,97 +480,106 @@
   },
   "ProductsPage": {
     "metadata": {
-      "title": "Products | Teknomont",
-      "description": "Connectors, terminals, wires and materials for wire harness and industrial equipment manufacturing. Retail and B2B supply."
+      "title": "Connectors, cables and wire harness materials",
+      "description": "TE Connectivity connectors, LAPP cables, braided sleeves and industrial components. Explore catalogue examples, visit the store or request a quotation."
     },
     "hero": {
-      "eyebrow": "Product range",
-      "title": "Components for manufacturing and",
-      "accent": "wire harnesses",
-      "description": "We supply connectors, terminals, wires and materials used in wire harness and industrial equipment manufacturing. Available products can be purchased online or quoted individually for larger quantities.",
-      "shopCta": "Go to online store",
-      "inquiryCta": "Ask about a product",
-      "benefits": {
-        "range": {
-          "title": "Broad range",
-          "description": "multiple categories"
-        },
-        "availability": {
-          "title": "Availability",
-          "description": "stock & sourcing"
-        },
-        "series": {
-          "title": "B2B supply",
-          "description": "larger series"
-        }
-      }
+      "eyebrow": "Teknomont product range",
+      "title": "Connectors, cables",
+      "accent": "and wire harness materials",
+      "description": "Housings, contacts, cables and protective materials for electrical connections, alongside components for industrial equipment. Explore the range, compare specific part numbers in the store or send an inquiry for the quantity you need.",
+      "rangeCta": "Explore the range",
+      "shopCta": "Visit the store",
+      "note": "Already have a part number? Include the manufacturer and required quantity in your inquiry to help identify the right item."
     },
     "categories": {
-      "title": "Product",
-      "accent": "categories",
-      "description": "Components used in wire harness, equipment, machinery and industrial installation manufacturing.",
-      "shopCta": "Browse the online store",
+      "title": "From electrical connections",
+      "accent": "to cable protection",
+      "description": "Choose a group to go directly to the store catalogue. For an inquiry, include the manufacturer part number and the parameters that matter for your application.",
+      "examplesLabel": "Catalogue examples",
+      "selectionLabel": "Details to include",
+      "links": {
+        "connectors": "Shop connectors",
+        "terminals": "Shop terminals",
+        "wires": "Shop cables",
+        "sleeves": "Sleeves and tubing",
+        "glands": "Cable glands and grommets",
+        "relays": "Relays",
+        "sensors": "Sensors"
+      },
       "items": {
         "connectors": {
-          "title": "Connectors & housings",
-          "description": "Multi-pin connectors, housings, plugs, sockets and connection system components."
-        },
-        "terminals": {
-          "title": "Terminals & pins",
-          "description": "Male and female contacts, crimp terminals and contact elements."
-        },
-        "seals": {
-          "title": "Seals",
-          "description": "Wire seals, cavity plugs and components protecting electrical connectors."
+          "title": "Connectors, housings and contacts",
+          "description": "Plugs, sockets, housings and contacts for wire-to-wire, wire-to-board and panel-mounted connections. The catalogue also includes accessories for connector systems.",
+          "examples": "TE Connectivity CPC, MQS and Junior Power Timer, IDC connectors and HARTING components.",
+          "selection": "Series and full part number, contact count, pitch, mounting method and whether you need a housing alone or contacts as well."
         },
         "wires": {
-          "title": "Wires",
-          "description": "Electrical wires for harness, equipment and installation manufacturing."
+          "title": "Wires and cables",
+          "description": "Cables for harnesses, data transmission and equipment connections. Individual items differ in conductor count, cross-section, insulation and shielding.",
+          "examples": "LAPP UNITRONIC, HELUKABEL cables and MANEX cables including FLRYY and RKKB.",
+          "selection": "Cable designation, conductor count and cross-section, shielding, required voltage, operating conditions and length."
         },
-        "sleeves": {
-          "title": "Braided sleeves & conduit",
-          "description": "Mechanical wire protection, textile braids and corrugated conduit."
+        "protection": {
+          "title": "Harness protection and routing",
+          "description": "Braided sleeves, tubing, cable glands and grommets for protecting cables and routing them through housings. Selection depends on harness dimensions and the installation.",
+          "examples": "HellermannTyton 170-12000 PET sleeving and items in the sleeves, tubing, cable glands and grommets categories.",
+          "selection": "Harness or cable diameter, opening dimensions, thread type, material and environmental requirements."
         },
-        "heatShrink": {
-          "title": "Heat-shrink tubing",
-          "description": "Materials for insulation, identification and protection of connections."
-        },
-        "grommets": {
-          "title": "Grommets",
-          "description": "Rubber and technical grommets protecting wires through panels and housings."
-        },
-        "accessories": {
-          "title": "Harness accessories",
-          "description": "Cable ties, clips, mounts and other components used in harness production."
+        "controls": {
+          "title": "Equipment and automation components",
+          "description": "Relays, sensors, switches and selected electronic components. The store also has separate categories for semiconductors, resistors and capacitors.",
+          "examples": "Relays and accessories, inductive sensors, switches and circuit switches.",
+          "selection": "Full manufacturer designation, electrical parameters, connection method, dimensions and required quantity."
         }
       }
     },
-    "support": {
-      "eyebrow": "Beyond the catalogue",
-      "title": "Can't find the",
-      "accent": "product?",
-      "description": "Not every component we can supply is listed in our online store. Send us a part number, photo or technical documentation and we can check availability or identify an alternative source.",
-      "cta": "Explore component sourcing"
-    },
-    "b2b": {
-      "eyebrow": "Larger orders",
-      "title": "Buying components in series?",
-      "description": "For larger quantities, we can prepare individual pricing, plan recurring deliveries and establish a supply model tailored to your production.",
-      "cta": "Explore our B2B offer",
+    "examples": {
+      "title": "Specific part numbers",
+      "accent": "from our catalogue",
+      "description": "Three examples from different parts of the range: a panel connector, a data cable and harness protection.",
+      "cta": "View product details",
+      "note": "Check the product page in the store for current price, availability and the full description.",
       "items": {
-        "pricing": {
-          "title": "Individual pricing",
-          "description": "Terms tailored to volume."
+        "connector": {
+          "title": "CPC panel housing, 19 positions",
+          "description": "Connector housing for panel mounting. The catalogue item is supplied without contacts; include them when specifying a complete connection.",
+          "imageAlt": "TE Connectivity CPC 213870-1 panel connector"
         },
-        "series": {
-          "title": "Series deliveries",
-          "description": "Schedules aligned with production."
+        "cable": {
+          "title": "UNITRONIC LiYY A, 5 × AWG22",
+          "description": "Data cable with PVC insulation. Catalogue specifications include a 300 V rated voltage and 5.9 mm outer diameter.",
+          "imageAlt": "LAPP UNITRONIC LiYY A 0022605 cable"
         },
-        "stock": {
-          "title": "Dedicated stock",
-          "description": "Supply protection for recurring part numbers."
+        "braid": {
+          "title": "PET braided sleeve, 14–26 mm",
+          "description": "Black HF sleeving for routing and protecting cables. Catalogue specifications include a −50 to +150°C temperature range and UL94 V-2 flammability rating.",
+          "imageAlt": "Black HellermannTyton 170-12000 braided sleeve"
         }
       }
+    },
+    "ordering": {
+      "title": "How to order",
+      "accent": "components",
+      "description": "Use the store for a specific item or send your requirements for an individual quotation.",
+      "shop": {
+        "title": "Order through the store",
+        "description": "Check the part number, description, sales unit and current availability on the product page. Compare the designation with the documentation for your equipment or harness before ordering.",
+        "cta": "Open the store catalogue"
+      },
+      "inquiry": {
+        "title": "Quote for a part number or larger quantity",
+        "description": "If the required item or quantity is not in the catalogue, send an inquiry. Useful details include:",
+        "items": {
+          "part": "Manufacturer and full part number, or a photo or documentation if the number is unknown.",
+          "quantity": "Quantity and whether this is a single delivery or recurring demand.",
+          "requirements": "Required delivery date and whether an alternative product is acceptable."
+        },
+        "cta": "Send an inquiry"
+      },
+      "support": "Need a component outside the catalogue or planning regular purchases? Explore sourcing options and our B2B supply terms.",
+      "sourcingCta": "Component sourcing",
+      "b2bCta": "B2B cooperation"
     }
   },
   "ContactPage": {

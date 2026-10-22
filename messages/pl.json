@@ -249,113 +249,123 @@
   },
   "SourcingPage": {
     "metadata": {
-      "title": "Sourcing komponentów",
-      "description": "Sourcing trudno dostępnych komponentów, zamienników i dostaw seryjnych. Weryfikacja dostawców, próbki i import pod konkretne zapotrzebowanie."
+      "title": "Sourcing złączy i komponentów przemysłowych",
+      "description": "Zapytaj o trudno dostępny indeks, alternatywny komponent lub większą partię. Sprawdź, jakie dane przesłać do Teknomont, i dołącz dokumentację."
     },
     "hero": {
       "eyebrow": "Sourcing komponentów",
-      "title": "Znajdziemy komponent, którego",
-      "accent": "nie możesz dostać",
-      "description": "Prześlij numer katalogowy, zdjęcie lub dokumentację. Sprawdzimy dostępność, alternatywnych producentów oraz możliwości dostawy z globalnych źródeł.",
-      "primaryCta": "Wyślij komponent do wyceny",
-      "secondaryCta": "Zobacz jak działamy",
-      "benefits": {
-        "suppliers": {
-          "title": "Sourcing",
-          "description": "globalne źródła"
-        },
-        "alternatives": {
-          "title": "Zamienniki",
-          "description": "alternatywne źródła"
-        },
-        "verification": {
-          "title": "Weryfikacja",
-          "description": "próbki i jakość"
-        },
-        "series": {
-          "title": "Większe serie",
-          "description": "dostawy B2B"
-        }
-      }
+      "title": "Szukasz konkretnej",
+      "accent": "części do produkcji?",
+      "description": "Prześlij indeks producenta, potrzebną ilość i wymagany termin. Sprawdzimy możliwości pozyskania komponentu do wiązki lub urządzenia, a jeśli dopuszczasz alternatywę — również inne rozwiązania.",
+      "primaryCta": "Prześlij zapytanie",
+      "secondaryCta": "Poznaj proces",
+      "note": "Możesz dołączyć zdjęcie, kartę katalogową lub listę części. Jeżeli numeru nie znasz, opisz oznaczenia i zastosowanie."
     },
     "useCases": {
-      "eyebrow": "Sourcing komponentów",
-      "title": "Kiedy możemy",
-      "accent": "pomóc?",
-      "description": "Najczęściej pomagamy w sytuacjach, gdy standardowa dystrybucja nie daje dobrego rozwiązania.",
+      "title": "Z jaką potrzebą",
+      "accent": "możesz się zgłosić?",
+      "description": "Im dokładniej opiszesz poszukiwaną część i ograniczenia zamówienia, tym łatwiej sprawdzić dostępne możliwości.",
+      "includeLabel": "W zapytaniu podaj:",
       "items": {
         "availability": {
-          "title": "Brak dostępności",
-          "description": "Nie możesz dostać konkretnego indeksu lub termin dostawy jest zbyt długi."
+          "title": "Brakuje konkretnego indeksu",
+          "description": "Części nie ma w sklepie albo szukasz innej możliwości dostawy. Punktem wyjścia jest pełne oznaczenie producenta, łącznie z końcówką indeksu.",
+          "include": "producenta, numer części, ilość i oczekiwany termin."
         },
         "alternative": {
-          "title": "Potrzebny zamiennik",
-          "description": "Szukasz alternatywnego producenta albo innego źródła dostawy."
+          "title": "Dopuszczasz zamiennik",
+          "description": "Możesz rozważyć innego producenta lub serię. Wskaż, jakie parametry i elementy konstrukcji muszą zostać zachowane.",
+          "include": "oryginalny indeks, dokumentację i wymagania dotyczące zgodności."
         },
         "series": {
-          "title": "Większa partia",
-          "description": "Potrzebujesz indywidualnej ceny i dostawy dla ilości seryjnej."
-        }
-      }
-    },
-    "capabilities": {
-      "eyebrow": "Zakres sourcingu",
-      "title": "Czego możemy",
-      "accent": "szukać?",
-      "description": "Największe doświadczenie mamy w komponentach elektrotechnicznych i elementach wykorzystywanych w produkcji wiązek oraz urządzeń przemysłowych.",
-      "note": "Nie proponujemy zamiennika w ciemno. W przypadku alternatywnego produktu zalecamy weryfikację dokumentacji, próbki oraz akceptację po stronie klienta.",
-      "items": {
-        "connectors": {
-          "title": "Złącza i terminale",
-          "description": "Obudowy, piny, terminale, uszczelki i akcesoria."
-        },
-        "harness": {
-          "title": "Materiały do wiązek",
-          "description": "Oploty, peszle, koszulki, przewody i materiały ochronne."
-        },
-        "electromechanical": {
-          "title": "Elementy elektromechaniczne",
-          "description": "Wybrane komponenty stosowane w urządzeniach i automatyce."
-        },
-        "partNumber": {
-          "title": "Konkretny numer części",
-          "description": "Sourcing na podstawie indeksu producenta lub istniejącego produktu."
-        },
-        "custom": {
-          "title": "Element według dokumentacji",
-          "description": "Weryfikacja możliwości wykonania części na podstawie rysunku lub specyfikacji."
-        },
-        "other": {
-          "title": "Nietypowe zapotrzebowanie",
-          "description": "Jeżeli komponent nie mieści się w katalogu, możemy sprawdzić dostępne możliwości."
+          "title": "Potrzebujesz większej partii",
+          "description": "Chcesz wycenić większą ilość albo planujesz kolejne zamówienia tego samego komponentu. Opisz przewidywane zapotrzebowanie.",
+          "include": "ilość na dostawę oraz informację o jednorazowym lub cyklicznym zakupie."
         }
       }
     },
     "process": {
-      "eyebrow": "Jak to działa",
-      "title": "Prosty proces",
-      "accent": "sourcingu",
-      "description": "Wystarczy kilka podstawowych informacji. Resztę sprawdzamy po naszej stronie.",
+      "title": "Od zapytania",
+      "accent": "do uzgodnienia dostawy",
+      "description": "Każdy indeks ma własne warunki dostępności. Cenę, ilość i termin ustalamy dla konkretnego zapytania.",
       "steps": {
         "request": {
-          "title": "Wysyłasz indeks",
-          "description": "Numer części, zdjęcie, ilość lub dokumentację techniczną."
+          "title": "Opisujesz zapotrzebowanie",
+          "description": "Przesyłasz oznaczenie części, ilość i wymagania. Zdjęcie, rysunek lub karta katalogowa pomagają określić, czego szukasz."
         },
         "search": {
-          "title": "Sprawdzamy źródła",
-          "description": "Weryfikujemy dostępność, producentów i możliwe alternatywy."
+          "title": "Sprawdzamy możliwości",
+          "description": "Weryfikujemy dostępność wskazanego komponentu i możliwe źródła. Jeżeli dopuszczasz zamiennik, uwzględniamy tę informację w poszukiwaniu."
+        },
+        "agreement": {
+          "title": "Uzgadniamy warunki",
+          "description": "Przed zamówieniem uzgadniamy konkretną pozycję, ilość, cenę i termin. Potrzebę próbki lub dodatkowej dokumentacji zaznacz już w zapytaniu."
         },
         "delivery": {
-          "title": "Próbka lub dostawa",
-          "description": "Po akceptacji organizujemy próbkę albo realizację zamówienia."
+          "title": "Realizujemy ustaloną dostawę",
+          "description": "Po akceptacji warunków realizujemy zamówienie w uzgodnionym zakresie. Przy cyklicznym zapotrzebowaniu możemy omówić model kolejnych dostaw."
+        }
+      }
+    },
+    "preparation": {
+      "eyebrow": "Dobór alternatywy",
+      "title": "Dokładny indeks czy dopuszczalny zamiennik?",
+      "description": "Wskaż, czy potrzebujesz części konkretnego producenta, czy możesz rozważyć alternatywę. Przy złączu przydatne są również oznaczenie współpracującego elementu, zdjęcia obu stron i wymiary.",
+      "approval": "Przed zaakceptowaniem alternatywy porównaj dokumentację z wymaganiami swojej aplikacji. Jeśli potrzebujesz próbki do sprawdzenia dopasowania, uwzględnij to w zapytaniu.",
+      "productsCta": "Zobacz zakres oferty",
+      "checklistTitle": "Co jest ważne przy zamienniku?",
+      "items": {
+        "connection": {
+          "title": "Połączenie i montaż",
+          "description": "Liczba i układ styków, raster, wymiary, mocowanie i sposób zakończenia przewodu."
+        },
+        "electrical": {
+          "title": "Parametry elektryczne",
+          "description": "Wymagane napięcie, prąd oraz przekrój przyłączanego przewodu."
+        },
+        "environment": {
+          "title": "Warunki pracy",
+          "description": "Temperatura, wymagania dotyczące szczelności i materiału."
+        },
+        "documents": {
+          "title": "Dokumentacja i wymagania projektu",
+          "description": "Karta katalogowa, rysunek oraz normy lub wymagania, które część ma spełnić."
+        }
+      }
+    },
+    "faq": {
+      "title": "Przed wysłaniem zapytania",
+      "description": "Kilka wskazówek, które pomogą przygotować informacje do wyceny.",
+      "items": {
+        "identification": {
+          "question": "Co przesłać, jeśli nie znam numeru części?",
+          "answer": "Dołącz czytelne zdjęcie oznaczeń i całego elementu. Podaj wymiary, sposób podłączenia i zastosowanie. Przy złączu pokaż stronę styków oraz element, z którym ma się łączyć. Te dane pomagają w identyfikacji; jeśli czegoś brakuje, opisz to w wiadomości."
+        },
+        "list": {
+          "question": "Czy mogę przesłać listę kilku indeksów?",
+          "answer": "Tak. Dołącz zestawienie w jednym pliku XLS, XLSX lub PDF i opisz zapotrzebowanie w formularzu. Przy każdej pozycji podaj producenta, numer katalogowy i ilość. Maksymalny rozmiar załącznika to 3,5 MB."
+        },
+        "terms": {
+          "question": "Jak ustalane są cena, termin i minimalna ilość?",
+          "answer": "Warunki zależą od konkretnego indeksu, ilości i możliwości dostawy. Podaj oczekiwaną datę oraz ilość, a jeśli planujesz regularne zakupy — również ich częstotliwość. Te informacje są podstawą indywidualnej wyceny."
+        },
+        "sample": {
+          "question": "Jak zgłosić potrzebę próbki lub dokumentacji?",
+          "answer": "Wpisz ją w dodatkowych informacjach, razem z parametrami, które chcesz sprawdzić. Możliwość dostarczenia próbki i dostępność dokumentów wymagają ustalenia dla konkretnego komponentu."
         }
       }
     },
     "inquiry": {
       "eyebrow": "Zapytanie sourcingowe",
-      "title": "Masz konkretny",
-      "accent": "indeks?",
-      "description": "Wyślij numer części, ilość oraz dostępne informacje. Jeżeli masz zdjęcie, rysunek lub kartę katalogową, możesz dołączyć je do zapytania."
+      "title": "Prześlij indeks",
+      "accent": "i zapotrzebowanie",
+      "description": "Opisz, czego potrzebujesz. Jeśli nie znasz numeru części, w pierwszym polu podaj krótki opis, a szczegóły i zdjęcie dodaj do wiadomości.",
+      "items": {
+        "part": "Pełny indeks i producent lub opis części z jej oznaczeniami.",
+        "quantity": "Potrzebna ilość, wymagany termin i ewentualna częstotliwość dostaw.",
+        "requirements": "Informacja o dopuszczalnym zamienniku, próbce lub wymaganej dokumentacji."
+      },
+      "attachmentNote": "Dołącz jeden plik do 3,5 MB: zdjęcie, dokumentację albo listę indeksów. Nie musisz znać wszystkich parametrów — przekaż te informacje, którymi dysponujesz."
     }
   },
   "B2BPage": {
@@ -470,97 +480,106 @@
   },
   "ProductsPage": {
     "metadata": {
-      "title": "Produkty",
-      "description": "Złącza, terminale, przewody oraz materiały do produkcji wiązek i urządzeń przemysłowych. Sprzedaż detaliczna i dostawy B2B."
+      "title": "Złącza, przewody i materiały do wiązek",
+      "description": "Złącza TE Connectivity, przewody LAPP, oploty i komponenty przemysłowe. Zobacz przykłady produktów, przejdź do sklepu lub zapytaj o konkretny indeks."
     },
     "hero": {
-      "eyebrow": "Oferta produktowa",
-      "title": "Komponenty do produkcji i",
-      "accent": "wiązek kablowych",
-      "description": "Dostarczamy złącza, terminale, przewody oraz materiały wykorzystywane w produkcji wiązek i urządzeń przemysłowych. Dostępne produkty możesz kupić w sklepie lub wysłać nam zapytanie o większą partię.",
+      "eyebrow": "Oferta produktowa Teknomont",
+      "title": "Złącza, przewody",
+      "accent": "i materiały do wiązek",
+      "description": "Obudowy, styki, przewody i elementy ochronne do połączeń elektrycznych oraz komponenty do urządzeń przemysłowych. Sprawdź grupę produktów, porównaj konkretne indeksy w sklepie lub prześlij zapytanie o potrzebną partię.",
+      "rangeCta": "Poznaj ofertę",
       "shopCta": "Przejdź do sklepu",
-      "inquiryCta": "Zapytaj o produkt",
-      "benefits": {
-        "range": {
-          "title": "Szeroka oferta",
-          "description": "wiele kategorii"
-        },
-        "availability": {
-          "title": "Dostępność",
-          "description": "towar i sourcing"
-        },
-        "series": {
-          "title": "Dostawy B2B",
-          "description": "większe serie"
-        }
-      }
+      "note": "Masz numer katalogowy? Do zapytania dołącz producenta i potrzebną ilość — to ułatwia ustalenie właściwej pozycji."
     },
     "categories": {
-      "title": "Kategorie",
-      "accent": "produktów",
-      "description": "Komponenty wykorzystywane w produkcji wiązek kablowych, urządzeń, maszyn oraz instalacji przemysłowych.",
-      "shopCta": "Zobacz ofertę w sklepie",
+      "title": "Od połączenia",
+      "accent": "do ochrony przewodów",
+      "description": "Wybierz grupę i przejdź bezpośrednio do katalogu sklepu. Przy zapytaniu podaj numer producenta oraz parametry ważne dla Twojego zastosowania.",
+      "examplesLabel": "Przykłady w katalogu",
+      "selectionLabel": "Co podać przy doborze",
+      "links": {
+        "connectors": "Złącza w sklepie",
+        "terminals": "Konektory w sklepie",
+        "wires": "Kable w sklepie",
+        "sleeves": "Koszulki i węże",
+        "glands": "Dławnice i przepusty",
+        "relays": "Przekaźniki",
+        "sensors": "Czujniki"
+      },
       "items": {
         "connectors": {
-          "title": "Złącza i obudowy",
-          "description": "Złącza wielopinowe, obudowy, wtyki, gniazda i elementy systemów połączeniowych."
-        },
-        "terminals": {
-          "title": "Terminale i piny",
-          "description": "Styki męskie i żeńskie, terminale zaciskane oraz elementy kontaktowe."
-        },
-        "seals": {
-          "title": "Uszczelki",
-          "description": "Uszczelki przewodów, zaślepki oraz elementy zabezpieczające złącza."
+          "title": "Złącza, obudowy i styki",
+          "description": "Wtyki, gniazda, obudowy i elementy kontaktowe do połączeń przewód–przewód, przewód–płytka oraz montażu panelowego. Katalog obejmuje również akcesoria do systemów złączy.",
+          "examples": "TE Connectivity CPC, MQS i Junior Power Timer, złącza IDC oraz elementy HARTING.",
+          "selection": "Seria i pełny indeks, liczba styków, raster, sposób montażu oraz informacja, czy potrzebujesz samej obudowy, czy również styków."
         },
         "wires": {
-          "title": "Przewody",
-          "description": "Przewody elektryczne do produkcji wiązek, urządzeń oraz instalacji."
+          "title": "Przewody i kable",
+          "description": "Przewody do wiązek, transmisji danych i połączeń w urządzeniach. Poszczególne pozycje różnią się liczbą żył, przekrojem, izolacją i obecnością ekranu.",
+          "examples": "LAPP UNITRONIC, przewody HELUKABEL oraz kable MANEX, w tym FLRYY i RKKB.",
+          "selection": "Oznaczenie przewodu, liczba i przekrój żył, ekranowanie, wymagane napięcie i warunki pracy oraz długość."
         },
-        "sleeves": {
-          "title": "Oploty i peszle",
-          "description": "Ochrona mechaniczna przewodów, oploty tekstylne i rury karbowane."
+        "protection": {
+          "title": "Ochrona i prowadzenie wiązek",
+          "description": "Oploty, koszulki, węże, dławnice i przepusty do zabezpieczania przewodów oraz ich przejścia przez obudowę. Dobór zależy od wymiarów wiązki i miejsca montażu.",
+          "examples": "Oplot PET HellermannTyton 170-12000 oraz pozycje z kategorii koszulek, węży, dławnic i przepustów.",
+          "selection": "Średnica wiązki lub kabla, wymiary otworu, rodzaj gwintu, materiał i wymagania środowiskowe."
         },
-        "heatShrink": {
-          "title": "Koszulki termokurczliwe",
-          "description": "Materiały do izolacji, oznaczania i zabezpieczania połączeń."
-        },
-        "grommets": {
-          "title": "Przepusty",
-          "description": "Gumowe i techniczne przepusty chroniące przewody w obudowach i konstrukcjach."
-        },
-        "accessories": {
-          "title": "Akcesoria do wiązek",
-          "description": "Opaski, klipsy, mocowania i pozostałe elementy potrzebne przy produkcji wiązek."
+        "controls": {
+          "title": "Elementy do urządzeń i automatyki",
+          "description": "Przekaźniki, czujniki, przełączniki oraz wybrane komponenty elektroniczne. W sklepie znajdziesz także osobne kategorie półprzewodników, rezystorów i kondensatorów.",
+          "examples": "Przekaźniki i akcesoria, czujniki indukcyjne oraz przełączniki i wyłączniki.",
+          "selection": "Pełne oznaczenie producenta, parametry elektryczne, sposób przyłączenia, wymiary i oczekiwana ilość."
         }
       }
     },
-    "support": {
-      "eyebrow": "Poza katalogiem",
-      "title": "Nie widzisz potrzebnego",
-      "accent": "produktu?",
-      "description": "Nie wszystkie komponenty, które możemy dostarczyć, znajdują się w sklepie internetowym. Jeżeli masz konkretny indeks, zdjęcie lub dokumentację, sprawdzimy dostępność albo znajdziemy alternatywne źródło.",
-      "cta": "Sprawdź sourcing komponentów"
-    },
-    "b2b": {
-      "eyebrow": "Większe zamówienia",
-      "title": "Kupujesz komponenty seryjnie?",
-      "description": "Przy większych ilościach możemy przygotować indywidualną ofertę, zaplanować dostawy oraz ustalić model współpracy dopasowany do produkcji.",
-      "cta": "Zobacz ofertę B2B",
+    "examples": {
+      "title": "Konkretne indeksy",
+      "accent": "z naszego katalogu",
+      "description": "Trzy przykłady pokazujące różne części oferty: złącze panelowe, przewód do transmisji danych i ochronę wiązki.",
+      "cta": "Zobacz kartę produktu",
+      "note": "Aktualną cenę, dostępność i pełny opis sprawdzisz na karcie produktu w sklepie.",
       "items": {
-        "pricing": {
-          "title": "Indywidualna cena",
-          "description": "Warunki dopasowane do wolumenu."
+        "connector": {
+          "title": "Obudowa panelowa CPC, 19 pól",
+          "description": "Obudowa złącza do montażu na panelu. Pozycja w katalogu jest oferowana bez elementów stykowych — uwzględnij je przy kompletowaniu połączenia.",
+          "imageAlt": "Złącze panelowe TE Connectivity CPC 213870-1"
         },
-        "series": {
-          "title": "Dostawy seryjne",
-          "description": "Harmonogram pod produkcję."
+        "cable": {
+          "title": "UNITRONIC LiYY A, 5 × AWG22",
+          "description": "Przewód do przesyłu danych z izolacją PVC. W opisie katalogowym: napięcie znamionowe 300 V i średnica zewnętrzna 5,9 mm.",
+          "imageAlt": "Przewód LAPP UNITRONIC LiYY A 0022605"
         },
-        "stock": {
-          "title": "Zapas magazynowy",
-          "description": "Możliwość zabezpieczenia stałych indeksów."
+        "braid": {
+          "title": "Oplot poliestrowy PET, 14–26 mm",
+          "description": "Czarny oplot HF do prowadzenia i osłony przewodów. W opisie katalogowym: zakres temperatur od −50 do +150°C i klasa palności UL94 V-2.",
+          "imageAlt": "Czarny oplot HellermannTyton 170-12000"
         }
       }
+    },
+    "ordering": {
+      "title": "Jak zamówić",
+      "accent": "komponenty?",
+      "description": "Skorzystaj z katalogu dla konkretnej pozycji lub prześlij zapotrzebowanie do indywidualnej wyceny.",
+      "shop": {
+        "title": "Zakup w sklepie",
+        "description": "Na karcie produktu sprawdź numer katalogowy, opis, jednostkę sprzedaży i bieżącą dostępność. Przed zamówieniem porównaj oznaczenie części z dokumentacją swojego urządzenia lub wiązki.",
+        "cta": "Otwórz katalog sklepu"
+      },
+      "inquiry": {
+        "title": "Wycena indeksu lub większej partii",
+        "description": "Jeśli potrzebnej części lub ilości nie ma w katalogu, wyślij zapytanie. Najłatwiej je doprecyzować, gdy zawiera:",
+        "items": {
+          "part": "Producenta i pełny numer części, a przy jego braku zdjęcie lub dokumentację.",
+          "quantity": "Ilość oraz informację, czy chodzi o jedną dostawę, czy powtarzalne zapotrzebowanie.",
+          "requirements": "Wymagany termin i informację, czy dopuszczasz alternatywny produkt."
+        },
+        "cta": "Wyślij zapytanie"
+      },
+      "support": "Potrzebujesz części spoza katalogu lub planujesz regularne zakupy? Sprawdź możliwości sourcingu i warunki współpracy B2B.",
+      "sourcingCta": "Sourcing komponentów",
+      "b2bCta": "Współpraca B2B"
     }
   },
   "ContactPage": {
