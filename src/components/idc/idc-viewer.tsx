@@ -1,6 +1,12 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import {
+  useEffect,
+  useImperativeHandle,
+  useRef,
+  useState,
+  type Ref,
+} from "react";
 import {
   Box,
   Expand,
@@ -19,7 +25,19 @@ import type { IdcConfiguration } from "@/lib/idc";
 import type { createIdcScene, IdcView, ViewerAction } from "./idc-scene";
 import s from "./idc-studio.module.css";
 
-export function IdcViewer({ config }: { config: IdcConfiguration }) {
+export type IdcViewerHandle = {
+  capturePreview: (
+    configuration: IdcConfiguration,
+  ) => { dataUrl: string; width: number; height: number } | null;
+};
+
+export function IdcViewer({
+  config,
+  ref,
+}: {
+  config: IdcConfiguration;
+  ref?: Ref<IdcViewerHandle>;
+}) {
   const t = useTranslations("IdcStudio.viewer");
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
@@ -88,6 +106,18 @@ export function IdcViewer({ config }: { config: IdcConfiguration }) {
       sceneRef.current = null;
     };
   }, [attempt]);
+
+  useImperativeHandle(
+    ref,
+    () => ({
+      capturePreview(configuration) {
+        if (status !== "ready" || !sceneRef.current) return null;
+        sceneRef.current.update(configuration);
+        return sceneRef.current.capturePreview();
+      },
+    }),
+    [status],
+  );
 
   function retry() {
     setStatus("loading");

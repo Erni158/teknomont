@@ -21,6 +21,7 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { href: "/produkty", key: "products" },
+  { href: "/konfigurator-idc", key: "configurator" },
   { href: "/sourcing", key: "sourcing" },
   { href: "/oferta-b2b", key: "b2b" },
   { href: "/o-firmie", key: "about" },
@@ -70,16 +71,17 @@ export function Header() {
 
           {/* DESKTOP NAV */}
           <nav
-            className="hidden items-center gap-1 lg:flex"
+            className="hidden items-center gap-1 xl:flex"
             aria-label={t("mainNav")}
           >
             {navItems.map((item) => (
               <Link
                 key={item.key}
                 href={item.href}
+                aria-current={pathname === item.href ? "page" : undefined}
                 className={cn(
                   `
-                    rounded-md
+                    whitespace-nowrap rounded-md
                     px-3 py-2
                     text-sm font-semibold
                     text-[var(--nav-foreground)]
@@ -96,7 +98,7 @@ export function Header() {
           </nav>
 
           {/* DESKTOP ACTIONS */}
-          <div className="hidden items-center gap-2 lg:flex">
+          <div className="hidden items-center gap-2 xl:flex">
             <button
               type="button"
               onClick={changeLocale}
@@ -144,7 +146,7 @@ export function Header() {
               text-[var(--primary)]
               transition-colors
               hover:bg-[var(--muted)]
-              lg:hidden
+              xl:hidden
             "
           >
             <Menu className="size-6" />
@@ -168,7 +170,7 @@ export function Header() {
             backdrop-blur-[2px]
             transition-opacity
             duration-300
-            lg:hidden
+            xl:hidden
           `,
           open
             ? "pointer-events-auto opacity-100"
@@ -195,7 +197,7 @@ export function Header() {
             transition-transform
             duration-300
             ease-out
-            lg:hidden
+            xl:hidden
           `,
           open ? "translate-x-0" : "translate-x-full",
         )}

@@ -21,7 +21,6 @@ import { Link } from "@/i18n/navigation";
 import { useInquirySubmit } from "@/hooks/use-inquiry-submit";
 import {
   DEFAULT_IDC_CONFIGURATION,
-  formatIdcSpecification,
   hasStandardEnds,
   IDC_FILE_LIMIT,
   IDC_PINS,
@@ -29,7 +28,7 @@ import {
   type IdcConfiguration,
   type IdcSide,
 } from "@/lib/idc";
-import { IdcViewer } from "./idc-viewer";
+import { IdcViewer, type IdcViewerHandle } from "./idc-viewer";
 import s from "./idc-studio.module.css";
 
 export function IdcStudio() {
@@ -43,6 +42,9 @@ export function IdcStudio() {
   const [fileName, setFileName] = useState("");
   const [formError, setFormError] = useState("");
   const [downloaded, setDownloaded] = useState(false);
+  const [isGeneratingPdf, setIsGeneratingPdf] = useState(false);
+  const [downloadError, setDownloadError] = useState("");
+  const viewerRef = useRef<IdcViewerHandle>(null);
   const fileRef = useRef<HTMLInputElement>(null);
   const inquiryRef = useRef<HTMLHeadingElement>(null);
   const inquiry = useInquirySubmit();
@@ -80,20 +82,33 @@ export function IdcStudio() {
         ? t("fields.none")
         : config[`part${side}`] || t("fields.custom");
   }
-  function download() {
+  async function download() {
     const parsed = idcConfigurationSchema.safeParse(candidate);
-    if (!parsed.success) return;
-    const blob = new Blob(
-      ["\uFEFF" + formatIdcSpecification(parsed.data, locale)],
-      { type: "text/plain;charset=utf-8" },
-    );
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = `Teknomont-IDC-${config.pins}p-${config.length}mm.txt`;
-    link.click();
-    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
-    setDownloaded(true);
+    if (!parsed.success || isGeneratingPdf) return;
+    setDownloadError("");
+    setDownloaded(false);
+    setIsGeneratingPdf(true);
+    try {
+      const configuration = parsed.data;
+      const preview = viewerRef.current?.capturePreview(configuration) ?? null;
+      const { createIdcPdf } = await import("@/lib/idc-pdf");
+      const bytes = await createIdcPdf({ configuration, locale, preview });
+      const url = URL.createObjectURL(
+        new Blob([new Uint8Array(bytes)], { type: "application/pdf" }),
+      );
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `Teknomont-IDC-${configuration.pins}p-${configuration.length}mm.pdf`;
+      document.body.append(link);
+      link.click();
+      link.remove();
+      window.setTimeout(() => URL.revokeObjectURL(url), 60000);
+      setDownloaded(true);
+    } catch {
+      setDownloadError(t("downloadError"));
+    } finally {
+      setIsGeneratingPdf(false);
+    }
   }
   function reset() {
     setConfig({ ...DEFAULT_IDC_CONFIGURATION });
@@ -178,15 +193,39 @@ export function IdcStudio() {
             </h1>
             <p className={s.description}>{t("description")}</p>
           </div>
-          <button
-            type="button"
-            className={s.secondaryButton}
-            onClick={download}
-            disabled={!valid}
-          >
-            {downloaded ? <Check size={17} /> : <Download size={17} />}
-            {t(downloaded ? "downloaded" : "download")}
-          </button>
+          <div className={s.downloadActions}>
+            <button
+              type="button"
+              className={s.secondaryButton}
+              onClick={download}
+              disabled={!valid || isGeneratingPdf}
+              aria-busy={isGeneratingPdf}
+            >
+              {isGeneratingPdf ? (
+                <LoaderCircle
+                  className={s.spinner}
+                  size={17}
+                  aria-hidden="true"
+                />
+              ) : downloaded ? (
+                <Check size={17} aria-hidden="true" />
+              ) : (
+                <Download size={17} aria-hidden="true" />
+              )}
+              {t(
+                isGeneratingPdf
+                  ? "downloading"
+                  : downloaded
+                    ? "downloaded"
+                    : "download",
+              )}
+            </button>
+            {downloadError && (
+              <p className={s.downloadError} role="alert">
+                {downloadError}
+              </p>
+            )}
+          </div>
         </header>
 
         <div className={s.studioGrid}>
@@ -202,13 +241,13 @@ export function IdcStudio() {
                 onClick={reset}
                 aria-label={t("reset")}
                 title={t("reset")}
-                disabled={inquiry.isSubmitting}
+                disabled={inquiry.isSubmitting || isGeneratingPdf}
               >
                 <RotateCcw size={16} />
               </button>
             </div>
             <fieldset
-              disabled={inquiry.isSubmitting}
+              disabled={inquiry.isSubmitting || isGeneratingPdf}
               className={s.settingsFields}
             >
               <legend className={s.srOnly}>{t("settings")}</legend>
@@ -360,7 +399,7 @@ export function IdcStudio() {
           </section>
 
           <div className={s.previewColumn}>
-            <IdcViewer config={config} />
+            <IdcViewer config={config} ref={viewerRef} />
             <div className={s.previewNote}>
               <Info size={17} aria-hidden="true" />
               <p>{t("previewNote")}</p>
@@ -415,7 +454,7 @@ export function IdcStudio() {
                     max={1000000}
                     step={1}
                     value={quantity}
-                    disabled={inquiry.isSubmitting}
+                    disabled={inquiry.isSubmitting || isGeneratingPdf}
                     onChange={(event) =>
                       changeNumber("quantity", event.target.value)
                     }
@@ -474,7 +513,7 @@ export function IdcStudio() {
             </div>
           ) : (
             <form id="idc-inquiry" onSubmit={submit} className={s.inquiryForm}>
-              <fieldset disabled={inquiry.isSubmitting}>
+              <fieldset disabled={inquiry.isSubmitting || isGeneratingPdf}>
                 <legend className={s.srOnly}>{t("form.title")}</legend>
                 <div className={s.formGrid}>
                   <label className={s.field}>
@@ -559,7 +598,7 @@ export function IdcStudio() {
                   <button
                     type="submit"
                     className={s.primaryButton}
-                    disabled={inquiry.isSubmitting}
+                    disabled={inquiry.isSubmitting || isGeneratingPdf}
                   >
                     {inquiry.isSubmitting ? (
                       <LoaderCircle className={s.spinner} size={17} />

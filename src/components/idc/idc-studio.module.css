@@ -881,10 +881,12 @@
     margin: 24px 0;
     align-items: flex-start;
   }
-  .intro > .secondaryButton {
+  .intro > .downloadActions {
+    max-width: 220px;
+  }
+  .downloadActions .secondaryButton {
     font-size: 10px;
     padding: 10px;
-    max-width: 160px;
   }
   .studioGrid {
     grid-template-columns: 235px minmax(0, 1fr);
@@ -950,7 +952,7 @@
   .description {
     font-size: 12px;
   }
-  .intro > .secondaryButton {
+  .intro > .downloadActions {
     margin-top: 18px;
     max-width: none;
   }
@@ -1082,5 +1084,27 @@
   }
   .root button {
     transition: none;
+  }
+}
+
+.downloadActions {
+  display: grid;
+  justify-items: end;
+  gap: 10px;
+  flex-shrink: 0;
+  max-width: 320px;
+}
+.downloadError {
+  color: #ad3030;
+  font-size: 11px;
+  line-height: 1.7;
+  text-align: right;
+}
+@media (max-width: 620px) {
+  .downloadActions {
+    justify-items: start;
+  }
+  .downloadError {
+    text-align: left;
   }
 }

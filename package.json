@@ -9,14 +9,16 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "check:translations": "node scripts/check-rendered-translations.mjs",
-    "test:idc": "node --test tests/idc.test.mjs"
+    "test:idc": "node --test tests/idc.test.mjs tests/idc-pdf.test.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.0",
     "@next/third-parties": "^16.3.2",
+    "@pdf-lib/fontkit": "^1.1.1",
     "lucide-react": "^1.33.0",
     "next": "^16.3.1",
     "next-intl": "^4.13.7",
+    "pdf-lib": "^1.17.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-hook-form": "^7.85.0",

@@ -7,6 +7,7 @@ import { CookieSettingsButton } from "@/components/cookies/cookie-settings-butto
 
 const footerNav = [
   { href: "/produkty", key: "products" },
+  { href: "/konfigurator-idc", key: "configurator" },
   { href: "/sourcing", key: "sourcing" },
   { href: "/oferta-b2b", key: "b2b" },
   { href: "/o-firmie", key: "about" },

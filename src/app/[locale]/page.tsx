@@ -7,6 +7,7 @@ import { HowItWorksSection } from "@/components/home/how-it-works-section";
 import { WhyTeknomontSection } from "@/components/home/why-teknomont-section";
 import { B2BCtaSection } from "@/components/home/b2b-cta-section";
 import { HeroSection } from "@/components/home/hero-section";
+import { IdcConfiguratorSection } from "@/components/products/idc-configurator-section";
 
 import { getLocalizedAlternates } from "@/lib/seo";
 import { Props } from "@/lib/types";
@@ -57,6 +58,7 @@ export default async function HomePage({ params }: Props) {
   return (
     <main>
       <HeroSection />
+      <IdcConfiguratorSection />
       <CategoriesSection />
       <SourcingSection />
       <HowItWorksSection />

@@ -405,7 +405,7 @@ export function createIdcScene(
     floor.scale.set((extent * 4) / 2000, (extent * 4) / 2000, 1);
     canvas.dataset.modelReady = "true";
   }
-  function fit(keepDirection = false) {
+  function fit(keepDirection = false, updateControls = true) {
     const vFov = THREE.MathUtils.degToRad(camera.fov);
     const hFov =
       2 * Math.atan(Math.tan(vFov / 2) * Math.max(camera.aspect, 0.1));
@@ -447,7 +447,7 @@ export function createIdcScene(
     camera.updateProjectionMatrix();
     controls.minDistance = Math.max(2, Math.min(distance * 0.08, width * 1.2));
     controls.maxDistance = distance * 5;
-    controls.update();
+    if (updateControls) controls.update();
     invalidate();
   }
   function resize() {
@@ -523,6 +523,100 @@ export function createIdcScene(
       camera.position.copy(controls.target).add(offset);
       controls.update();
       invalidate();
+    },
+    capturePreview() {
+      if (disposed || renderer.getContext().isContextLost()) return null;
+      const size = renderer.getSize(new THREE.Vector2());
+      const pixelRatio = renderer.getPixelRatio();
+      const saved = {
+        position: camera.position.clone(),
+        quaternion: camera.quaternion.clone(),
+        target: controls.target.clone(),
+        aspect: camera.aspect,
+        near: camera.near,
+        far: camera.far,
+        minDistance: controls.minDistance,
+        maxDistance: controls.maxDistance,
+        dimensions: dimensionGroup.visible,
+      };
+      const width = 1500,
+        height = 520;
+      try {
+        // Fit the full cable at the current angle, independently of screen size or zoom.
+        renderer.setPixelRatio(1);
+        renderer.setSize(width, height, false);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+        dimensionGroup.visible = true;
+        fit(true, false);
+        renderer.render(scene, camera);
+        const image = document.createElement("canvas");
+        image.width = width;
+        image.height = height;
+        const context = image.getContext("2d");
+        if (!context) return null;
+        const background = context.createLinearGradient(0, 0, 0, height);
+        background.addColorStop(0, "#f0f3f8");
+        background.addColorStop(0.5, "#ffffff");
+        background.addColorStop(1, "#f3f6fb");
+        context.fillStyle = background;
+        context.fillRect(0, 0, width, height);
+        context.drawImage(canvas, 0, 0, width, height);
+        context.textAlign = "center";
+        context.textBaseline = "middle";
+        for (const side of ["A", "B", "dimension"] as const) {
+          const point = anchors[side].clone().project(camera);
+          const x = ((point.x + 1) * width) / 2;
+          const y = ((1 - point.y) * height) / 2;
+          if (
+            point.z < -1 ||
+            point.z > 1 ||
+            x < 20 ||
+            x > width - 20 ||
+            y < 20 ||
+            y > height - 40
+          )
+            continue;
+          const label = side === "dimension" ? `L ${config.length} mm` : side;
+          context.font =
+            side === "dimension"
+              ? "22px Arial, sans-serif"
+              : "bold 24px Arial, sans-serif";
+          const labelWidth =
+            side === "dimension" ? context.measureText(label).width + 24 : 36;
+          const centerY = y + (side === "dimension" ? 22 : -25);
+          context.fillStyle = side === "dimension" ? "#f4f6fb" : "#0759dc";
+          context.beginPath();
+          context.roundRect(
+            x - labelWidth / 2,
+            centerY - 18,
+            labelWidth,
+            36,
+            5,
+          );
+          context.fill();
+          context.fillStyle = side === "dimension" ? "#344c67" : "#ffffff";
+          context.fillText(label, x, centerY);
+        }
+        return { dataUrl: image.toDataURL("image/png"), width, height };
+      } finally {
+        renderer.setPixelRatio(pixelRatio);
+        renderer.setSize(size.x, size.y, false);
+        camera.position.copy(saved.position);
+        camera.quaternion.copy(saved.quaternion);
+        camera.aspect = saved.aspect;
+        camera.near = saved.near;
+        camera.far = saved.far;
+        camera.updateProjectionMatrix();
+        camera.updateMatrixWorld();
+        controls.target.copy(saved.target);
+        controls.minDistance = saved.minDistance;
+        controls.maxDistance = saved.maxDistance;
+        dimensionGroup.visible = saved.dimensions;
+        renderer.render(scene, camera);
+        positionLabels();
+        invalidate();
+      }
     },
     dispose() {
       disposed = true;
